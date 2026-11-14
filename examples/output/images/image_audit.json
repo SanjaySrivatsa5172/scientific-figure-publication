@@ -1,0 +1,42 @@
+{
+  "operation": "center-crop shared canvas; optional shared display window; optional calibrated scale bar",
+  "raw_files_modified": false,
+  "rows": [
+    {
+      "source": "/workspace/skill-pack/scientific-figure-publication/examples/output/raw_images/a.png",
+      "source_sha256": "7c348f16767cf843d504a6709d153a504b91edee5150fcc4392a1fea5de6881d",
+      "output": "/workspace/skill-pack/scientific-figure-publication/examples/output/images/a_std.png",
+      "crop": [
+        0,
+        0,
+        240,
+        180
+      ],
+      "display": null,
+      "scale_bar": {
+        "um": 20,
+        "px": 40,
+        "um_per_pixel": 0.5
+      },
+      "resampled": false
+    },
+    {
+      "source": "/workspace/skill-pack/scientific-figure-publication/examples/output/raw_images/b.png",
+      "source_sha256": "4ed862a7d135ba75a0323dfeb3978df5332475ddaa51a7c0a7c8ffe18e89aaae",
+      "output": "/workspace/skill-pack/scientific-figure-publication/examples/output/images/b_std.png",
+      "crop": [
+        30,
+        10,
+        240,
+        180
+      ],
+      "display": null,
+      "scale_bar": {
+        "um": 20,
+        "px": 40,
+        "um_per_pixel": 0.5
+      },
+      "resampled": false
+    }
+  ]
+}

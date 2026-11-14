@@ -1,0 +1,29 @@
+schema_version: 1
+palette_id: okabe-ito-manuscript-v1
+paper_id: ""
+status: draft
+description: >
+  One shared semantic color system for every figure in a paper.
+  Neutrals do not count toward the five-hue cap. Do not rotate roles.
+semantic:
+  canvas: "#FFFFFF"
+  ink: "#172033"
+  muted: "#5B6472"
+  grid: "#E2E8F0"
+  neutral: "#666666"
+chart_roles:
+  ours: "#0072B2"
+  strong_baseline: "#E69F00"
+  other_baselines: "#666666"
+  positive: "#009E73"
+  negative: "#D55E00"
+  highlight: "#CC79A7"
+  upper_bound: "#172033"
+  uncertainty_mix: 0.22
+rules:
+  freeze_before_final_figures: true
+  same_entity_same_color: true
+  status_needs_redundant_encoding: true
+  maximum_semantic_hues: 5
+  card_tints_derive_from_role_hues: true
+  background: white

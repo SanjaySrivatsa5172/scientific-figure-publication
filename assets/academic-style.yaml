@@ -1,0 +1,47 @@
+# Machine-readable publication limits. The validator treats these as gates,
+# not suggestions. A venue exception is an audit note until a person waives it.
+version: 1
+geometry:
+  single_column_mm: 85
+  double_column_mm: 178
+  single_column_range_mm: [82, 90]
+  double_column_range_mm: [170, 190]
+  note: >
+    These are starting canvases. A named journal does not authorize a guessed
+    width. Use the current author guide when the user supplies it.
+typography:
+  primary_family: Arial
+  fallback_families: ["Liberation Sans", "Helvetica", "DejaVu Sans"]
+  monospace_for_code_only: ["Liberation Mono", "DejaVu Sans Mono", "Consolas"]
+  max_families: 2
+  max_visible_sizes: 3
+  manuscript_body_pt: [8, 9]
+  manuscript_minimum_pt: 7
+  panel_label_pt: [9, 10]
+  slide_body_pt: [14, 18]
+  poster_body_pt: [18, 28]
+stroke_pt:
+  supporting: [0.6, 1.0]
+  primary: [0.8, 1.4]
+  emphasis_max: 1.6
+color:
+  max_semantic_hues: 5
+  notation: "#RRGGBB"
+  background: "#FFFFFF"
+  min_text_contrast: 4.5
+effects:
+  gradient: false
+  shadow: false
+  glass: false
+  bevel: false
+  three_dimensional_bars: false
+  emoji: false
+  dark_background: false
+  generative_final_art: false
+export:
+  masters: [svg, pdf]
+  review_raster: png
+  min_png_dpi: 300
+  dense_bar_dpi: 600
+  tight_bbox_for_assembled_panels: false
+  svg_fonttype: none
