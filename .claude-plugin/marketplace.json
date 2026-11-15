@@ -9,7 +9,7 @@
     {
       "name": "scientific-figure-publication",
       "source": "./",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "description": "Publication-ready scientific figures at final journal size: verified presets for 42 journals and venues, clinical builders (Kaplan-Meier, forest, CONSORT, PRISMA, Bland-Altman, ROC), color-vision-safe palettes, editable diagrams, image-panel integrity checks, and an automated QA gate.",
       "author": {
         "name": "SanjaySrivatsa5172",

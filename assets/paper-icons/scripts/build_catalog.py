@@ -2,7 +2,7 @@
 """Generate library/catalog.json — semantic metadata for every icon.
 
 The agent reads catalog.json to (a) find an icon by concept and (b) know whether
-an icon can be recolored. Edit the ICONS / BRAND dicts below and re-run.
+an icon can be recolored. Edit the ICONS dict below and re-run.
 
 Usage: python3 build_catalog.py
 """
@@ -93,50 +93,10 @@ ICONS = {
                        "Monochrome workflow, pipeline, basic flow-diagram element"),
 }
 
-# 39 brand logos (Mizar77/ml-paper-icons, MIT). color_type=color = official brand
-# colors — recoloring breaks brand recognition, so do NOT recolor by default;
-# mono ones (currentColor/black) can switch between light/dark themes.
-BRAND = {
-    "openai":         ("OpenAI", ["openai","gpt","chatgpt","o1","o3"], "mono", "OpenAI / GPT / ChatGPT — closed-source baseline in comparisons"),
-    "anthropic":      ("Anthropic", ["anthropic"], "mono", "Anthropic company mark (monochrome)"),
-    "claude-color":   ("Claude", ["claude","anthropic","sonnet","opus","haiku"], "color", "Claude / Sonnet / Opus / Haiku — closed-source baseline"),
-    "gemini-color":   ("Gemini", ["gemini","google","bard","pro","flash"], "color", "Google Gemini / Bard — closed-source baseline"),
-    "google-color":   ("Google", ["google","alphabet"], "color", "Google company mark"),
-    "deepmind-color": ("DeepMind", ["deepmind","google"], "color", "Google DeepMind"),
-    "meta-color":     ("Meta", ["meta","facebook","llama"], "color", "Meta / Facebook — maker of Llama"),
-    "microsoft-color":("Microsoft", ["microsoft","msft","azure"], "color", "Microsoft — maker of Copilot/Bing"),
-    "azure-color":    ("Azure", ["azure","microsoft","cloud"], "color", "Microsoft Azure cloud/AI service"),
-    "bing-color":     ("Bing", ["bing","microsoft","copilot"], "color", "Bing / Copilot"),
-    "copilot-color":  ("Copilot", ["copilot","microsoft","github"], "color", "GitHub Copilot / Microsoft Copilot"),
-    "colab-color":    ("Colab", ["colab","google","notebook"], "color", "Google Colab — experiment environment"),
-    "mistral-color":  ("Mistral", ["mistral","mixtral"], "color", "Mistral / Mixtral — open-weight models"),
-    "deepseek-color": ("DeepSeek", ["deepseek","deepseek-r1","v3"], "color", "DeepSeek / DeepSeek-R1 / V3 — open reasoning models"),
-    "qwen-color":     ("Qwen", ["qwen","alibaba","tongyi"], "color", "Qwen / Tongyi Qianwen — Alibaba open series"),
-    "tongyi-color":   ("Tongyi", ["tongyi","alibaba","qwen"], "color", "Tongyi Qianwen (Alibaba)"),
-    "zhipu-color":    ("Zhipu", ["zhipu","chatglm","glm","thudm"], "color", "Zhipu / ChatGLM / GLM series"),
-    "chatglm-color":  ("ChatGLM", ["chatglm","glm","zhipu"], "color", "ChatGLM / GLM-4 — Zhipu"),
-    "kimi-color":     ("Kimi", ["kimi","moonshot"], "color", "Kimi — Moonshot"),
-    "moonshot":       ("Moonshot", ["moonshot","kimi"], "mono", "Moonshot AI / maker of Kimi"),
-    "doubao-color":   ("Doubao", ["doubao","bytedance"], "color", "Doubao — ByteDance"),
-    "baidu-color":    ("Baidu", ["baidu","wenxin","ernie"], "color", "Baidu ERNIE / Wenxin"),
-    "perplexity-color":("Perplexity", ["perplexity"], "color", "Perplexity — retrieval-augmented QA"),
-    "cohere-color":   ("Cohere", ["cohere","command"], "color", "Cohere / Command series"),
-    "huggingface-color":("Hugging Face", ["huggingface","hf","hub"], "color", "Hugging Face — model/dataset hosting"),
-    "nvidia-color":   ("NVIDIA", ["nvidia","cuda","gpu"], "color", "NVIDIA / CUDA / GPU compute"),
-    "langchain-color":("LangChain", ["langchain","framework","rag"], "color", "LangChain — LLM app framework"),
-    "langgraph-color":("LangGraph", ["langgraph","agent","graph"], "color", "LangGraph — agent orchestration"),
-    "llamaindex-color":("LlamaIndex", ["llamaindex","rag","index"], "color", "LlamaIndex — RAG framework"),
-    "dify-color":     ("Dify", ["dify","platform"], "color", "Dify — LLM app platform"),
-    "vllm-color":     ("vLLM", ["vllm","inference","serve"], "color", "vLLM — inference/serving engine"),
-    "ollama":         ("Ollama", ["ollama","local","run"], "mono", "Ollama — run LLMs locally"),
-    "palm-color":     ("PaLM", ["palm","google"], "color", "Google PaLM"),
-    "stability-color":("Stability AI", ["stability","stable","sdxl","sd"], "color", "Stability AI / Stable Diffusion"),
-    "midjourney":     ("Midjourney", ["midjourney","image","gen"], "mono", "Midjourney — image generation"),
-    "grok":           ("Grok", ["grok","xai","twitter"], "mono", "Grok — xAI"),
-    "xai":            ("xAI", ["xai","grok"], "mono", "xAI company mark"),
-    "gradio-color":   ("Gradio", ["gradio","demo","ui"], "color", "Gradio — ML demo UI"),
-    "spark-color":    ("Apache Spark", ["spark","apache","big-data","distributed"], "color", "Apache Spark — distributed big-data processing"),
-}
+# Brand / vendor logos are not bundled (removed in scientific-figure-publication
+# v1.0.1: the MIT license on the SVG code does not cover the trademarks). A project
+# that needs one adds it here and under library/brand/ with its own clearance.
+BRAND: dict = {}
 
 
 # Auto-scanned icon families from ml-paper-icons. Too many to annotate by hand, so
@@ -353,14 +313,13 @@ def main():
         "count": len(items),
         "sources": {
             "original": "37 local icons (potrace-vectorized)",
-            "brand": "ml-paper-icons (MIT) — 39 AI vendor logos",
             "lucide/tabler/phosphor/duotone": "ml-paper-icons (MIT) — 473 general icons, auto-cataloged by filename + color scan",
             "fetched": "On-demand from Lucide (ISC; see fetch_icon.py)",
         },
         "color_types": {
             "mono": "Single color — recolor exactly (recommended)",
             "silhouette": "Single-color silhouette traced from a multicolor icon; recolors but lost internal color detail",
-            "color": "Official brand colors — do NOT recolor (breaks recognition)",
+            "color": "Fixed multicolor artwork — do NOT recolor",
         },
         "icons": items,
     }

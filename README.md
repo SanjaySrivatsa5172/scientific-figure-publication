@@ -17,7 +17,7 @@ All gallery data are synthetic and labeled as such in the artwork.
 - Clinical builders: Kaplan-Meier and Aalen-Johansen curves with numbers at risk and journal truncation rules, log-rank tests, forest plots (standalone or as one panel of a larger figure), CONSORT 2025 and PRISMA 2020 flow diagrams with count checks, Bland-Altman, ROC with DeLong intervals, calibration, waterfall, and spaghetti plots.
 - Color: Okabe-Ito categorical order checked under simulated protanopia, deuteranopia, and tritanopia (Machado 2009) with CIEDE2000; perceptually uniform and centered diverging colormaps.
 - Statistics house styles: AMA, NEJM, Annals, Lancet, EHJ, EJVES, JEVT, Vascular Medicine, and AHA P-value and interval formats, plus a legend checker with journal word limits.
-- Diagrams: an editable draw.io pipeline and an SVG icon composer with 619 licensed icons, including a clinical set.
+- Diagrams: an editable draw.io pipeline and an SVG icon composer with 580 licensed icons (no vendor logos), including a clinical set.
 - Image panels: batch-locked display settings, calibrated scale bars, identifier masking, audit hashes, and duplicate screening as review leads.
 - Integrity rules: never invent or alter data, never refit model estimates from display data, flag claims the data contradict, and mark conflicting inputs for confirmation.
 

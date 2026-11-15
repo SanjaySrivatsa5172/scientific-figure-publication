@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "catalog": "catalog.json",
-  "total_catalog_icons": 619,
+  "total_catalog_icons": 580,
   "groups": [
     {
       "paths": [
@@ -41,17 +41,6 @@
     },
     {
       "paths": [
-        "brand/*.svg"
-      ],
-      "count": 39,
-      "source": "https://github.com/lobehub/lobe-icons",
-      "license": "MIT",
-      "trademarked": true,
-      "recolor_policy": "preserve official colors",
-      "usage": "academic identification or comparison only; no implied endorsement"
-    },
-    {
-      "paths": [
         "fetched/*.svg"
       ],
       "count": 70,
@@ -73,8 +62,9 @@
   "upstream_collection": {
     "source": "https://github.com/Mizar77/ml-paper-icons",
     "commit_audited": "0e9082e78d502743a1e49ee5bcbcd27a47d15ba4",
-    "imported_icon_count": 512,
-    "curation_license": "MIT"
+    "imported_icon_count": 473,
+    "curation_license": "MIT",
+    "note": "The upstream collection holds 512 icons; its 39 Lobe Icons brand marks were removed in scientific-figure-publication v1.0.1 (trademark exposure), leaving 473"
   },
   "notices": [
     "../LICENSE",
