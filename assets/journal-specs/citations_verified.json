@@ -1,0 +1,434 @@
+[
+  {
+    "id": "1",
+    "status": "verified",
+    "ama": "Rougier NP, Droettboom M, Bourne PE. Ten simple rules for better figures. PLoS Comput Biol. 2014;10(9):e1003833. doi:10.1371/journal.pcbi.1003833",
+    "pmid": "25210732",
+    "doi": "10.1371/journal.pcbi.1003833",
+    "corrections": "None; matches PubMed and Crossref. Editorial (no abstract).",
+    "key_point": "[No abstract; from the article's opening text] Aims to give a basic set of rules to improve figure design and explain common pitfalls, beginning with Rule 1: know your audience."
+  },
+  {
+    "id": "2",
+    "status": "verified",
+    "ama": "Weissgerber TL, Milic NM, Winham SJ, Garovic VD. Beyond bar and line graphs: time for a new data presentation paradigm. PLoS Biol. 2015;13(4):e1002128. doi:10.1371/journal.pbio.1002128",
+    "pmid": "25901488",
+    "doi": "10.1371/journal.pbio.1002128",
+    "corrections": "None.",
+    "key_point": "A systematic review of 703 papers in top physiology journals found most presented continuous data as bar and line graphs and rarely used scatterplots, box plots or histograms, although many different distributions can produce the same bar graph."
+  },
+  {
+    "id": "3",
+    "status": "verified",
+    "ama": "Weissgerber TL, Winham SJ, Heinzen EP, et al. Reveal, don't conceal: transforming data visualization to improve transparency. Circulation. 2019;140(18):1506-1518. doi:10.1161/CIRCULATIONAHA.118.037777",
+    "pmid": "31657957",
+    "doi": "10.1161/CIRCULATIONAHA.118.037777",
+    "corrections": "None (9 authors; 'et al' after 3 is correct AMA).",
+    "key_point": "In a systematic review of top peripheral vascular disease journals, 47.7% of papers with data figures used bar graphs for continuous data; the primer explains choosing figure type by design, sample size and variable type, and making dot, box and violin plots."
+  },
+  {
+    "id": "4",
+    "status": "verified",
+    "ama": "Crameri F, Shephard GE, Heron PJ. The misuse of colour in science communication. Nat Commun. 2020;11(1):5444. doi:10.1038/s41467-020-19160-7",
+    "pmid": "33116149",
+    "doi": "10.1038/s41467-020-19160-7",
+    "corrections": "Added issue (1) and DOI; otherwise matches.",
+    "key_point": "Rainbow-like and red-green colour maps that distort data through uneven gradients or are unreadable with colour-vision deficiency remain prevalent; scientifically derived colour maps show true data variation and are accessible to people with CVD."
+  },
+  {
+    "id": "5",
+    "status": "verified",
+    "ama": "Pocock SJ, Clayton TC, Altman DG. Survival plots of time-to-event outcomes in clinical trials: good practice and pitfalls. Lancet. 2002;359(9318):1686-1689. doi:10.1016/S0140-6736(02)08594-X",
+    "pmid": "12020548",
+    "doi": "10.1016/S0140-6736(02)08594-X",
+    "corrections": "None.",
+    "key_point": "Recommends that survival plots go up rather than down, and addresses how far in time to extend the plot, showing the extent of follow-up, displaying uncertainty with SEs or CIs, and caution in interpreting curve shape and the time pattern of treatment differences."
+  },
+  {
+    "id": "6",
+    "status": "verified",
+    "ama": "Morris TP, Jarvis CI, Cragg W, Phillips PPJ, Choodari-Oskooei B, Sydes MR. Proposals on Kaplan-Meier plots in medical research and a survey of stakeholder views: KMunicate. BMJ Open. 2019;9(9):e030215. doi:10.1136/bmjopen-2019-030215",
+    "pmid": "31575572",
+    "doi": "10.1136/bmjopen-2019-030215",
+    "corrections": "Added issue (9) and DOI.",
+    "key_point": "In a survey of 1174 stakeholders, the most popular proposals were an extended table beneath the plot giving numbers at risk, censored and with events at periodic time points, and confidence intervals around each Kaplan-Meier curve."
+  },
+  {
+    "id": "7",
+    "status": "verified",
+    "ama": "Rossner M, Yamada KM. What's in a picture? The temptation of image manipulation. J Cell Biol. 2004;166(1):11-15. doi:10.1083/jcb.200406019",
+    "pmid": "15240566",
+    "doi": "10.1083/jcb.200406019",
+    "corrections": "None. PubMed article type 'News' (no abstract).",
+    "key_point": ""
+  },
+  {
+    "id": "8",
+    "status": "verified",
+    "ama": "Bik EM, Casadevall A, Fang FC. The prevalence of inappropriate image duplication in biomedical research publications. mBio. 2016;7(3):e00809-16. doi:10.1128/mBio.00809-16",
+    "pmid": "27273827",
+    "doi": "10.1128/mBio.00809-16",
+    "corrections": "None. No editorial notices (Scite, PubMed). Scite flags one contrasting citation (FEBS Lett 2025, doi:10.1002/1873-3468.70077) that did not reproduce the journal-impact-factor trend at the publication level.",
+    "key_point": "Visual screening of 20,621 papers in 40 journals (1995-2014) found 3.8% contained problematic duplicated images, at least half suggestive of deliberate manipulation, with prevalence rising over the preceding decade."
+  },
+  {
+    "id": "9",
+    "status": "verified",
+    "ama": "Wong B. Points of view: color blindness. Nat Methods. 2011;8(6):441. doi:10.1038/nmeth.1618",
+    "pmid": "21774112",
+    "doi": "10.1038/nmeth.1618",
+    "corrections": "Metadata matches (PubMed title is just 'Color blindness'; Crossref keeps the 'Points of view:' column prefix). Author correction exists: Wong B. Author correction: points of view: color blindness. Nat Methods. 2023;20(8):1266. doi:10.1038/s41592-023-01974-0 (PMID 37452153); it adds the missing link crediting the palette to Kei Ito and Masataka Okabe's 2002 presentation. Not a retraction; cite the correction too if the skill reproduces the palette.",
+    "key_point": ""
+  },
+  {
+    "id": "10",
+    "status": "corrected",
+    "ama": "Nuñez JR, Anderton CR, Renslow RS. Optimizing colormaps with consideration for color vision deficiency to enable accurate interpretation of scientific data. PLoS One. 2018;13(7):e0199239. doi:10.1371/journal.pone.0199239",
+    "pmid": "30067751",
+    "doi": "10.1371/journal.pone.0199239",
+    "corrections": "First author's name is 'Nuñez' (with tilde), not 'Nunez'. Otherwise matches.",
+    "key_point": "Presents the cmaputil Python module and the cividis colormap, which gives nearly identical data interpretation for viewers with and without red-green CVD, is perceptually uniform in hue and brightness, and increases in brightness linearly."
+  },
+  {
+    "id": "11",
+    "status": "verified",
+    "ama": "Machado GM, Oliveira MM, Fernandes LAF. A physiologically-based model for simulation of color vision deficiency. IEEE Trans Vis Comput Graph. 2009;15(6):1291-1298. doi:10.1109/TVCG.2009.113",
+    "pmid": "19834201",
+    "doi": "10.1109/TVCG.2009.113",
+    "corrections": "None.",
+    "key_point": "Presents a physiologically based model, validated with groups of CVD and normal-vision observers, that simulates normal colour vision, anomalous trichromacy and dichromacy in one unified framework."
+  },
+  {
+    "id": "12",
+    "status": "verified",
+    "ama": "Cleveland WS, McGill R. Graphical perception: theory, experimentation, and application to the development of graphical methods. J Am Stat Assoc. 1984;79(387):531-554. doi:10.1080/01621459.1984.10478080",
+    "pmid": "",
+    "doi": "10.1080/01621459.1984.10478080",
+    "corrections": "None (verified via Crossref; not indexed in PubMed).",
+    "key_point": "[Abstract via OpenAlex] Ranks elementary perceptual tasks by how accurately people perform them and advises graphs use tasks as high in that ordering as possible, proposing dot charts and framed-rectangle charts in place of bar, divided-bar and pie charts."
+  },
+  {
+    "id": "13",
+    "status": "verified",
+    "ama": "Lewis S, Clarke M. Forest plots: trying to see the wood and the trees. BMJ. 2001;322(7300):1479-1480. doi:10.1136/bmj.322.7300.1479",
+    "pmid": "11408310",
+    "doi": "10.1136/bmj.322.7300.1479",
+    "corrections": "None.",
+    "key_point": "[No abstract; from the article's summary points] Forest plots show each study's point estimate (square) and confidence interval (line), with the pooled estimate as a diamond, displaying between-study variation and the overall result at a glance."
+  },
+  {
+    "id": "14",
+    "status": "verified",
+    "ama": "Bland JM, Altman DG. Statistical methods for assessing agreement between two methods of clinical measurement. Lancet. 1986;1(8476):307-310. doi:10.1016/S0140-6736(86)90837-8",
+    "pmid": "2868172",
+    "doi": "10.1016/S0140-6736(86)90837-8",
+    "corrections": "None; DOI added (from Crossref; the PubMed record carries none). Crossref lists the volume as 327 (Lancet's retrospective numbering); '1' is the conventional citation.",
+    "key_point": "Using correlation to judge whether two measurement methods agree is misleading; the paper describes an alternative based on graphical techniques and simple calculations."
+  },
+  {
+    "id": "15",
+    "status": "verified",
+    "ama": "Cumming G, Fidler F, Vaux DL. Error bars in experimental biology. J Cell Biol. 2007;177(1):7-11. doi:10.1083/jcb.200611141",
+    "pmid": "17420288",
+    "doi": "10.1083/jcb.200611141",
+    "corrections": "None.",
+    "key_point": "Error bars can show CIs, SEs, SDs or other quantities that convey quite different information, so legends must state what they represent; the authors give eight simple rules for their use and interpretation."
+  },
+  {
+    "id": "16",
+    "status": "verified",
+    "ama": "Krzywinski M, Altman N. Points of significance: error bars. Nat Methods. 2013;10(10):921-922. doi:10.1038/nmeth.2659",
+    "pmid": "24161969",
+    "doi": "10.1038/nmeth.2659",
+    "corrections": "Added issue (10) and DOI. (Crossref title is just 'Error bars'.)",
+    "key_point": ""
+  },
+  {
+    "id": "17",
+    "status": "corrected",
+    "ama": "Krzywinski M, Altman N. Visualizing samples with box plots. Nat Methods. 2014;11(2):119-120. doi:10.1038/nmeth.2813",
+    "pmid": "24645192",
+    "doi": "10.1038/nmeth.2813",
+    "corrections": "Title is 'Visualizing samples with box plots' in both PubMed and Crossref ('Points of Significance' is the column name, not part of the title). Added issue (2) and DOI.",
+    "key_point": ""
+  },
+  {
+    "id": "18",
+    "status": "corrected",
+    "ama": "Allen M, Poggiali D, Whitaker K, Marshall TR, van Langen J, Kievit RA. Raincloud plots: a multi-platform tool for robust data visualization [version 2]. Wellcome Open Res. 2021;4:63. doi:10.12688/wellcomeopenres.15191.2",
+    "pmid": "31069261",
+    "doi": "10.12688/wellcomeopenres.15191.2",
+    "corrections": "Your draft matches version 1 exactly (5 authors, 2019): Allen M, Poggiali D, Whitaker K, Marshall TR, Kievit RA. Wellcome Open Res. 2019;4:63. doi:10.12688/wellcomeopenres.15191.1. Version 2 (21 Jan 2021) adds van Langen J as 5th author and is the version the PubMed record (PMID 31069261) now links to. Cite one version consistently.",
+    "key_point": "Raincloud plots show raw data, probability density and summary statistics (median, mean, CIs) together, avoiding barplot-with-error-bar distortions; open-source code is provided for R, Python and Matlab."
+  },
+  {
+    "id": "19",
+    "status": "verified",
+    "ama": "Jambor H, Antonietti A, Alicea B, et al. Creating clear and informative image-based figures for scientific publications. PLoS Biol. 2021;19(3):e3001161. doi:10.1371/journal.pbio.3001161",
+    "pmid": "33788834",
+    "doi": "10.1371/journal.pbio.3001161",
+    "corrections": "None.",
+    "key_point": "Of 580 papers in top journals in plant sciences, cell biology and physiology, image figures often lacked scale bars, had poorly marked insets, used colours inaccessible to colourblind readers or explained annotations poorly; papers meeting all good-practice criteria were uncommon (2%-16%)."
+  },
+  {
+    "id": "20",
+    "status": "corrected",
+    "ama": "Borland D, Taylor RM II. Rainbow color map (still) considered harmful. IEEE Comput Graph Appl. 2007;27(2):14-17. doi:10.1109/MCG.2007.323435",
+    "pmid": "17388198",
+    "doi": "10.1109/MCG.2007.323435",
+    "corrections": "Format only: AMA writes the suffix as 'II' ('2nd' is NLM style); Crossref gives 'Russell M. Taylor II' (PubMed indexes him as 'Taylor MR'). Contrasting evidence flagged by Scite: Reda K, Szafir DA (2021; ALT3) found rainbow-like colormaps improved accuracy in graphical-inference tasks.",
+    "key_point": "[Abstract via OpenAlex] Restates why the rainbow colour map is a poor choice, illustrates its deficiencies on simple data sets and recommends better colour maps for several categories of display."
+  },
+  {
+    "id": "21",
+    "status": "verified",
+    "ama": "Hunter JD. Matplotlib: a 2D graphics environment. Comput Sci Eng. 2007;9(3):90-95. doi:10.1109/MCSE.2007.55",
+    "pmid": "",
+    "doi": "10.1109/MCSE.2007.55",
+    "corrections": "None (Crossref; not in PubMed). Note: Scite returns an unrelated (astronomy) abstract for this DOI, so do not quote Scite for this paper.",
+    "key_point": "[Abstract via OpenAlex] Matplotlib is a 2D graphics package for Python used for application development, interactive scripting and publication-quality image generation across user interfaces and operating systems."
+  },
+  {
+    "id": "22",
+    "status": "verified",
+    "ama": "Harrower M, Brewer CA. ColorBrewer.org: an online tool for selecting colour schemes for maps. Cartogr J. 2003;40(1):27-37. doi:10.1179/000870403235002042",
+    "pmid": "",
+    "doi": "10.1179/000870403235002042",
+    "corrections": "None (Crossref; not in PubMed).",
+    "key_point": "[Abstract via OpenAlex] ColorBrewer helps users choose map colour schemes according to the number of data classes, the nature of the data (sequential, diverging or qualitative) and the end-use environment (screen, print, projection, photocopy)."
+  },
+  {
+    "id": "23",
+    "status": "verified",
+    "ama": "Kelleher C, Wagener T. Ten guidelines for effective data visualization in scientific publications. Environ Model Softw. 2011;26(6):822-827. doi:10.1016/j.envsoft.2010.12.006",
+    "pmid": "",
+    "doi": "10.1016/j.envsoft.2010.12.006",
+    "corrections": "None (Crossref; publisher lists it as a short communication; not in PubMed).",
+    "key_point": "[Abstract from publisher page] Lists ten guidelines, drawn from a review of key visualization literature, to support the primary objective of data visualization: effectively conveying information."
+  },
+  {
+    "id": "24",
+    "status": "verified",
+    "ama": "Midway SR. Principles of effective data visualization. Patterns (N Y). 2020;1(9):100141. doi:10.1016/j.patter.2020.100141",
+    "pmid": "33336199",
+    "doi": "10.1016/j.patter.2020.100141",
+    "corrections": "None.",
+    "key_point": "Offers ten principles, from settling the message before building the visual to how colour combinations imply different information, because figure making is rarely taught and figure standards are rarely enforced."
+  },
+  {
+    "id": "25",
+    "status": "verified",
+    "ama": "Rice K, Lumley T. Graphics and statistics for cardiology: comparing categorical and continuous variables. Heart. 2016;102(5):349-355. doi:10.1136/heartjnl-2015-308104",
+    "pmid": "26819235",
+    "doi": "10.1136/heartjnl-2015-308104",
+    "corrections": "None.",
+    "key_point": "For data typical of Heart, recommends dot charts, violin plots, histograms and boxplots for quantitative data and mosaic plots and bar charts for categorical data, justified by research on visual perception."
+  },
+  {
+    "id": "26",
+    "status": "verified",
+    "ama": "Kiran A, Crespillo AP, Rahimi K. Graphics and statistics for cardiology: data visualisation for meta-analysis. Heart. 2017;103(1):19-23. doi:10.1136/heartjnl-2016-309685",
+    "pmid": "27810865",
+    "doi": "10.1136/heartjnl-2016-309685",
+    "corrections": "None (published online 3 Nov 2016; issue dated 2017).",
+    "key_point": "Recommends a study flow diagram, a forest plot with tabulated statistics including a heterogeneity test, funnel plots (at least 10 studies) and Galbraith plots for small-study effects, bubble plots for meta-regression, and final checks of axis scale, line pattern, text size and resolution."
+  },
+  {
+    "id": "27a",
+    "status": "verified",
+    "ama": "Hopewell S, Chan AW, Collins GS, et al. CONSORT 2025 statement: updated guideline for reporting randomised trials. BMJ. 2025;389:e081123. doi:10.1136/bmj-2024-081123",
+    "pmid": "40228833",
+    "doi": "10.1136/bmj-2024-081123",
+    "corrections": "Exists in BMJ and JAMA (and Lancet, Nat Med, PLoS Med). Co-publications: Lancet. 2025;405(10489):1633-1640, doi:10.1016/S0140-6736(25)00672-5, PMID 40245901; Nat Med. 2025;31(6):1776-1783, doi:10.1038/s41591-025-03635-5, PMID 40229553; PLoS Med. 2025;22(4):e1004587, doi:10.1371/journal.pmed.1004587, PMID 40228477.",
+    "key_point": "30-item checklist plus a participant flow diagram: 7 new items, 3 revised, 1 deleted and a new open-science section, developed through a 317-participant Delphi survey and a 30-expert consensus meeting."
+  },
+  {
+    "id": "27b",
+    "status": "verified",
+    "ama": "Hopewell S, Chan AW, Collins GS, et al. CONSORT 2025 statement: updated guideline for reporting randomized trials. JAMA. 2025;333(22):1998-2005. doi:10.1001/jama.2025.4347",
+    "pmid": "40228499",
+    "doi": "10.1001/jama.2025.4347",
+    "corrections": "JAMA version uses US spelling ('randomized').",
+    "key_point": "30-item checklist plus a participant flow diagram: 7 new items, 3 revised, 1 deleted and a new open-science section, developed through a 317-participant Delphi survey and a 30-expert consensus meeting."
+  },
+  {
+    "id": "28",
+    "status": "verified",
+    "ama": "Page MJ, McKenzie JE, Bossuyt PM, et al. The PRISMA 2020 statement: an updated guideline for reporting systematic reviews. BMJ. 2021;372:n71. doi:10.1136/bmj.n71",
+    "pmid": "33782057",
+    "doi": "10.1136/bmj.n71",
+    "corrections": "None.",
+    "key_point": "Replaces PRISMA 2009 with a 27-item checklist, an expanded checklist, an abstract checklist and revised flow diagrams for original and updated reviews."
+  },
+  {
+    "id": "29",
+    "status": "verified",
+    "ama": "Lang TA, Altman DG. Basic statistical reporting for articles published in biomedical journals: the \"Statistical Analyses and Methods in the Published Literature\" or the SAMPL Guidelines. Int J Nurs Stud. 2015;52(1):5-9. doi:10.1016/j.ijnurstu.2014.09.006",
+    "pmid": "25441757",
+    "doi": "10.1016/j.ijnurstu.2014.09.006",
+    "corrections": "None (online 28 Sep 2014; print 2015). No abstract.",
+    "key_point": ""
+  },
+  {
+    "id": "30",
+    "status": "verified",
+    "ama": "Ibrahim AM, Lillemoe KD, Klingensmith ME, Dimick JB. Visual abstracts to disseminate research on social media: a prospective, case-control crossover study. Ann Surg. 2017;266(6):e46-e48. doi:10.1097/SLA.0000000000002277",
+    "pmid": "28448382",
+    "doi": "10.1097/SLA.0000000000002277",
+    "corrections": "None. No abstract (publisher: 'Abstract was not provided for this article'); results not read.",
+    "key_point": ""
+  },
+  {
+    "id": "31",
+    "status": "verified",
+    "ama": "Gelman A, Pasarica C, Dodhia R. Let's practice what we preach: turning tables into graphs. Am Stat. 2002;56(2):121-130. doi:10.1198/000313002317572790",
+    "pmid": "",
+    "doi": "10.1198/000313002317572790",
+    "corrections": "None (Crossref, subtitle confirmed; not in PubMed).",
+    "key_point": "[Abstract via OpenAlex] Working through the tables in an issue of JASA, the authors show graphs can improve the presentation while taking less space, with multiple repeated line plots especially effective."
+  },
+  {
+    "id": "32",
+    "status": "verified",
+    "ama": "Viénot F, Brettel H, Mollon JD. Digital video colourmaps for checking the legibility of displays by dichromats. Color Res Appl. 1999;24(4):243-252. doi:10.1002/(SICI)1520-6378(199908)24:4<243::AID-COL5>3.0.CO;2-3",
+    "pmid": "",
+    "doi": "10.1002/(SICI)1520-6378(199908)24:4<243::AID-COL5>3.0.CO;2-3",
+    "corrections": "None (Crossref; not in PubMed).",
+    "key_point": "[Abstract via OpenAlex] Proposes replacement colourmaps, built from the LMS specification of standard video-monitor primaries for 256 colours, that let a designer check how colours appear to protanopes and deuteranopes."
+  },
+  {
+    "id": "33",
+    "status": "verified",
+    "ama": "Schmied C, Nelson MS, Avilov S, et al. Community-developed checklists for publishing images and image analyses. Nat Methods. 2024;21(2):170-181. doi:10.1038/s41592-023-01987-9",
+    "pmid": "37710020",
+    "doi": "10.1038/s41592-023-01987-9",
+    "corrections": "None (online 14 Sep 2023; issue Feb 2024).",
+    "key_point": "Community-developed checklists for light-microscopy image figures and image-analysis reporting, with recommendations on image formatting and annotation, colour selection, data availability and analysis workflows."
+  },
+  {
+    "id": "34",
+    "status": "verified",
+    "ama": "Macleod M, Collings AM, Graf C, et al. The MDAR (Materials Design Analysis Reporting) Framework for transparent reporting in the life sciences. Proc Natl Acad Sci U S A. 2021;118(17):e2103238118. doi:10.1073/pnas.2103238118",
+    "pmid": "33893240",
+    "doi": "10.1073/pnas.2103238118",
+    "corrections": "None. PubMed article type 'Editorial' (no abstract).",
+    "key_point": ""
+  },
+  {
+    "id": "35",
+    "status": "verified",
+    "ama": "Goldberg IG, Allan C, Burel JM, et al. The Open Microscopy Environment (OME) Data Model and XML file: open tools for informatics and quantitative analysis in biological imaging. Genome Biol. 2005;6(5):R47. doi:10.1186/gb-2005-6-5-r47",
+    "pmid": "15892875",
+    "doi": "10.1186/gb-2005-6-5-r47",
+    "corrections": "None.",
+    "key_point": "OME defines a data model and software implementation, expressed in XML, as an informatics framework for microscopy imaging that represents acquisition parameters, annotations and image-analysis results."
+  },
+  {
+    "id": "36",
+    "status": "verified",
+    "ama": "Cromey DW. Avoiding twisted pixels: ethical guidelines for the appropriate use and manipulation of scientific digital images. Sci Eng Ethics. 2010;16(4):639-667. doi:10.1007/s11948-010-9201-y",
+    "pmid": "20567932",
+    "doi": "10.1007/s11948-010-9201-y",
+    "corrections": "None.",
+    "key_point": "Proposes 12 guidelines for manipulating scientific digital images, with the technical reasons behind each, to address both rare deliberate falsification and the more common unintentional inappropriate manipulation."
+  },
+  {
+    "id": "A1",
+    "status": "verified",
+    "ama": "Guyot P, Ades AE, Ouwens MJNM, Welton NJ. Enhanced secondary analysis of survival data: reconstructing the data from published Kaplan-Meier survival curves. BMC Med Res Methodol. 2012;12:9. doi:10.1186/1471-2288-12-9",
+    "pmid": "22297116",
+    "doi": "10.1186/1471-2288-12-9",
+    "corrections": "New (Kaplan-Meier presentation). PubMed abbreviates the third author's initials to 'MJ'.",
+    "key_point": "Reconstructed patient data from published KM curves was reproducible, but hazard ratios were reasonably accurate only when numbers at risk or total events were reported, so the authors recommend all RCTs report both alongside KM curves."
+  },
+  {
+    "id": "A2",
+    "status": "verified",
+    "ama": "Schriger DL, Altman DG, Vetter JA, Heafner T, Moher D. Forest plots in reports of systematic reviews: a cross-sectional study reviewing current practice. Int J Epidemiol. 2010;39(2):421-429. doi:10.1093/ije/dyp370",
+    "pmid": "20093305",
+    "doi": "10.1093/ije/dyp370",
+    "corrections": "New (forest-plot design).",
+    "key_point": "Across 300 systematic reviews, Cochrane forest plots were standardized but often held 3 or fewer studies (80%) and always listed studies alphabetically, whereas non-Cochrane plots held more studies but often omitted key information."
+  },
+  {
+    "id": "A3",
+    "status": "verified",
+    "ama": "Wullschleger M, Aghlmandi S, Egger M, Zwahlen M. High incorrect use of the standard error of the mean (SEM) in original articles in three cardiovascular journals evaluated for 2012. PLoS One. 2014;9(10):e110364. doi:10.1371/journal.pone.0110364",
+    "pmid": "25354300",
+    "doi": "10.1371/journal.pone.0110364",
+    "corrections": "New (data presentation in cardiology journals).",
+    "key_point": "Of 441 original 2012 articles in Cardiovascular Research, Circulation: Heart Failure and Circulation Research, 64% used the SEM incorrectly to describe data (basic science 74% vs clinical 10%), and 89% of these showed SEM bars rather than 95% CIs."
+  },
+  {
+    "id": "A4",
+    "status": "verified",
+    "ama": "Riedel N, Schulz R, Kazezian V, Weissgerber T. Replacing bar graphs of continuous data with more informative graphics: are we making progress? Clin Sci (Lond). 2022;136(15):1139-1156. doi:10.1042/CS20220287",
+    "pmid": "35822444",
+    "doi": "10.1042/CS20220287",
+    "corrections": "New (bar-graph misuse).",
+    "key_point": "Automated screening of 227,998 PubMed Central papers from 23 fields found bar graphs are used incorrectly for continuous data more often than correctly for counts or proportions, at rates of 4%-58% by field in 2020, with improvement in only some fields."
+  },
+  {
+    "id": "A5",
+    "status": "verified",
+    "ama": "Bik EM, Fang FC, Kullas AL, Davis RJ, Casadevall A. Analysis and correction of inappropriate image duplication: the Molecular and Cellular Biology experience. Mol Cell Biol. 2018;38(20):e00309-18. doi:10.1128/MCB.00309-18",
+    "pmid": "30037982",
+    "doi": "10.1128/MCB.00309-18",
+    "corrections": "New (image-integrity screening).",
+    "key_point": "Of 960 MCB papers (2009-2016), 59 (6.1%) contained inappropriately duplicated images (41 corrections, 5 retractions); pre-publication screening flagged 12 of 83 accepted manuscripts (14.5%) and took about 30 minutes per problem paper versus about 6 hours of staff time after publication."
+  },
+  {
+    "id": "A6",
+    "status": "verified",
+    "ama": "Stevens HP, Winegar CV, Oakley AF, Piccolo SR. Identifying images in the biology literature that are problematic for people with a color-vision deficiency. eLife. 2024;13:RP95524. doi:10.7554/eLife.95524",
+    "pmid": "39259199",
+    "doi": "10.7554/eLife.95524",
+    "corrections": "New (CVD accessibility of figures).",
+    "key_point": "Of 4964 eLife images (2012-2022), 636 (12.8%) were judged hard for deuteranopes to interpret, most often in cell-oriented disciplines and declining over time; the authors provide a classifier and a web app that simulates deuteranopia."
+  },
+  {
+    "id": "A7",
+    "status": "verified",
+    "ama": "Chapman SJ, Grossman RC, FitzPatrick MEB, Brady RRW. Randomized controlled trial of plain English and visual abstracts for disseminating surgical research via social media. Br J Surg. 2019;106(12):1611-1616. doi:10.1002/bjs.11307",
+    "pmid": "31577372",
+    "doi": "10.1002/bjs.11307",
+    "corrections": "New (visual abstracts).",
+    "key_point": "In a three-arm RCT of 41 BJS manuscripts promoted on Twitter, visual abstracts drew significantly more engagements than plain English abstracts (P<.001), mostly from health care professionals; public engagement was low in all arms."
+  },
+  {
+    "id": "A8",
+    "status": "verified",
+    "ama": "Borkin MA, Gajos KZ, Peters A, et al. Evaluation of artery visualizations for heart disease diagnosis. IEEE Trans Vis Comput Graph. 2011;17(12):2479-2488. doi:10.1109/TVCG.2011.192",
+    "pmid": "22034369",
+    "doi": "10.1109/TVCG.2011.192",
+    "corrections": "New (perceptually appropriate vs rainbow colormaps, clinical task).",
+    "key_point": "In a quantitative study with domain experts locating low endothelial shear stress in coronary arteries, 2D representations were more accurate and efficient than 3D, and a perceptually appropriate colour map caused fewer diagnostic mistakes than a rainbow map."
+  },
+  {
+    "id": "ALT1",
+    "status": "verified",
+    "ama": "Pocock SJ, Travison TG, Wruck LM. Figures in clinical trial reports: current practice & scope for improvement. Trials. 2007;8:36. doi:10.1186/1745-6215-8-36",
+    "pmid": "18021449",
+    "doi": "10.1186/1745-6215-8-36",
+    "corrections": "Optional alternate (KM and forest plots in trial reports); a different Pocock paper from #5.",
+    "key_point": "In 77 RCT reports from five general medical journals, flow diagrams, Kaplan-Meier plots, forest plots and repeated-measures plots made up 92% of figures, with wide variation in style and content; guidelines are given for each type."
+  },
+  {
+    "id": "ALT2",
+    "status": "verified",
+    "ama": "Underwood CJ, Faragher EB, Charlesworth D. The uses and abuses of life-table methods in vascular surgery. Br J Surg. 1984;71(7):495-498. doi:10.1002/bjs.1800710705",
+    "pmid": "6733419",
+    "doi": "10.1002/bjs.1800710705",
+    "corrections": "Optional alternate (vascular-surgery patency curves).",
+    "key_point": "Recommends standardized patency curves in vascular surgery: step rather than continuous curves, the number of patients remaining shown at intervals, and a stricter definition of how long a curve is claimed to hold."
+  },
+  {
+    "id": "ALT3",
+    "status": "verified",
+    "ama": "Reda K, Szafir DA. Rainbows revisited: modeling effective colormap design for graphical inference. IEEE Trans Vis Comput Graph. 2021;27(2):1032-1042. doi:10.1109/TVCG.2020.3030439",
+    "pmid": "33048735",
+    "doi": "10.1109/TVCG.2020.3030439",
+    "corrections": "Optional alternate; contrasting evidence to #20 (and #4) flagged by Scite.",
+    "key_point": "Contrary to conventional guidance, participants in two graphical-inference experiments were more accurate with colormaps that cross many nameable colours, such as rainbow, and showed no evidence of inferring false data features."
+  }
+]

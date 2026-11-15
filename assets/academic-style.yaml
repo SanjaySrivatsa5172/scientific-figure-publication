@@ -1,47 +1,78 @@
-# Machine-readable publication limits. The validator treats these as gates,
-# not suggestions. A venue exception is an audit note until a person waives it.
-version: 1
-geometry:
-  single_column_mm: 85
-  double_column_mm: 178
-  single_column_range_mm: [82, 90]
-  double_column_range_mm: [170, 190]
-  note: >
-    These are starting canvases. A named journal does not authorize a guessed
-    width. Use the current author guide when the user supplies it.
-typography:
-  primary_family: Arial
-  fallback_families: ["Liberation Sans", "Helvetica", "DejaVu Sans"]
-  monospace_for_code_only: ["Liberation Mono", "DejaVu Sans Mono", "Consolas"]
-  max_families: 2
-  max_visible_sizes: 3
-  manuscript_body_pt: [8, 9]
-  manuscript_minimum_pt: 7
-  panel_label_pt: [9, 10]
-  slide_body_pt: [14, 18]
-  poster_body_pt: [18, 28]
-stroke_pt:
-  supporting: [0.6, 1.0]
-  primary: [0.8, 1.4]
-  emphasis_max: 1.6
-color:
-  max_semantic_hues: 5
-  notation: "#RRGGBB"
-  background: "#FFFFFF"
-  min_text_contrast: 4.5
-effects:
-  gradient: false
-  shadow: false
-  glass: false
-  bevel: false
-  three_dimensional_bars: false
-  emoji: false
-  dark_background: false
-  generative_final_art: false
-export:
-  masters: [svg, pdf]
-  review_raster: png
-  min_png_dpi: 300
-  dense_bar_dpi: 600
-  tight_bbox_for_assembled_panels: false
-  svg_fonttype: none
+{
+  "version": 3,
+  "geometry": {
+    "single_column_width_mm": 85.0,
+    "double_column_width_mm": 178.0,
+    "single_column_range_mm": [82.0, 90.0],
+    "double_column_range_mm": [170.0, 180.0],
+    "require_canvas_boundary": true,
+    "default_canvas": {
+      "single": [560.0, 420.0],
+      "double": [1080.0, 480.0]
+    }
+  },
+  "typography": {
+    "primary_family": "Arial",
+    "allowed_families": ["Arial", "Helvetica", "sans-serif"],
+    "monospace_families": ["SFMono-Regular", "Menlo", "Consolas", "monospace"],
+    "minimum_final_text_pt": 7.0,
+    "minimum_panel_label_pt": 8.0,
+    "minimum_text_contrast_ratio": 4.5,
+    "preferred_body_pt": [8.0, 9.0],
+    "preferred_panel_label_pt": [9.0, 10.0],
+    "maximum_visible_type_sizes": 3,
+    "monospace_only_for_code": true
+  },
+  "stroke": {
+    "minimum_supporting_pt": 0.8,
+    "primary_range_pt": [1.0, 1.4],
+    "maximum_emphasis_pt": 1.6
+  },
+  "color": {
+    "maximum_semantic_hues": 5,
+    "require_rrggbb_notation": true,
+    "paper_palette_schema_version": 1,
+    "require_frozen_paper_palette_for_multi_figure_work": true,
+    "forbid_per_figure_drift_when_paper_palette_is_bound": true,
+    "require_palette_id_and_sha256_when_bound": true,
+    "palette": {
+      "canvas": "#FFFFFF",
+      "ink": "#172033",
+      "muted": "#5B6472",
+      "stroke": "#CBD5E1",
+      "neutral": "#64748B",
+      "accent": "#0072B2",
+      "secondary": "#882255",
+      "success": "#15803D",
+      "warning": "#8C510A",
+      "danger": "#BB5566"
+    }
+  },
+  "icons": {
+    "maximum_families": 1,
+    "maximum_per_node": 1,
+    "require_square_geometry": true,
+    "size_fraction_of_node_height": [0.2, 0.32],
+    "require_vector": true,
+    "require_embedded_drawio_data_uri": true,
+    "require_source_manifest": true
+  },
+  "effects": {
+    "allow_gradient": false,
+    "allow_shadow": false,
+    "allow_glass": false,
+    "allow_comic": false,
+    "allow_three_dimensional": false,
+    "allow_animation_in_submission": false,
+    "allow_dark_background": false,
+    "allow_emoji": false,
+    "allow_raster_image_cells": false
+  },
+  "export": {
+    "vector_masters": ["svg", "pdf"],
+    "review_raster": "png",
+    "minimum_png_dpi": 300,
+    "final_border_px": 0,
+    "require_accessible_svg_metadata": true
+  }
+}

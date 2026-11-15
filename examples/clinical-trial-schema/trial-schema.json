@@ -1,0 +1,62 @@
+{
+ "metadata": {
+  "title": "Trial schema",
+  "description": "Patients with PAD randomized to drug-coated balloon or plain balloon angioplasty, followed for 12 months for primary patency."
+ },
+ "figure": {
+  "column": "double",
+  "layout": "pipeline",
+  "direction": "horizontal"
+ },
+ "nodes": [
+  {
+   "id": "pts",
+   "label": "Patients with PAD",
+   "subtitle": "n = 400",
+   "icon": "fetched-users-round"
+  },
+  {
+   "id": "rand",
+   "label": "Randomized 1:1",
+   "icon": "fetched-clipboard-check",
+   "tone": "neutral"
+  },
+  {
+   "id": "dcb",
+   "label": "Drug-coated balloon",
+   "icon": "fetched-syringe",
+   "tone": "accent"
+  },
+  {
+   "id": "fu",
+   "label": "12-month follow-up",
+   "icon": "fetched-calendar-days",
+   "tone": "neutral"
+  },
+  {
+   "id": "out",
+   "label": "Primary patency",
+   "icon": "fetched-heart-pulse",
+   "tone": "success"
+  }
+ ],
+ "edges": [
+  {
+   "from": "pts",
+   "to": "rand"
+  },
+  {
+   "from": "rand",
+   "to": "dcb"
+  },
+  {
+   "from": "dcb",
+   "to": "fu"
+  },
+  {
+   "from": "fu",
+   "to": "out",
+   "label": "duplex ultrasound"
+  }
+ ]
+}

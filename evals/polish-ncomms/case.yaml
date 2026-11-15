@@ -1,0 +1,11 @@
+schema_version: "1.1"
+name: polish-ncomms
+expected_outcome: |
+  The bar-plus-SEM panel becomes every observation (n = 7 per group) with a defined summary and interval;
+  red/green becomes a color-vision-safe pair; the jet heatmap becomes a diverging colormap centered on 0
+  with a labeled colorbar (log₂ fold change); the exclamatory title and the unexplained "p<0.05 *" leave
+  the artwork (no P value printed without its test); the figure is rebuilt at a Nature Communications
+  width (88 or 180 mm) without tight cropping, with lines of at least 1 pt, 5 to 7 pt text, lowercase bold
+  panel labels, embedded TrueType fonts; changes.md explains every change with its reason.
+context:
+  scaffold_script: place-files.sh

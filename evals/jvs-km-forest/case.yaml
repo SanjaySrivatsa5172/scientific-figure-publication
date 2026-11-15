@@ -1,0 +1,12 @@
+schema_version: "1.1"
+name: jvs-km-forest
+expected_outcome: |
+  A JVS-compliant two-panel figure (vector PDF plus raster) built at a JVS preset width with text of at
+  least 10 pt: panel A a Kaplan-Meier freedom-from-CD-TLR plot by arm with numbers at risk and the JVS
+  truncation rule (standard error above 10%) applied or stated; panel B a log-scale forest plot with the
+  supplied hazard ratios, events/n columns, and a null line at 1. The supplied overall HR (0.62, 95% CI
+  0.41-0.93) is shown, not recomputed. Uppercase panel labels. A legend without em dashes that defines
+  n, CIs, abbreviations, and any P values in AMA style. The figure script runs from the project folder
+  with copied helpers and passes figure_qa without FAIL findings.
+context:
+  scaffold_script: place-files.sh

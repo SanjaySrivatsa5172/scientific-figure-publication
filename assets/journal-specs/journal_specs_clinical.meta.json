@@ -1,0 +1,20 @@
+{
+ "dataset": "Figure/artwork submission requirements for clinical and cardiovascular journals",
+ "retrieved": "2026-11-14",
+ "method": "Every value was read from the journal or publisher official author-instruction page or linked official PDF/template fetched on 2026-11-14 (direct download where allowed, otherwise Firecrawl scrape). No third-party sources. Quotes are verbatim except: bracketed text [..] is an annotation added by the compiler; \"...\" marks omitted text; \" | \" separates separate passages. \"not stated\" means the pages read do not state it.",
+ "field_key": {
+  "widths": "figure widths (single / 1.5 / double column) as stated",
+  "max_height": "maximum figure height",
+  "resolution": "minimum resolution at final size by image type",
+  "formats": "accepted/preferred file formats; vector/editable preference",
+  "fonts": "font family, size limits, embedding/outlining",
+  "color_mode_and_charges": "RGB vs CMYK and colour charges",
+  "line_weight": "minimum line weight",
+  "panel_labels": "panel label style/placement",
+  "special_figures": "central illustration / visual / graphical abstract / cover image",
+  "image_integrity": "image manipulation policy",
+  "patient_images": "identifiable patient images / consent",
+  "chart_specific_and_unusual": "chart rules, legend limits, figure-count limits",
+  "statistics_style": "P-value, CI, effect-size presentation, house style manual"
+ }
+}

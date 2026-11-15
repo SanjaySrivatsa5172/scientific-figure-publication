@@ -1,0 +1,2479 @@
+[
+  {
+    "journal": "Nature",
+    "publisher": "Springer Nature (Nature Portfolio)",
+    "source_urls": [
+      "https://www.nature.com/nature/for-authors/final-submission",
+      "https://www.nature.com/nature/for-authors/formatting-guide",
+      "https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/",
+      "https://research-figure-guide.nature.com/figures/building-and-exporting-figure-panels/",
+      "https://research-figure-guide.nature.com/figures/image-integrity/",
+      "https://research-figure-guide.nature.com/figures/extended-data-formatting-guidelines/",
+      "https://research-figure-guide.nature.com/covers/",
+      "https://www.nature.com/nature-portfolio/editorial-policies/image-integrity",
+      "https://www.nature.com/documents/nr-reporting-summary-flat.pdf"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": {
+          "single_column": "89 mm",
+          "one_and_half_column": "120–136 mm",
+          "double_column": "183 mm"
+        },
+        "quote": "For guidance, Nature's standard figure sizes are 89 mm wide (single column) and 183 mm wide (double column). The full depth of a Nature page is 247 mm. Figures can also be a column-and-a-half where necessary (120–136 mm).",
+        "source": "https://www.nature.com/nature/for-authors/final-submission",
+        "note": "CONFLICT: the Nature formatting guide (https://www.nature.com/nature/for-authors/formatting-guide) says: \"For guidance, Nature's standard figure sizes are 90 mm (single column) and 180 mm (double column) and the full depth of the page is 170 mm.\" The research figure guide (https://research-figure-guide.nature.com/figures/building-and-exporting-figure-panels/) agrees with 89/183 mm: \"The widths of printed figures are: 89 mm (single column) 183 mm (double column)\"."
+      },
+      "max_height": {
+        "value": "170 mm (figure, leaving room for the legend); full page depth 247 mm",
+        "quote": "The maximum height for a Nature figure is 170 mm, to allow space for the figure legend to fit underneath.",
+        "source": "https://research-figure-guide.nature.com/figures/building-and-exporting-figure-panels/",
+        "note": "Final-submission page gives 'The full depth of a Nature page is 247 mm.' Formatting guide gives 'the full depth of the page is 170 mm.'"
+      },
+      "resolution": {
+        "value": {
+          "line_art": "vector required for main figures (no dpi given)",
+          "halftone_photo": "minimum 300 dpi at the maximum size used (final-submission page); research figure guide export checklist says minimum 450 dpi",
+          "combination": "not stated separately (vector artwork with embedded images)",
+          "extended_data": "maximum 300 ppi, file <= 10 MB"
+        },
+        "quote": "All photographic images must be supplied at a minimum of 300 dpi at the maximum size they can be used. [research figure guide:] All photographic images must be supplied at a minimum of 300 dpi. The maximum dpi of online proofs is 450 dpi; supplying images at 450 dpi or above ensures they will have the highest resolution possible. ... For images, minimum 450 dpi",
+        "source": "https://www.nature.com/nature/for-authors/final-submission ; https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/",
+        "note": "Final-submission page also says: 'Layered Photoshop (PSD) or TIFF format (high resolution, 300–600 dots per inch (dpi) for photographic images.' Extended Data: 'Images should be supplied at maximum 300 p.p.i.'"
+      },
+      "file_formats": {
+        "value": {
+          "main_figures": "vector required: .ai, .eps, .pdf preferred; acceptable: layered PSD, PowerPoint (save to PDF), plain .svg, Excel, .ps",
+          "not_accepted_main": ".jpeg, .tiff, .png, Canvas, DeltaGraph, Tex, ChemDraw, SigmaPlot, Coreldraw",
+          "extended_data": "JPEG (preferred), TIFF or EPS, RGB, <= 10 MB",
+          "vector": "required"
+        },
+        "quote": "For main figures we require vector files with editable layers Nature’s preferred formats are: .ai .eps .pdf (please choose to retain all editing capabilities) Acceptable formats: Layered Photoshop files ... Powerpoint (please save .ppt to .pdf first to avoid Mac/Windows corruption issues). .svg (if saving from Inkscape, please choose to save as plain svg and not Inkscape svg) Excel .ps (postscript) We do not accept the following formats: .jpeg, .tiff, .png, Canvas, DeltaGraph, Tex, ChemDraw, SigmaPlot, Coreldraw. Please limit file sizes to 50 MB where possible and ensure that all components are embedded (not linked) in the file.",
+        "source": "https://research-figure-guide.nature.com/figures/building-and-exporting-figure-panels/",
+        "note": "CONFLICT: the final-submission page (https://www.nature.com/nature/for-authors/final-submission) lists Layered PSD or TIFF as preferred for photographic images and says 'If these formats are not possible, we can also accept the following formats: JPEG (high-resolution, 300–600 dpi), CorelDraw (up to version 8), Microsoft Word, Excel or PowerPoint.'"
+      },
+      "fonts": {
+        "value": {
+          "family": "sans-serif, preferably Helvetica or Arial (same font in all figures); amino-acid sequences in Courier; Symbol font for Greek",
+          "min_pt": 5,
+          "max_pt": 7,
+          "panel_label_pt": 8
+        },
+        "quote": "Lettering should be in a sans-serif typeface, preferably Helvetica or Arial, the same font throughout all figures in the paper. ... Separate panels in multi-part figures should each be labelled with 8 pt bold, upright (not italic) a, b, c. Maximum text size for all other text should be 7 pt; minimum text size should be 5 pt. Amino-acid sequences should be presented in one-letter code in Courier.",
+        "source": "https://www.nature.com/nature/for-authors/final-submission"
+      },
+      "font_embedding_outlining": {
+        "value": "Do not outline/rasterize text; embed fonts as TrueType 2 or 42 (not Type 3); matplotlib pdf.fonttype=42",
+        "quote": "Do not rasterize or covert text to outlines. [research figure guide:] Do not outline text Embed fonts (True Type 2 or 42, do not select TrueType 3) If you are using Python please use the following setting: Matplotlib.rcParams['pdf.fonttype']=42",
+        "source": "https://www.nature.com/nature/for-authors/final-submission ; https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/"
+      },
+      "color_mode": {
+        "value": "RGB recommended (CMYK accepted on final-submission page); Extended Data must be RGB",
+        "quote": "Colour artwork can be provided in RGB (recommended) or CMYK format. ... [Extended Data:] Files should be saved in RGB (not CMYK) for maximum colour saturation and smaller file size.",
+        "source": "https://www.nature.com/nature/for-authors/final-submission",
+        "note": "Research figure guide: 'We recommend supplying your artwork in the RGB colour spectrum.' and lists 'artwork supplied in the CMYK colour space' under 'Avoid'."
+      },
+      "line_weight": {
+        "value": "0.25–1 pt at final size",
+        "quote": "Line weights and strokes should be set between 0.25 and 1 pt at the final size (lines thinner than 0.25 pt may vanish in print). Do not rasterize or outline these lines if possible.",
+        "source": "https://www.nature.com/nature/for-authors/final-submission"
+      },
+      "panel_labels": {
+        "value": "lowercase bold upright a, b, c at 8 pt",
+        "quote": "Separate panels in multi-panelled figures should be labelled with 8-pt bold, upright (not italic) and lowercase a, b, c, etc.",
+        "source": "https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/"
+      },
+      "special_figures": {
+        "value": {
+          "cover": "213 mm x 285 mm incl. 3 mm bleed top/bottom/right; >= 300 dpi at actual size; .psd/.tiff/.jpeg/.png",
+          "extended_data_page": "max 180 mm wide x 170 mm tall (research figure guide); final-submission page says max page 18 cm x 24 cm",
+          "graphical_abstract": "not stated",
+          "etoc": "not stated"
+        },
+        "quote": "Our covers are 213mm x 285mm. This includes a 3mm bleed on the top, bottom and right. Files should be at least 300 dpi at actual size, in .psd, .tiff, ,jpeg or .png formats.",
+        "source": "https://research-figure-guide.nature.com/covers/",
+        "note": "CONFLICT (Extended Data): research figure guide says 'Maximum page dimensions are 180 mm wide by 170 mm tall (170 mm to fit a legend underneath).' while the final-submission page says 'The maximum page dimension is 18 cm by 24 cm.'"
+      },
+      "image_integrity": {
+        "value": "Minimal, whole-image, equal-to-controls adjustments only; no cloning/healing/generative tools; disclose nonlinear adjustments; unprocessed gels/blots required at acceptance (life sciences); no generative AI in figures",
+        "quote": "Digital images submitted with a manuscript for review should be minimally processed. A certain degree of image processing is acceptable for publication (and for some experiments, fields and techniques is unavoidable), but the final image must correctly represent the original data and conform to community standards. ... The use of touch-up tools, such as cloning and healing tools in Photoshop, or any feature that deliberately obscures manipulations, is unacceptable. Processing (such as changing brightness and contrast) is appropriate only when it is applied equally across the entire image and is applied equally to controls. Contrast should not be adjusted so that data disappear. ... Quantitative comparisons between samples on different gels/blots are strongly discouraged; if this is unavoidable, the figure legend must state that the samples derive from the same experiment or parallel experiments and that gels/blots were processed in parallel. Re-arranged lanes that are non-adjacent in the gel must be clearly indicated in a manner that delineates the boundary between the lanes. ... Loading controls (e.g. GAPDH, actin) must be run on the same blot. ... High-contrast gels and blots are discouraged, as overexposure may mask additional bands. ... If \"pseudo-colouring\" and nonlinear adjustment (for example \"gamma changes\") are used, this must be disclosed. [research figure guide:] The use of any sort of generative AI in figures is not permitted. This includes content-aware editing tools in Photoshop.",
+        "source": "https://www.nature.com/nature-portfolio/editorial-policies/image-integrity ; https://research-figure-guide.nature.com/figures/image-integrity/",
+        "note": "Nature Portfolio policy also says: 'All life science papers published in Nature Portfolio journals require submission of unprocessed original images of gels and western blots to be submitted with the final accepted version.'"
+      },
+      "chart_specific": {
+        "value": [
+          "Axis lines and tick marks required; axes labelled with units in parentheses, e.g. Data (unit)",
+          "Accessible (colour-blind-safe) palette required; avoid red/green combinations and rainbow scales",
+          "Avoid background gridlines, drop shadows, patterns, decorative icons, coloured text, overlapping text",
+          "Use keylines/keys rather than colour descriptions in captions",
+          "All error bars and statistics must be defined in the figure legend",
+          "Scale bars rather than magnification factors; keep scale bar on a separate editable layer",
+          "Reporting Summary requires exact n per group, the test used and whether one- or two-sided, central tendency AND variation, exact P values where suitable",
+          "Explicit 'show individual data points for small n' rule: NOT FOUND in any Nature source fetched"
+        ],
+        "quote": "We require Axis lines and tick marks to be included All axes to be labelled with units in parentheses, e.g. Data (unit) An accessible colour palette to be used ... We avoid Background gridlines Superfluous icons and other decorative elements Drop shadows Patterns ... Coloured text; keylines, keys, etc. should be used instead [build page:] Avoiding red/green combinations and rainbow scales helps readers with colour blindness todistinguish datasets and interpret data correctly. [formatting guide:] All error bars and statistics must be defined in the figure legend, as discussed above.",
+        "source": "https://research-figure-guide.nature.com/figures/preparing-figures-our-specifications/ ; https://research-figure-guide.nature.com/figures/building-and-exporting-figure-panels/ ; https://www.nature.com/nature/for-authors/formatting-guide ; https://www.nature.com/documents/nr-reporting-summary-flat.pdf"
+      }
+    },
+    "notes": "Three Nature pages disagree on widths/height (final-submission 89/120–136/183 mm, depth 247 mm; research figure guide 89/183 mm, max height 170 mm; formatting guide 90/180 mm, depth 170 mm) and on accepted formats (research figure guide rejects JPEG/TIFF/PNG for main figures; final-submission page accepts TIFF/PSD/JPEG). The research figure guide is the most detailed and recent-looking source; the 89/183 mm widths are confirmed by two of the three pages.",
+    "retrieval_method": "HTML via curl (nature.com, research-figure-guide.nature.com); Reporting Summary PDF via curl + pdftotext"
+  },
+  {
+    "journal": "Nature Medicine",
+    "publisher": "Springer Nature (Nature Portfolio)",
+    "source_urls": [
+      "https://www.nature.com/nm/submission-guidelines/aip-and-formatting",
+      "https://www.nature.com/documents/NRJs-guide-to-preparing-final-artwork.pdf",
+      "https://www.nature.com/nature-portfolio/editorial-policies/image-integrity",
+      "https://research-figure-guide.nature.com/covers/"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": {
+          "single_column": "88 mm",
+          "double_column": "180 mm",
+          "max_width": "180 mm",
+          "other_content (Perspectives, Reviews etc.)": "58 / 121 / 185 mm (1/2/3-column)"
+        },
+        "quote": "Figure panels should be prepared at a minimum resolution of 300 dpi and saved at a maximum width of 180 mm. [NRJ guide, Original research and review content:] 1-column width: 88mm 2-column width: 180mm [All other content:] 1-column width: 58mm 2-column width: 121mm 3-column width: 185mm",
+        "source": "https://www.nature.com/nm/submission-guidelines/aip-and-formatting ; https://www.nature.com/documents/NRJs-guide-to-preparing-final-artwork.pdf",
+        "note": "NRJ guide quotes transcribed from a rendered image of the 2-page PDF (its text layer is not extractable). 1.5-column width not stated."
+      },
+      "max_height": {
+        "value": {
+          "caption<300 words": "~130 mm (1-col) / ~185 mm (2-col)",
+          "caption<150 words": "~180 mm / ~210 mm",
+          "caption<50 words": "~220 mm / ~225 mm"
+        },
+        "quote": "Length of figure caption | Maximum height of figure | 1-column (88mm) width figures | 2-column (180mm) width figures | <300 words ~130 mm ~185 mm | <150 words ~180 mm ~210 mm | <50 words ~220 mm ~225 mm",
+        "source": "https://www.nature.com/documents/NRJs-guide-to-preparing-final-artwork.pdf",
+        "note": "Transcribed from the table in the rendered NRJ PDF."
+      },
+      "resolution": {
+        "value": {
+          "halftone_photo": ">= 300 dpi at maximum size",
+          "line_art": "vector (AI/EPS/PDF)",
+          "combination": "bitmap parts >= 300 dpi placed in vector layout"
+        },
+        "quote": "Figure panels should be prepared at a minimum resolution of 300 dpi ... [NRJ:] All photos and complex technical illustrations, e.g. 3D-rendered graphics, should be directly saved/scanned in at least 300 dpi resolution at the maximum size that they could be used. ... Place all bitmapped images into the layout application at 300 dpi or at the native resolution if captured at less than the optimal 300 dpi.",
+        "source": "https://www.nature.com/nm/submission-guidelines/aip-and-formatting ; https://www.nature.com/documents/NRJs-guide-to-preparing-final-artwork.pdf"
+      },
+      "file_formats": {
+        "value": {
+          "vector": "AI, EPS, PDF (vector preferred for line art)",
+          "bitmap": "photos as bitmap files",
+          "final_layout_recommended": "AI, EPS, PDF, PPT",
+          "final_layout_not_accepted": "BMP, GIF, GIMP, JPG, PNG, Tex, TIFF"
+        },
+        "quote": "Save graphs, charts, schematics or other line art as vector files. Save photographs or complex illustrations as bitmap files. Vector files: AI, EPS, PDF ... We cannot use bitmapped file types such as BMP, GIF, GIMP, JPG, PNG, Tex or TIFF for vector art. ... When combining different figure parts into one file for layout, use a vector-based application such as Adobe Illustrator or Microsoft Powerpoint. - We recommend: AI, EPS, PDF, PPT • Do not use applications that do not support vector format. - We do not accept: BMP, GIF, GIMP, JPG, PNG, Tex, TIFF",
+        "source": "https://www.nature.com/documents/NRJs-guide-to-preparing-final-artwork.pdf"
+      },
+      "fonts": {
+        "value": {
+          "family": "sans-serif (preferably Helvetica or Arial); Symbol font for Greek",
+          "min_pt": 5,
+          "max_pt": 7
+        },
+        "quote": "Use a 5–7 pt san serif font for standard text labelling and Symbol font for Greek characters. [NRJ:] All text should be sans-serif typeface, preferably Helvetica or Arial. Maximum text size is 7pt. Minimum text size is 5pt.",
+        "source": "https://www.nature.com/nm/submission-guidelines/aip-and-formatting ; https://www.nature.com/documents/NRJs-guide-to-preparing-final-artwork.pdf"
+      },
+      "font_embedding_outlining": {
+        "value": "Text must stay editable (not flattened); explicit embedding rule not stated",
+        "quote": "Do not flatten labelling or scale/error bars onto images – uneditable or low-resolution images are two of the most common reasons for delay in manuscript preparation.",
+        "source": "https://www.nature.com/nm/submission-guidelines/aip-and-formatting"
+      },
+      "color_mode": {
+        "value": "RGB for original research; CMYK for Perspectives, Progress Articles and Review Articles",
+        "quote": "Original research content should be supplied in RGB colour mode. All other content (including Perspectives, Progress Articles and Review Articles) should be supplied in CMYK colour mode.",
+        "source": "https://www.nature.com/documents/NRJs-guide-to-preparing-final-artwork.pdf"
+      },
+      "line_weight": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://www.nature.com/nm/submission-guidelines/aip-and-formatting",
+          "https://www.nature.com/documents/NRJs-guide-to-preparing-final-artwork.pdf"
+        ]
+      },
+      "panel_labels": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://www.nature.com/nm/submission-guidelines/aip-and-formatting",
+          "https://www.nature.com/documents/NRJs-guide-to-preparing-final-artwork.pdf"
+        ],
+        "note": "Example figure in the NRJ guide shows bold lowercase 'a', 'b', but no rule is stated in text."
+      },
+      "special_figures": {
+        "value": {
+          "cover": "no dimensions on NM page; it points to the Nature cover guide (213 x 285 mm incl. 3 mm bleed, >= 300 dpi)",
+          "graphical_abstract": "not stated"
+        },
+        "quote": "Authors of accepted papers are encouraged to submit images related to their research for consideration as an issue cover ... Images created with Generative AI (such as from DALL-E, Stable Diffusion, and Midjourney) are not permitted. View additional cover guidance in the Nature guide.",
+        "source": "https://www.nature.com/nm/submission-guidelines/aip-and-formatting"
+      },
+      "image_integrity": {
+        "value": "Nature Portfolio image integrity policy (shared)",
+        "quote": "Digital images submitted with a manuscript for review should be minimally processed. A certain degree of image processing is acceptable for publication (and for some experiments, fields and techniques is unavoidable), but the final image must correctly represent the original data and conform to community standards. ... The use of touch-up tools, such as cloning and healing tools in Photoshop, or any feature that deliberately obscures manipulations, is unacceptable. Processing (such as changing brightness and contrast) is appropriate only when it is applied equally across the entire image and is applied equally to controls. Contrast should not be adjusted so that data disappear. ... Quantitative comparisons between samples on different gels/blots are strongly discouraged; if this is unavoidable, the figure legend must state that the samples derive from the same experiment or parallel experiments and that gels/blots were processed in parallel. Re-arranged lanes that are non-adjacent in the gel must be clearly indicated in a manner that delineates the boundary between the lanes. ... Loading controls (e.g. GAPDH, actin) must be run on the same blot. ... High-contrast gels and blots are discouraged, as overexposure may mask additional bands. ... If \"pseudo-colouring\" and nonlinear adjustment (for example \"gamma changes\") are used, this must be disclosed.",
+        "source": "https://www.nature.com/nature-portfolio/editorial-policies/image-integrity"
+      },
+      "chart_specific": {
+        "value": [
+          "Legends must give centre values, define all error bars and how calculated, n, statistical test and P values",
+          "Use scale bars, not magnification factors; include error bars where appropriate",
+          "Use verbal cues for keys (e.g. 'open red triangles'), not visual cues or symbols",
+          "Source data: unprocessed gels/blots as PDF per figure; statistics source data in Excel, one file per figure"
+        ],
+        "quote": "Use scale bars, not magnification factors, and include error bars where appropriate. ... Use verbal cues to describe keys, eg. \"open red triangles\", not visual cues or symbols. Include a description of centre values (median or average) and all error bars and how they were calculated. Give an indication of sample size (n number), state the statistical test used and provide P values. ... Full-length, unprocessed gels and blots must be provided as source data for any relevant figures ... Statistics source data should be provided in Excel format, one file for each relevant figure",
+        "source": "https://www.nature.com/nm/submission-guidelines/aip-and-formatting",
+        "note": "CONFLICT with Nature Communications/Scientific Reports, which say 'In legends, please use visual cues rather than verbal explanations such as \"open red triangles\"'."
+      }
+    },
+    "notes": "Nature Medicine's page links to the 'Nature branded research journals – guide to preparing final artwork' PDF (NRJs-guide-to-preparing-final-artwork.pdf, created Jan 2021). Its 88/180 mm widths differ from Nature's 89/183 mm.",
+    "retrieval_method": "HTML via curl; NRJ artwork-guide PDF has no text layer, so it was rendered with pdftoppm and transcribed from the page image"
+  },
+  {
+    "journal": "Nature Communications",
+    "publisher": "Springer Nature (Nature Portfolio)",
+    "source_urls": [
+      "https://www.nature.com/ncomms/submit/how-to-submit",
+      "https://www.nature.com/nature-portfolio/editorial-policies/image-integrity"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": {
+          "single_column": "88 mm (>= 1,040 px)",
+          "double_column": "180 mm (>= 2,080 px)",
+          "one_and_half_column": "not stated",
+          "page": "210 x 276 mm pdf page"
+        },
+        "quote": "A single column width measures 88 mm and a double column width measures 180 mm. In practice this means that the absolute width of single-column figures should be no less than 1,040 pixels wide and double-column figures should be no less than 2,080 pixels wide (excluding peripheral white space).",
+        "source": "https://www.nature.com/ncomms/submit/how-to-submit",
+        "note": "Also: 'For optimal results, prepare figures to fit the pdf page size (210 x 276 mm)'. One- or two-column format figures are required."
+      },
+      "max_height": {
+        "value": "not stated as a figure height; pdf page is 210 x 276 mm",
+        "quote": "For optimal results, prepare figures to fit the pdf page size (210 x 276 mm), and supply the figure in the format in which they were compiled.",
+        "source": "https://www.nature.com/ncomms/submit/how-to-submit"
+      },
+      "resolution": {
+        "value": {
+          "line_art": "vector; if not possible 1,200 DPI",
+          "halftone_photo": "TIFF, minimum 300 DPI",
+          "combination": "not stated"
+        },
+        "quote": "If line-art figures cannot be supplied as vector files they should be supplied at 1,200 DPI and prepared to fit the page size. ... All photographic and bitmapped images should be supplied in TIFF format at a minimum of 300 DPI and as close to the page size as possible.",
+        "source": "https://www.nature.com/ncomms/submit/how-to-submit"
+      },
+      "file_formats": {
+        "value": {
+          "line_art": "vector EPS, AI or PDF (Illustrator preferred; Word/PowerPoint accepted)",
+          "photos": "TIFF",
+          "vector": "required for line art (1,200 DPI raster fallback)"
+        },
+        "quote": "All line art, graphs, charts and schematics should be supplied in vector format, such as Encapsulated PostScript (.EPS), Adobe Illustrator (.AI), or Portable Document Format (.PDF), and should be saved or exported as such directly from the application in which they were made. We prefer to work with Adobe Illustrator but can accept Word and PowerPoint files.",
+        "source": "https://www.nature.com/ncomms/submit/how-to-submit"
+      },
+      "fonts": {
+        "value": {
+          "family": "clear sans-serif (e.g. Helvetica); Symbol font for Greek",
+          "min_pt": "not stated",
+          "max_pt": "not stated"
+        },
+        "quote": "Figure lettering should be in a clear, sans-serif typeface (for example, Helvetica); if possible, the same typeface in approximately the same font size should be used for all figures in a paper. Use symbol font for Greek letters.",
+        "source": "https://www.nature.com/ncomms/submit/how-to-submit"
+      },
+      "font_embedding_outlining": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://www.nature.com/ncomms/submit/how-to-submit"
+        ]
+      },
+      "color_mode": {
+        "value": "RGB for colour photographs",
+        "quote": "Please supply colour photographic images in RGB colour mode.",
+        "source": "https://www.nature.com/ncomms/submit/how-to-submit"
+      },
+      "line_weight": {
+        "value": ">= 1 pt",
+        "quote": "The thinnest lines in the final figure should be no smaller than one point wide.",
+        "source": "https://www.nature.com/ncomms/submit/how-to-submit",
+        "note": "CONFLICT with Nature (0.25–1 pt) and Springer generic (>= 0.3 pt)."
+      },
+      "panel_labels": {
+        "value": "lowercase bold a, b, ... same size as other figure text",
+        "quote": "Figures divided into parts should be labelled with a lower-case bold a, b, and so on, in the same type size as used elsewhere in the figure.",
+        "source": "https://www.nature.com/ncomms/submit/how-to-submit"
+      },
+      "special_figures": {
+        "value": {
+          "featured_image": "optional 'image of the week'; no dimensions stated",
+          "graphical_abstract": "not stated",
+          "cover": "not stated"
+        },
+        "quote": "Authors of accepted papers are encouraged to submit images for consideration as an image of the week.",
+        "source": "https://www.nature.com/ncomms/submit/how-to-submit"
+      },
+      "image_integrity": {
+        "value": "Nature Portfolio image integrity policy (linked from the page); Lena image banned",
+        "quote": "Digital images submitted with a manuscript for review should be minimally processed. A certain degree of image processing is acceptable for publication (and for some experiments, fields and techniques is unavoidable), but the final image must correctly represent the original data and conform to community standards. ... The use of touch-up tools, such as cloning and healing tools in Photoshop, or any feature that deliberately obscures manipulations, is unacceptable. Processing (such as changing brightness and contrast) is appropriate only when it is applied equally across the entire image and is applied equally to controls. Contrast should not be adjusted so that data disappear. ... Quantitative comparisons between samples on different gels/blots are strongly discouraged; if this is unavoidable, the figure legend must state that the samples derive from the same experiment or parallel experiments and that gels/blots were processed in parallel. Re-arranged lanes that are non-adjacent in the gel must be clearly indicated in a manner that delineates the boundary between the lanes. ... Loading controls (e.g. GAPDH, actin) must be run on the same blot. ... High-contrast gels and blots are discouraged, as overexposure may mask additional bands. ... If \"pseudo-colouring\" and nonlinear adjustment (for example \"gamma changes\") are used, this must be disclosed. [Nature Communications page:] Nature Communications will no longer publish, or send out for peer review, manuscripts which use the image Lena.",
+        "source": "https://www.nature.com/nature-portfolio/editorial-policies/image-integrity ; https://www.nature.com/ncomms/submit/how-to-submit"
+      },
+      "chart_specific": {
+        "value": [
+          "Include error bars when appropriate and describe the statistical treatment in the legend",
+          "White backgrounds; avoid excessive boxing, unnecessary colour, 3D 'skyscraper' histograms",
+          "Do not truncate the vertical axis of histograms",
+          "Recolour green-and-red heatmaps/graphs; recolour primary data to green-magenta, turquoise-red, yellow-blue etc.",
+          "Scale bar length defined in the legend, not on the bar",
+          "Legends <= 350 words; use visual cues rather than verbal explanations",
+          "Source data file (Excel/zip) may be requested: numbers behind graphs and uncropped gels/blots"
+        ],
+        "quote": "When appropriate, figures should include error bars. A description of the statistical treatment of error analysis should be included in the figure legend. ... The vertical axis of histograms should not be truncated to exaggerate small differences. ... Many colourblind readers cannot interpret visuals that rely on discrimination of green and red, for example. Thus, we ask authors to recolour green-and-red heatmaps, graphs and schematics for which colours are chosen arbitrarily. ... Scale bars should be used rather than magnification factors, with the length of the bar defined in the legend rather than on the bar itself. In legends, please use visual cues rather than verbal explanations such as \"open red triangles\".",
+        "source": "https://www.nature.com/ncomms/submit/how-to-submit"
+      }
+    },
+    "notes": "Scale-bar rule conflicts with Scientific Reports (length defined on the bar). Line weight (>= 1 pt) conflicts with Nature.",
+    "retrieval_method": "HTML via curl"
+  },
+  {
+    "journal": "Scientific Reports",
+    "publisher": "Springer Nature (Nature Portfolio)",
+    "source_urls": [
+      "https://www.nature.com/srep/author-instructions/submission-guidelines"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://www.nature.com/srep/author-instructions/submission-guidelines"
+        ],
+        "note": "No column widths or maximum height are given on the submission guidelines page."
+      },
+      "max_height": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://www.nature.com/srep/author-instructions/submission-guidelines"
+        ]
+      },
+      "resolution": {
+        "value": {
+          "all_digitized_images": "300 DPI if possible",
+          "chemical_structures": "300 dpi RGB TIFF",
+          "line_art": "vector (EPS/AI)"
+        },
+        "quote": "All digitized images submitted with the final revision of the manuscript should be 300 DPI if possible. ... Structures should then be exported into a 300 dpi RGB tiff file before being submitted.",
+        "source": "https://www.nature.com/srep/author-instructions/submission-guidelines"
+      },
+      "file_formats": {
+        "value": {
+          "line_art": "vector EPS or AI (preferred)",
+          "photos": "tiff, jpg or psd",
+          "not_accepted": "Word or PowerPoint files with placed images"
+        },
+        "quote": "For optimal results, you should supply all line art, graphs, charts and schematics in vector format, such as EPS or AI. ... Please supply all photographic and bitmap images in a bitmap image format such as tiff, jpg, or psd. ... Please do not supply Word or Powerpoint files with placed images.",
+        "source": "https://www.nature.com/srep/author-instructions/submission-guidelines"
+      },
+      "fonts": {
+        "value": {
+          "family": "clear sans-serif (e.g. Helvetica); 'symbols' font for Greek",
+          "size": "same size in all figures; no pt values"
+        },
+        "quote": "Use a clear, sans-serif typeface (for example, Helvetica) for figure lettering. Use the same typeface in the same font size for all figures in your paper. For Greek letters, use a 'symbols' font.",
+        "source": "https://www.nature.com/srep/author-instructions/submission-guidelines"
+      },
+      "font_embedding_outlining": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://www.nature.com/srep/author-instructions/submission-guidelines"
+        ]
+      },
+      "color_mode": {
+        "value": "RGB or CMYK (not converted by the journal)",
+        "quote": "Images can be supplied as RGB or CMYK (note: we will not convert image colour modes).",
+        "source": "https://www.nature.com/srep/author-instructions/submission-guidelines"
+      },
+      "line_weight": {
+        "value": ">= 1 pt",
+        "quote": "The thinnest lines in the final figure should be no smaller than one point wide.",
+        "source": "https://www.nature.com/srep/author-instructions/submission-guidelines"
+      },
+      "panel_labels": {
+        "value": "lowercase bold a, b, c (same size as other figure text)",
+        "quote": "Figures divided into parts should be labelled with a lower-case, bold letter ( a, b, c and so on) in the same type size as used elsewhere in the figure.",
+        "source": "https://www.nature.com/srep/author-instructions/submission-guidelines"
+      },
+      "special_figures": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://www.nature.com/srep/author-instructions/submission-guidelines"
+        ]
+      },
+      "image_integrity": {
+        "value": "Cropped gels/blots allowed if stated in legend with uncropped originals in SI; follow Nature Portfolio policy",
+        "quote": "The display of cropped gels and blots in the main paper is encouraged if it improves the clarity and conciseness of the presentation. In such cases, the cropping must be mentioned in the figure legend and the supplementary information must include original gels and blots, with gel/membrane edges visible.",
+        "source": "https://www.nature.com/srep/author-instructions/submission-guidelines"
+      },
+      "chart_specific": {
+        "value": [
+          "Include error bars when appropriate; describe statistical treatment in legend",
+          "Never truncate the vertical axis of histograms",
+          "Scale bar length defined on the bar itself rather than in the legend",
+          "State test name, n, alpha, one/two-tailed and exact P values; label error bars; state SEM vs SD after ±",
+          "No colours in tables"
+        ],
+        "quote": "Never truncate the vertical axis of histograms to exaggerate small differences. ... Scale bars should be used rather than magnification factors, with the length of the bar defined on the bar itself rather than in the legend. ... Graphs should include clearly labelled error bars. You must state whether a number that follows the ± sign is a standard error (s.e.m.) or a standard deviation (s.d.).",
+        "source": "https://www.nature.com/srep/author-instructions/submission-guidelines"
+      }
+    },
+    "notes": "CONFLICT with Nature Communications on scale bars (SR: length on the bar; NC: length in the legend). Line weight >= 1 pt conflicts with Nature's 0.25–1 pt.",
+    "retrieval_method": "HTML via curl"
+  },
+  {
+    "journal": "Science",
+    "publisher": "AAAS",
+    "source_urls": [
+      "https://www.science.org/content/page/instructions-preparing-initial-manuscript",
+      "https://www.science.org/content/page/instructions-preparing-revised-manuscript",
+      "https://www.science.org/cms/asset/62583409-a188-466e-8cc0-6fb5f083bbff/author_prep_guide_2025.pdf"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": {
+          "1_column": "5.7 cm (2.24 in)",
+          "2_columns": "12.1 cm (4.76 in)",
+          "3_columns": "18.4 cm (7.24 in)"
+        },
+        "quote": "The width of figures, when printed, will usually be 5.7 cm (2.24 inches or 1 column), 12.1 cm (4.76 inches or 2 columns), or 18.4 cm (7.24 inches or 3 columns).",
+        "source": "https://www.science.org/content/page/instructions-preparing-initial-manuscript",
+        "note": "CONFLICT: the 2025 figure preparation guide PDF (https://www.science.org/cms/asset/62583409-a188-466e-8cc0-6fb5f083bbff/author_prep_guide_2025.pdf) shows '1 column = 21p3 picas (9 cm, or 3.6 in.)' and '2 column = 43p4 picas (18.3 cm, or 7.25 in.)'. Same 5.7/12.1/18.4 cm text appears on the revised-manuscript page."
+      },
+      "max_height": {
+        "value": "no numeric value; prep guide: 'Figure and legend must fit within this box' (page box)",
+        "quote": "Figure and legend must fit within this box",
+        "source": "https://www.science.org/cms/asset/62583409-a188-466e-8cc0-6fb5f083bbff/author_prep_guide_2025.pdf",
+        "note": "Transcribed from the rendered image of page 2 of the PDF (this label is not in the PDF text layer)."
+      },
+      "resolution": {
+        "value": {
+          "line_art_raster": ">= 300 dpi at final size, preferably higher (vector preferred)",
+          "grayscale_color": ">= 300 dpi at final size",
+          "photos (prep guide)": "300–500 dpi at final print size",
+          "initial_submission": "300 dpi"
+        },
+        "quote": "Line art that is not available as a vector file should have a resolution of at least 300 dots per inch (dpi), preferably higher, at final size ... Grayscale and color images should have a minimum resolution of 300 dpi at final size, and a higher resolution if possible. ... Upsampling of images (i.e., artificially increasing file size or resolution) is not permitted.",
+        "source": "https://www.science.org/content/page/instructions-preparing-revised-manuscript",
+        "note": "Prep guide: 'Photographic images should have a resolution of 300 to 500 dots per inch (dpi) at final print size'."
+      },
+      "file_formats": {
+        "value": {
+          "vector (preferred)": "PDF, EPS, AI",
+          "raster_line_art": "TIFF min 300 dpi",
+          "combination": "PDF or EPS",
+          "photos": "TIFF",
+          "not_accepted": "figures embedded in Word; PowerPoint",
+          "R graphs (prep guide)": "vector SVG"
+        },
+        "quote": "Vector illustrations and diagrams (preferred): Adobe Portable Document Format (PDF) Encapsulated PostScript (EPS), or Adobe Illustrator (AI) Raster illustrations and diagrams: Tagged Image File Format (TIFF), minimum 300 dpi Vector and raster combinations for photographs or microscopy images: Adobe Portable Document Format (PDF) or Encapsulated PostScript (EPS) Raster photographs or microscopy images: Tagged Image File Format (TIFF) ... we cannot accept: Figures embedded in Microsoft Word files Microsoft PowerPoint files",
+        "source": "https://www.science.org/content/page/instructions-preparing-revised-manuscript",
+        "note": "Prep guide: 'If you are making graphs in R, please save these as a vector svg.'"
+      },
+      "fonts": {
+        "value": {
+          "family": "sans-serif, Helvetica preferred (prep guide: Arial or Helvetica)",
+          "size_web_pages": "about 7 pt, not smaller than 5 pt",
+          "size_prep_guide": "labels 6–9 pt, max 3 sizes",
+          "panel_label_pt": 10
+        },
+        "quote": "Symbols and lettering should be large enough to be legible after reduction [a reduced size of about 7 points (2.5 mm) high, and not smaller than 5 points]. Avoid wide variation in type size within a single figure. ... Use a sans-serif font whenever possible (Helvetica is preferred).",
+        "source": "https://www.science.org/content/page/instructions-preparing-initial-manuscript",
+        "note": "CONFLICT: prep guide says 'Labels are 6 to 9 points' and 'maximum of 3 sizes'."
+      },
+      "font_embedding_outlining": {
+        "value": "Do not outline or rasterize text; embed linked images",
+        "quote": "Do not rasterize, flatten, or outline line art or text.",
+        "source": "https://www.science.org/cms/asset/62583409-a188-466e-8cc0-6fb5f083bbff/author_prep_guide_2025.pdf"
+      },
+      "color_mode": {
+        "value": "RGB",
+        "quote": "Full-color artwork should be provided in RGB format. The color may shift when converted to CMYK for print.",
+        "source": "https://www.science.org/cms/asset/62583409-a188-466e-8cc0-6fb5f083bbff/author_prep_guide_2025.pdf"
+      },
+      "line_weight": {
+        "value": ">= 0.5 pt at final reduced size (web page); prep guide says >= 0.28 pt (~0.10 mm)",
+        "quote": "Line widths should be legible upon reduction (minimum of 0.5 point at the final reduced size).",
+        "source": "https://www.science.org/content/page/instructions-preparing-initial-manuscript",
+        "note": "CONFLICT: prep guide: 'At final print size, minimum line weight is 0.28 pt (~0.10 mm)'."
+      },
+      "panel_labels": {
+        "value": "uppercase bold A, B, C at 10 pt, upper left; sub-parts a, b, c / prime / i, ii",
+        "quote": "Use capital letters for part labels in multipart figures – A, B, C, etc. These should be 10 pt and bold in the final figure. When possible, place part labels in the upper left corner of each figure part",
+        "source": "https://www.science.org/content/page/instructions-preparing-initial-manuscript"
+      },
+      "special_figures": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://www.science.org/content/page/instructions-preparing-initial-manuscript",
+          "https://www.science.org/content/page/instructions-preparing-revised-manuscript",
+          "https://www.science.org/cms/asset/62583409-a188-466e-8cc0-6fb5f083bbff/author_prep_guide_2025.pdf"
+        ],
+        "note": "No graphical abstract, eTOC or cover-image dimensions on the pages fetched."
+      },
+      "image_integrity": {
+        "value": "Linear adjustments to whole image/plate only; nonlinear adjustments disclosed in caption; no selective enhancement; lines between assembled images",
+        "quote": "Science does not allow certain electronic enhancements or manipulations of micrographs, gels, or other digital images. Figures assembled from multiple photographs or images, or non-concurrent portions of the same image, must clearly indicate the separate parts with lines between them. Linear adjustment of contrast, brightness, or color must be applied to an entire image or plate equally. Nonlinear adjustments must be specified in the figure caption. Selective enhancement or alteration of one part of an image is not acceptable.",
+        "source": "https://www.science.org/content/page/instructions-preparing-initial-manuscript"
+      },
+      "chart_specific": {
+        "value": [
+          "Plot symbols >= 6 pt; prefer solid symbols",
+          "Scales/axes must not extend beyond the data range",
+          "No minor tick marks or grid lines; no duplicate right-hand y-axis labels",
+          "Avoid red+green together, similar hues, and grayscale; white type/scale bars over dark image areas",
+          "Units in parentheses (SI); variables in italics; leading zeros on decimals",
+          "Values for N, P and the test must be in the caption or main text",
+          "Tabulated data underlying figures uploaded as data S1 (csv/tsv/json/xml)"
+        ],
+        "quote": "Use solid symbols for plotting data, if possible ... Size symbols so that they will be distinguishable when the figure is reduced (6 point minimum). ... Scales or axes should not extend beyond the range of the data plotted. ... Do not use minor tick marks in scales or grid lines. Avoid using y-axis labels on the right that repeat those on the left. ... Avoid using red and green together ... Avoid using grayscale. ... The values for N, P, and the specific statistical test(s) performed for each experiment should be included in the appropriate figure caption or main text. ... Tabulated data underlying the figures should be uploaded as an additional supplementary data file (called \"data S1\")",
+        "source": "https://www.science.org/content/page/instructions-preparing-initial-manuscript"
+      }
+    },
+    "notes": "Science web pages (5.7/12.1/18.4 cm; 5–7 pt; >=0.5 pt lines) conflict with its own 2025 figure-prep guide PDF (9 / 18.3 cm; 6–9 pt; >=0.28 pt lines). Fetched via firecrawl (science.org blocks plain fetchers); PDF fetched directly.",
+    "retrieval_method": "science.org pages via firecrawl_scrape markdown (site blocks curl); 2025 prep-guide PDF via curl + pdftotext (+ page-2 image)"
+  },
+  {
+    "journal": "Science Advances",
+    "publisher": "AAAS",
+    "source_urls": [
+      "https://www.science.org/content/page/science-advances-information-authors",
+      "https://www.science.org/cms/asset/a720088d-4243-48fb-92d8-14a24f180a0f/sciadv_guide_to_preparing_figures_2026.pdf"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": {
+          "single_column": "3.55 in / 9 cm / 21p3",
+          "intermediate_max": "5.67 in / 14.4 cm / 34p0",
+          "double_column": "7.25 in / 18.4 cm / 43p6"
+        },
+        "quote": "Figures should default to widths of 1 column (3.55 in, 9 cm or 21p3 picas) or 2 columns (7.25 in, 18.4 cm or 43p6 picas). Widths in between those sizes can also be used, if needed. If the figure is not a full 2 columns wide, the width should not exceed 5.67 in, 14.4 cm, or 34p0 picas wide.",
+        "source": "https://www.science.org/cms/asset/a720088d-4243-48fb-92d8-14a24f180a0f/sciadv_guide_to_preparing_figures_2026.pdf"
+      },
+      "max_height": {
+        "value": {
+          "page_height": "9 in / 22.75 cm / 53p9",
+          "recommended_max_with_legend": "7.8 in / 19.9 cm / 47p0"
+        },
+        "quote": "Figures should be no deeper than the page height (9 in, 22.75cm or 53p9 picas). For 2 column figures, keep in mind that the legend will need to fit into the 9-inch depth. Legends are set at 7.5 pt (10pt leading) Myriad Regular. We recommend a maximum depth of 7.8 in, 19.9 cm, or 47p0 picas.",
+        "source": "https://www.science.org/cms/asset/a720088d-4243-48fb-92d8-14a24f180a0f/sciadv_guide_to_preparing_figures_2026.pdf"
+      },
+      "resolution": {
+        "value": {
+          "line_art_bw": ">= 1200 dpi",
+          "halftone_photo": ">= 300 dpi",
+          "combination": ">= 300 dpi",
+          "note": "files > 600 dpi downsampled to 600 dpi"
+        },
+        "quote": "At the final sizes, the resolution of black and white line art (graphs or illustrations) must be at least 1200 dpi. Raster-based grayscale or color images (gel or blot figures, micrographs, or photographs) must be supplied at a resolution of at least 300 dpi. Figures with both types of elements should be at least 300 dpi. Note that for figures below 600 dpi, we will retain the provided resolution. For figures above 600 dpi, we will downsample these to 600 dpi.",
+        "source": "https://www.science.org/cms/asset/a720088d-4243-48fb-92d8-14a24f180a0f/sciadv_guide_to_preparing_figures_2026.pdf"
+      },
+      "file_formats": {
+        "value": {
+          "vector (preferred)": ".pdf or .ai",
+          "raster_line_art": ".tiff or .png",
+          "photos": ".tiff or .jpeg",
+          "not_allowed": "Word/PowerPoint files or figures prepared in them and converted"
+        },
+        "quote": "The preferred format for all figures should be a vector-based image. Vector images should be supplied as .pdf or .ai files ... Raster-based black and white line art (graphs or illustrations) must be supplied (in order of preference) as .tiff or .png files. Raster-based grayscale or color images (gel or blot figures, micrographs, or photographs) must be supplied as .tiff or .jpeg files. The following formats are not allowed: Figures embedded in Word files, PowerPoint files, and figures prepared in PowerPoint or Word that have been converted to other, acceptable formats such as .ps or .pdf.",
+        "source": "https://www.science.org/cms/asset/a720088d-4243-48fb-92d8-14a24f180a0f/sciadv_guide_to_preparing_figures_2026.pdf",
+        "note": "Page 1 of the same PDF orders vector formats as '.ai or .pdf'."
+      },
+      "fonts": {
+        "value": {
+          "family": "sans serif, preferably Myriad",
+          "default_pt": 8,
+          "min_pt": 6,
+          "panel_label_pt": 9,
+          "legend": "7.5 pt Myriad"
+        },
+        "quote": "All text should be in a sans serif typeface, preferably Myriad. • Panel part labels are 9 point bold, capitalized – A B C D… • Default label font size is 8 points – Eight • Minimum font size is 6 points – Six",
+        "source": "https://www.science.org/cms/asset/a720088d-4243-48fb-92d8-14a24f180a0f/sciadv_guide_to_preparing_figures_2026.pdf"
+      },
+      "font_embedding_outlining": {
+        "value": "Do not rasterize line art or text; embedding not stated",
+        "quote": "Do not rasterize line art or text.",
+        "source": "https://www.science.org/cms/asset/a720088d-4243-48fb-92d8-14a24f180a0f/sciadv_guide_to_preparing_figures_2026.pdf"
+      },
+      "color_mode": {
+        "value": "RGB required (not CMYK)",
+        "quote": "All color figures must be supplied in RGB format (red, green, blue) and not CMYK (cyan, magenta, yellow, black).",
+        "source": "https://www.science.org/cms/asset/a720088d-4243-48fb-92d8-14a24f180a0f/sciadv_guide_to_preparing_figures_2026.pdf"
+      },
+      "line_weight": {
+        "value": ">= 0.28 pt",
+        "quote": "At final print size, minimum line weight is .28 point.",
+        "source": "https://www.science.org/cms/asset/a720088d-4243-48fb-92d8-14a24f180a0f/sciadv_guide_to_preparing_figures_2026.pdf"
+      },
+      "panel_labels": {
+        "value": "uppercase bold A, B, C at 9 pt Myriad; sub-parts lowercase a, b, c (not roman numerals)",
+        "quote": "At the final size, the labels of each part of the figure (A, B, C, etc.) should be capitalized and must be in 9 pt. Myriad bold type (or equivalent Sans Serif font).",
+        "source": "https://www.science.org/cms/asset/a720088d-4243-48fb-92d8-14a24f180a0f/sciadv_guide_to_preparing_figures_2026.pdf"
+      },
+      "special_figures": {
+        "value": {
+          "cover": "2476 x 3137 px",
+          "site_image": "1280 x 427 px",
+          "graphical_abstract": "not permitted"
+        },
+        "quote": "Specifications: high-resolution files with dimensions of 2476 pixels wide by 3137 tall (cover) or 1280 pixels wide by 427 pixels tall (site image). ... Graphic representations of the abstract are not permitted.",
+        "source": "https://www.science.org/content/page/science-advances-information-authors"
+      },
+      "image_integrity": {
+        "value": "Linear whole-image adjustments only; nonlinear adjustments in legend; lines between assembled images; no AI-generated artwork",
+        "quote": "Science Advances does not allow digital enhancements or manipulations of images, including micrographs and gels. Figures assembled from multiple photographs or images must indicate the separate parts with lines between them. Linear adjustment of contrast, brightness, or color must be applied to an entire image or plate, equally. Nonlinear adjustments must be specified in the figure legend. [guide:] Science Advances does not allow the use of AI-generated artwork.",
+        "source": "https://www.science.org/content/page/science-advances-information-authors ; https://www.science.org/cms/asset/a720088d-4243-48fb-92d8-14a24f180a0f/sciadv_guide_to_preparing_figures_2026.pdf"
+      },
+      "chart_specific": {
+        "value": [
+          "Avoid red+green and dark blue+yellow combinations; avoid similar hues; avoid grayscale",
+          "White backgrounds; white type and scale bars over dark image areas",
+          "Do not include figure titles in figure images",
+          "Symbols 6–8 pt; no minor tick marks or grid lines; axes not beyond data range",
+          "N, P and test for each experiment in legend or main text",
+          "Figure files up to 25 MB"
+        ],
+        "quote": "Avoid using combinations of red and green together or combinations of dark blue and yellow together. ... Avoid using grayscale. • Use white backgrounds. ... • Do not include figure titles in figure images.",
+        "source": "https://www.science.org/cms/asset/a720088d-4243-48fb-92d8-14a24f180a0f/sciadv_guide_to_preparing_figures_2026.pdf"
+      }
+    },
+    "notes": "Science Advances differs from Science: 9 cm/18.4 cm widths, 8 pt default/6 pt min text, 9 pt panel labels, 1200 dpi line art, RGB mandatory.",
+    "retrieval_method": "info page via firecrawl_scrape markdown; 2026 figure guide PDF via curl + pdftotext"
+  },
+  {
+    "journal": "Cell",
+    "publisher": "Cell Press (Elsevier)",
+    "source_urls": [
+      "https://www.cell.com/information-for-authors/figure-guidelines",
+      "https://www.cell.com/pb/assets/raw/shared/figureguidelines/GA_guide-1780933691430.pdf",
+      "https://www.cell.com/cell/information-for-authors/final-submission",
+      "https://www.cell.com/cell/information-for-authors/revise-manuscript",
+      "https://www.cell.com/cell/information-for-authors/cover-submission"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": {
+          "single_column": "8.5 cm",
+          "one_and_half_column": "11.4 cm",
+          "full_width": "17.4 cm",
+          "three_column_formats (previews, commentaries)": "5.5 / 11.4 / 17.4 cm",
+          "STAR_Protocols": "13.4 / 17.2 cm"
+        },
+        "quote": "Two-column formats (such as research articles and reviews): 8.5 cm (1 column), 11.4 cm (1.5 columns), and 17.4 cm (full width of the page) Three-column formats (such as previews and commentaries): 5.5 cm (1 column), 11.4 cm (2 columns), and 17.4 cm (full width of the page)",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines"
+      },
+      "max_height": {
+        "value": "figure max 6.5 x 8 in (16.5 x 20 cm) recommended; must fit on one page",
+        "quote": "Each figure must fit on a single page. We recommend that figures be a maximum of 6.5 x 8 in (16.5 x 20 cm) to allow for page margins and text.",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines"
+      },
+      "resolution": {
+        "value": {
+          "color_grayscale": ">= 300 dpi",
+          "black_and_white": ">= 500 dpi",
+          "line_art": ">= 1,000 dpi",
+          "embedded_images": ">= 300 ppi at final print size"
+        },
+        "quote": "Figure resolutions should be as follows: for color or grayscale figures, at least 300 dpi; for black and white figures, at least 500 dpi; for line-art figures, at least 1,000 dpi at the desired print size",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines"
+      },
+      "file_formats": {
+        "value": {
+          "preferred": "TIFF and PDF",
+          "also_accepted": "EPS, JPEG, PSD, PNG, CDX",
+          "AI": "only for Leading Edge figures in Cell",
+          "vector": "accepted via PDF/EPS; not required"
+        },
+        "quote": "For all other article types and journals, TIFF and PDF are the preferred formats for final production files. ... Editorial Manager also accepts EPS, JPEG, PSD, PNG, and CDX files",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines",
+        "note": "Each figure file <= 20 MB; 'When using layers, reduce to one layer (flatten artwork) before saving your image (except for Leading Edge papers published in Cell)'."
+      },
+      "fonts": {
+        "value": {
+          "family": "Arial only",
+          "size": "about 6–8 pt at print size"
+        },
+        "quote": "Always embed fonts, and use only Arial fonts ... Text should be about 6–8 pt at the desired print size",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines"
+      },
+      "font_embedding_outlining": {
+        "value": "Embed fonts (EPS: embed all fonts)",
+        "quote": "Always embed fonts, and use only Arial fonts",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines"
+      },
+      "color_mode": {
+        "value": "RGB",
+        "quote": "If used, color should be encoded as RGB",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines"
+      },
+      "line_weight": {
+        "value": "0.5–1.5 pt",
+        "quote": "Line weights or stroke widths should be in the 0.5–1.5 pt range",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines"
+      },
+      "panel_labels": {
+        "value": "capital letters A, B, C",
+        "quote": "Different panels should be labeled with capital letters",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines"
+      },
+      "special_figures": {
+        "value": {
+          "graphical_abstract": "1200 x 1200 px at 300 dpi; Arial 8–12 pt; TIFF/PDF/JPG; required for Cell",
+          "etoc": "eTOC blurb is text only (<= 50 words, 2 sentences)",
+          "cover": "final 8 3/8 x 10 7/8 in; submit approx. 9 x 11.5 in; >= 300 dpi TIF or PSD, <= 100 MB"
+        },
+        "quote": "Size: The submitted image should be 1200 pixels square at 300 dpi. Font: Arial, 8–12 points. Smaller fonts will not be legible online. Preferred file types: T I F F, P D F, J P G [cover page:] The final cover size is 8 ⅜″ × 10 ⅞″. Your submitted image should be larger than this (approximately 9″ × 11.5″) to allow for cropping. ... A high-resolution (at least 300 dpi) TIF or PSD (no more than 100 MB)",
+        "source": "https://www.cell.com/pb/assets/raw/shared/figureguidelines/GA_guide-1780933691430.pdf ; https://www.cell.com/cell/information-for-authors/cover-submission",
+        "note": "Final-submission page: 'GAs are optional for the journals Cell Systems, Current Biology, Patterns, Neuron, and Newton. For all other journals, a GA is required.'"
+      },
+      "image_integrity": {
+        "value": "Whole-image adjustments; disclose single-channel changes; mark spliced lanes; no generative AI",
+        "quote": "You must apply any alteration (e.g., contrast/brightness adjustments) to the entire image. When this is impossible (e.g., when a single color channel on a microscopy image is altered), you must clearly explain the alteration in the figure legend and methods. In gel images, if you remove lanes from gels and blots or consolidate your data in any way, you must make the alterations obvious (e.g., by including a line or space between non-consecutive lanes) and indicate the alterations in the figure legend. ... You must not obscure or hide non-specific background in microscopy or gel images. You must include a scale bar on all microscopy images. You must have the original, unprocessed data available upon request of editors or reviewers. Cell Press does not permit use of generative AI or AI-assisted tools to create or alter research or data images in submitted manuscripts, including but not limited to adjustments of brightness, contrast, or color balance in any image presenting experimental or observational data.",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines"
+      },
+      "chart_specific": {
+        "value": [
+          "Plot individual data points in addition to average ± error for quantitation graphs",
+          "Red and green should not be used together",
+          "Gray fills >= 20% different from other fills, no lighter than 10% or darker than 80%",
+          "Legends must state test(s), define asterisk P values, number of biological and technical replicates, define all error bars and scale bars",
+          "Avoid numbered reference citations inside artwork"
+        ],
+        "quote": "Plot the individual data points in addition to indicating the average ± error for graphs displaying quantitation of a dataset. ... To accommodate all viewers, red and green should not be used together ... Gray fills should be kept at least 20% different from other fills and no lighter than 10% or darker than 80% [revise page:] The legends, main and supplemental, should state the statistical test(s) used, and the value of the p values indicated by asterisk(s) in the figure panels should be defined. ... The legends, main and supplemental, should state the number of biological and technical replicates for each result. ... All measures and all error bars should be defined in the legends",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines ; https://www.cell.com/cell/information-for-authors/revise-manuscript"
+      }
+    },
+    "notes": "Cell figure specs come from the shared Cell Press figure-guidelines page (the old URL cell.com/figureguidelines now 404s). cell.com blocks plain fetchers; pages were read via firecrawl.",
+    "retrieval_method": "cell.com via firecrawl_scrape markdown (figure guidelines, final submission) and firecrawl directQuote extraction (revise-manuscript, cover pages); GA guide PDF via firecrawl PDF parser"
+  },
+  {
+    "journal": "Cell Reports",
+    "publisher": "Cell Press (Elsevier)",
+    "source_urls": [
+      "https://www.cell.com/information-for-authors/figure-guidelines",
+      "https://www.cell.com/pb/assets/raw/shared/figureguidelines/GA_guide-1780933691430.pdf",
+      "https://www.cell.com/cell-reports/information-for-authors/final-submission"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": {
+          "single_column": "8.5 cm",
+          "one_and_half_column": "11.4 cm",
+          "full_width": "17.4 cm",
+          "three_column_formats (previews, commentaries)": "5.5 / 11.4 / 17.4 cm",
+          "STAR_Protocols": "13.4 / 17.2 cm"
+        },
+        "quote": "Two-column formats (such as research articles and reviews): 8.5 cm (1 column), 11.4 cm (1.5 columns), and 17.4 cm (full width of the page) Three-column formats (such as previews and commentaries): 5.5 cm (1 column), 11.4 cm (2 columns), and 17.4 cm (full width of the page)",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines"
+      },
+      "max_height": {
+        "value": "figure max 6.5 x 8 in (16.5 x 20 cm) recommended; must fit on one page",
+        "quote": "Each figure must fit on a single page. We recommend that figures be a maximum of 6.5 x 8 in (16.5 x 20 cm) to allow for page margins and text.",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines"
+      },
+      "resolution": {
+        "value": {
+          "color_grayscale": ">= 300 dpi",
+          "black_and_white": ">= 500 dpi",
+          "line_art": ">= 1,000 dpi",
+          "embedded_images": ">= 300 ppi at final print size"
+        },
+        "quote": "Figure resolutions should be as follows: for color or grayscale figures, at least 300 dpi; for black and white figures, at least 500 dpi; for line-art figures, at least 1,000 dpi at the desired print size",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines"
+      },
+      "file_formats": {
+        "value": {
+          "preferred": "TIFF and PDF",
+          "also_accepted": "EPS, JPEG, PSD, PNG, CDX",
+          "AI": "only for Leading Edge figures in Cell",
+          "vector": "accepted via PDF/EPS; not required"
+        },
+        "quote": "For all other article types and journals, TIFF and PDF are the preferred formats for final production files. ... Editorial Manager also accepts EPS, JPEG, PSD, PNG, and CDX files",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines",
+        "note": "Each figure file <= 20 MB; 'When using layers, reduce to one layer (flatten artwork) before saving your image (except for Leading Edge papers published in Cell)'."
+      },
+      "fonts": {
+        "value": {
+          "family": "Arial only",
+          "size": "about 6–8 pt at print size"
+        },
+        "quote": "Always embed fonts, and use only Arial fonts ... Text should be about 6–8 pt at the desired print size",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines"
+      },
+      "font_embedding_outlining": {
+        "value": "Embed fonts (EPS: embed all fonts)",
+        "quote": "Always embed fonts, and use only Arial fonts",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines"
+      },
+      "color_mode": {
+        "value": "RGB",
+        "quote": "If used, color should be encoded as RGB",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines"
+      },
+      "line_weight": {
+        "value": "0.5–1.5 pt",
+        "quote": "Line weights or stroke widths should be in the 0.5–1.5 pt range",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines"
+      },
+      "panel_labels": {
+        "value": "capital letters A, B, C",
+        "quote": "Different panels should be labeled with capital letters",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines"
+      },
+      "special_figures": {
+        "value": {
+          "graphical_abstract": "1200 x 1200 px at 300 dpi; Arial 8–12 pt; TIFF/PDF/JPG; required (Cell Reports not in the optional list)",
+          "etoc": "eTOC blurb is text only (<= 50 words)",
+          "cover": "not verified for Cell Reports"
+        },
+        "quote": "Size: The submitted image should be 1200 pixels square at 300 dpi. Font: Arial, 8–12 points. Smaller fonts will not be legible online. Preferred file types: T I F F, P D F, J P G",
+        "source": "https://www.cell.com/pb/assets/raw/shared/figureguidelines/GA_guide-1780933691430.pdf ; https://www.cell.com/cell-reports/information-for-authors/final-submission",
+        "note": "Cell Reports final-submission page: 'GAs are optional for the journals Cell Systems, Current Biology, Patterns, Neuron, and Newton. For all other journals, a GA is required.'"
+      },
+      "image_integrity": {
+        "value": "Whole-image adjustments; disclose single-channel changes; mark spliced lanes; no generative AI",
+        "quote": "You must apply any alteration (e.g., contrast/brightness adjustments) to the entire image. When this is impossible (e.g., when a single color channel on a microscopy image is altered), you must clearly explain the alteration in the figure legend and methods. In gel images, if you remove lanes from gels and blots or consolidate your data in any way, you must make the alterations obvious (e.g., by including a line or space between non-consecutive lanes) and indicate the alterations in the figure legend. ... You must not obscure or hide non-specific background in microscopy or gel images. You must include a scale bar on all microscopy images. You must have the original, unprocessed data available upon request of editors or reviewers. Cell Press does not permit use of generative AI or AI-assisted tools to create or alter research or data images in submitted manuscripts, including but not limited to adjustments of brightness, contrast, or color balance in any image presenting experimental or observational data.",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines"
+      },
+      "chart_specific": {
+        "value": [
+          "Plot individual data points in addition to average ± error for quantitation graphs",
+          "Red and green should not be used together",
+          "Gray fills >= 20% different from other fills, no lighter than 10% or darker than 80%",
+          "Legends must state test(s), define asterisk P values, number of biological and technical replicates, define all error bars and scale bars",
+          "Avoid numbered reference citations inside artwork"
+        ],
+        "quote": "Plot the individual data points in addition to indicating the average ± error for graphs displaying quantitation of a dataset. ... To accommodate all viewers, red and green should not be used together ... Gray fills should be kept at least 20% different from other fills and no lighter than 10% or darker than 80% [revise page:] The legends, main and supplemental, should state the statistical test(s) used, and the value of the p values indicated by asterisk(s) in the figure panels should be defined. ... The legends, main and supplemental, should state the number of biological and technical replicates for each result. ... All measures and all error bars should be defined in the legends",
+        "source": "https://www.cell.com/information-for-authors/figure-guidelines ; https://www.cell.com/cell/information-for-authors/revise-manuscript"
+      }
+    },
+    "notes": "Cell Reports uses the same Cell Press figure guidelines (its final-submission page links them). Legend/statistics rules were verified on the Cell revise-manuscript page only, not on the Cell Reports equivalent.",
+    "retrieval_method": "firecrawl directQuote extraction of the Cell Reports final-submission page; shared Cell Press pages as for Cell"
+  },
+  {
+    "journal": "PNAS",
+    "publisher": "National Academy of Sciences",
+    "source_urls": [
+      "https://www.pnas.org/pb-assets/authors/digitalart-1675347574760.pdf",
+      "https://www.pnas.org/author-center/submitting-your-manuscript",
+      "https://www.pnas.org/author-center/editorial-and-journal-policies"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": {
+          "single_column": "20.5 picas / 3.42 in / 8.7 cm",
+          "one_and_half_column": "27 picas / 4.5 in / 11.4 cm",
+          "double_column": "42.125 picas / 7 in / 17.8 cm"
+        },
+        "quote": "Use one of the following widths: 1 column wide (20.5 picas / 3.42” / 8.7 cm) 1.5 columns wide (27 picas / 4.5” / 11.4 cm) 2 columns wide (42.125 picas / 7” / 17.8 cm)",
+        "source": "https://www.pnas.org/pb-assets/authors/digitalart-1675347574760.pdf",
+        "note": "CONFLICT: the web page instead lists 'Small: approximately 9 cm x 6 cm Medium: approximately 11 cm x 11 cm Large: approximately 18 cm x 22 cm'."
+      },
+      "max_height": {
+        "value": "54 picas / 9 in / 22.5 cm (recommended)",
+        "quote": "Recommended max height: 54 picas / 9” / 22.5 cm.",
+        "source": "https://www.pnas.org/pb-assets/authors/digitalart-1675347574760.pdf"
+      },
+      "resolution": {
+        "value": {
+          "line_art (monochrome)": "1000–1200 ppi",
+          "combination": "600–900 ppi",
+          "halftone": ">= 300 ppi"
+        },
+        "quote": "Monochrome (1-bit) images (line art): ... The preferred resolution for this type of image is between 1000 and 1200 ppi at publication size. • Combination halftones: ... The preferred resolution for this type of image is between 600 and 900 ppi at publication size. • Halftones: ... The suggested minimum resolution for this type of image is 300 ppi at publication size.",
+        "source": "https://www.pnas.org/pb-assets/authors/digitalart-1675347574760.pdf",
+        "note": "Web page: 'article PDFs are processed to display images at 200 ppi ... The HTML display of an article offers 300 ppi for all images.'"
+      },
+      "file_formats": {
+        "value": {
+          "web_page": "TIFF, EPS, PDF, or PPT; 3D as PRC or U3D",
+          "digital_art_guide": "TIFF, EPS, or PDF preferred; EPS preferred for vector line art; MS Office not recommended",
+          "vector": "preferred"
+        },
+        "quote": "Submit images in these file formats: TIFF, EPS, PDF, or PPT. [Digital Art Guidelines:] Vector images are preferred because they have the highest quality and produce the best results in publication. ... TIFF, EPS, or PDF file formats are preferred.",
+        "source": "https://www.pnas.org/author-center/submitting-your-manuscript ; https://www.pnas.org/pb-assets/authors/digitalart-1675347574760.pdf"
+      },
+      "fonts": {
+        "value": {
+          "family": "standard fonts: Arial, Helvetica, Times, Symbol, Mathematical Pi, European Pi; same font in all figures",
+          "min_pt": 6,
+          "max_pt": 12
+        },
+        "quote": "Ensure that all numbers, letters, and symbols are no smaller than 6 points (2 mm) and no larger than 12 points (6 mm) after reduction. Keep text sizing consistent within each graphic. [Digital Art Guidelines:] Use standard fonts such as Arial, Helvetica, Times, Symbol, Mathematical Pi, and European Pi. ... Size any text in your figure to at least 6–8 points.",
+        "source": "https://www.pnas.org/author-center/submitting-your-manuscript ; https://www.pnas.org/pb-assets/authors/digitalart-1675347574760.pdf"
+      },
+      "font_embedding_outlining": {
+        "value": "Embed all fonts in vector files",
+        "quote": "Embed all fonts used in vector files.",
+        "source": "https://www.pnas.org/pb-assets/authors/digitalart-1675347574760.pdf"
+      },
+      "color_mode": {
+        "value": "RGB (tag with originating ICC profile)",
+        "quote": "All color image files must be submitted in their original RGB color.",
+        "source": "https://www.pnas.org/pb-assets/authors/digitalart-1675347574760.pdf"
+      },
+      "line_weight": {
+        "value": ">= 0.25 pt",
+        "quote": "It is preferable to have these saved as EPS files, with all fonts embedded, and graph lines at least 0.25 points wide.",
+        "source": "https://www.pnas.org/pb-assets/authors/digitalart-1675347574760.pdf"
+      },
+      "panel_labels": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://www.pnas.org/author-center/submitting-your-manuscript",
+          "https://www.pnas.org/pb-assets/authors/digitalart-1675347574760.pdf"
+        ],
+        "note": "Legends must 'Explicitly reference and describe each panel', but no label style is given."
+      },
+      "special_figures": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://www.pnas.org/author-center/submitting-your-manuscript",
+          "https://www.pnas.org/pb-assets/authors/digitalart-1675347574760.pdf"
+        ],
+        "note": "Only 3D images (U3D/PRC plus a 2D representation) are covered; no cover/graphical-abstract specs found."
+      },
+      "image_integrity": {
+        "value": "No feature enhanced/obscured/moved/removed/introduced; whole-image brightness/contrast/colour only; grouping must be explicit",
+        "quote": "No specific feature within an image may be enhanced, obscured, moved, removed, or introduced. The grouping or consolidation of images from multiple sources must be made explicit by the arrangement of the figure and in the figure legend. Adjustments of brightness, contrast, or color balance are acceptable if they are applied to the whole image and if they do not obscure, eliminate, or misrepresent any information present in the original, including backgrounds.",
+        "source": "https://www.pnas.org/author-center/editorial-and-journal-policies"
+      },
+      "chart_specific": {
+        "value": [
+          "Numerical axes on all graphs must go to 0, except log axes",
+          "Clearly labeled error bars in all graphs, described in the legend; state SEM vs SD after ±",
+          "Give P value, magnification or scale bar info; give N (independent data points) in the legend",
+          "MS Office figures: 20% difference in percent screens for differentiation; no pattern fills"
+        ],
+        "quote": "Include clearly labeled error bars in all graphs and describe them in the figure legend. State whether a number that follows the ± sign is a standard error (SEM) or a standard deviation (SD). When applicable, provide the P value, magnification, or scale bar information. Indicate the number of independent data points (N) represented in a graph in the legend. Ensure that numerical axes on all graphs go to 0, except for log axes.",
+        "source": "https://www.pnas.org/author-center/submitting-your-manuscript"
+      }
+    },
+    "notes": "PNAS web page and Digital Art Guidelines PDF (updated 02/16/2022) disagree on size presets (9x6/11x11/18x22 cm vs 8.7/11.4/17.8 cm widths). pnas.org blocks plain fetchers; web pages read via firecrawl, PDF fetched directly.",
+    "retrieval_method": "Digital Art Guidelines PDF via curl + pdftotext; pnas.org web pages via firecrawl directQuote extraction"
+  },
+  {
+    "journal": "PLOS (all PLOS journals; PLOS ONE page fetched)",
+    "publisher": "Public Library of Science",
+    "source_urls": [
+      "https://journals.plos.org/plosone/s/figures",
+      "https://journals.plos.org/plosone/s/submission-guidelines"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": {
+          "min_width": "6.68 cm / 2.63 in / 789 px at 300 dpi",
+          "max_width": "19.05 cm / 7.5 in / 2250 px at 300 dpi",
+          "text_column_alignment": "<= 5.2 in (13.2 cm)"
+        },
+        "quote": "Width: 789 – 2250 pixels (at 300 dpi). Height maximum: 2625 pixels (at 300 dpi). ... Minimum width 6.68 2.63 789 Maximum width 19.05 7.5 2250 ... To align your figure with the text column of the PDF version of the article, make it no wider than 5.2 inches (13.2 cm).",
+        "source": "https://journals.plos.org/plosone/s/figures",
+        "note": "Table columns are Centimeters / Inches / Pixels at 300 dpi."
+      },
+      "max_height": {
+        "value": "22.23 cm / 8.75 in / 2625 px (whole page, excluding caption)",
+        "quote": "Height maximum At the height maximum, the figure occupies the whole page and excludes the caption 22.23 8.75 2625",
+        "source": "https://journals.plos.org/plosone/s/figures"
+      },
+      "resolution": {
+        "value": {
+          "all": "300–600 dpi (above 600 dpi may lead to resizing)"
+        },
+        "quote": "Submit figures at the desired dimensions with a resolution no greater than 300-600 dpi . ... Resolution below 300 results in blurred, jagged or pixelated published figures. Resolution above 600 dpi may lead to resizing of the published figure.",
+        "source": "https://journals.plos.org/plosone/s/figures"
+      },
+      "file_formats": {
+        "value": {
+          "accepted": "TIFF or EPS only",
+          "LaTeX_EPS": "not accepted",
+          "vector": "allowed (EPS) but not required; TIFF recommended"
+        },
+        "quote": "TIFF or EPS only. ... TIFF tends to be easier to work with than EPS. ... PLOS does not accept vector EPS figures generated in LaTeX. Submit TIFF or EPS figures created in standard software.",
+        "source": "https://journals.plos.org/plosone/s/figures"
+      },
+      "fonts": {
+        "value": {
+          "family": "Arial, Times, or Symbol only",
+          "min_pt": 8,
+          "max_pt": 12
+        },
+        "quote": "Use only Arial, Times, or Symbol font in 8-12 point.",
+        "source": "https://journals.plos.org/plosone/s/figures"
+      },
+      "font_embedding_outlining": {
+        "value": "EPS: embed fonts or convert to outlines (outlining allowed)",
+        "quote": "Embed fonts, or convert them to outlines to prevent missing or improperly rendered text.",
+        "source": "https://journals.plos.org/plosone/s/figures",
+        "note": "CONFLICT with Nature, which forbids outlining."
+      },
+      "color_mode": {
+        "value": "RGB (8 bit/channel) or grayscale",
+        "quote": "RGB (8 bit/channel) or grayscale only.",
+        "source": "https://journals.plos.org/plosone/s/figures"
+      },
+      "line_weight": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://journals.plos.org/plosone/s/figures"
+        ]
+      },
+      "panel_labels": {
+        "value": "lettered label, (A) or (a)",
+        "quote": "Describe each part of a multipart figure with with a lettered panel label: for example, (A) or (a).",
+        "source": "https://journals.plos.org/plosone/s/figures",
+        "note": "Quote reproduces a typo ('with with') in the source."
+      },
+      "special_figures": {
+        "value": {
+          "striking_image": "optional, derived from a figure; single panel, ideally no text/scale bars; no dimensions stated"
+        },
+        "quote": "Striking images should ideally be high resolution, eye-catching, single panel images, and should ideally avoid containing added details such as text, scale bars, and arrows.",
+        "source": "https://journals.plos.org/plosone/s/submission-guidelines"
+      },
+      "image_integrity": {
+        "value": "No introduction/enhancement/movement/removal of features; no unmarked grouping; whole-image adjustments; splice lines; keep background noise; raw blot/gel PDF (S1_raw_images)",
+        "quote": "The following examples are all considered to be unacceptable image manipulation: The introduction, enhancement, movement, or removal of specific feature(s) within an image ... Unmarked grouping of images that should otherwise have been presented separately ... Adjustments of brightness, contrast, or color balance that obscure, eliminate, or misrepresent any information, including non-specific signal or background details ... Spliced gels need a thin dividing line added to indicate the alteration. ... Images must contain the background “noise” they originally contained.",
+        "source": "https://journals.plos.org/plosone/s/figures"
+      },
+      "chart_specific": {
+        "value": [
+          "Individual data points, underlying graphs and summary statistics must be made available (data policy)",
+          "2-point white border recommended; flattened TIFF, no alpha channels, LZW compression required; <10 MB",
+          "No author names/titles/captions inside figure files"
+        ],
+        "quote": "As explained in PLOS’s Data Policy , be sure to make individual data points, underlying graphs and summary statistics available at the time of publication.",
+        "source": "https://journals.plos.org/plosone/s/submission-guidelines"
+      }
+    },
+    "notes": "PLOS waives formatting until provisional accept; the NAAS tool checks files. Only TIFF/EPS accepted (no PDF).",
+    "retrieval_method": "HTML via curl"
+  },
+  {
+    "journal": "eLife",
+    "publisher": "eLife Sciences Publications",
+    "source_urls": [
+      "https://elife-rp.msubmit.net/html/elife-rp_author_instructions.html"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": {
+          "minimum_width": "10 cm",
+          "full_page_width_minimum": "20 cm"
+        },
+        "quote": "All figures must be uploaded at a minimum dpi of 300 and a minimum physical width size of 10cm. If you anticipate any figures being the equivalent width of a full typeset page, they must be uploaded at a minimum physical width of 20cm and remain at 300 dpi.",
+        "source": "https://elife-rp.msubmit.net/html/elife-rp_author_instructions.html"
+      },
+      "max_height": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://elife-rp.msubmit.net/html/elife-rp_author_instructions.html"
+        ],
+        "note": "Only: avoid figure + legend extending beyond one page in the PDF."
+      },
+      "resolution": {
+        "value": {
+          "all": ">= 300 dpi"
+        },
+        "quote": "All figures must be uploaded at a minimum dpi of 300",
+        "source": "https://elife-rp.msubmit.net/html/elife-rp_author_instructions.html"
+      },
+      "file_formats": {
+        "value": {
+          "accepted": "TIFF (8-bit), JPG, EPS, AI, PDF (vector)",
+          "multi_page": "not supported"
+        },
+        "quote": "Figures and figure supplements can be uploaded in the following formats: TIFF, JPG, EPS, AI and PDF. If providing figures in TIFF format, please provide this in 8-bit format. If you would like to supply PDF images please ensure that they are saved in a Vector image format.",
+        "source": "https://elife-rp.msubmit.net/html/elife-rp_author_instructions.html"
+      },
+      "fonts": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://elife-rp.msubmit.net/html/elife-rp_author_instructions.html"
+        ]
+      },
+      "font_embedding_outlining": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://elife-rp.msubmit.net/html/elife-rp_author_instructions.html"
+        ]
+      },
+      "color_mode": {
+        "value": "RGB",
+        "quote": "Please provide images in an RGB color space and ensure that whitespace around figures is minimised",
+        "source": "https://elife-rp.msubmit.net/html/elife-rp_author_instructions.html"
+      },
+      "line_weight": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://elife-rp.msubmit.net/html/elife-rp_author_instructions.html"
+        ]
+      },
+      "panel_labels": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://elife-rp.msubmit.net/html/elife-rp_author_instructions.html"
+        ]
+      },
+      "special_figures": {
+        "value": {
+          "striking_image": ">= 1800 x 900 px, landscape, PNG/TIFF/JPEG, no labels or text, 1–2 panels, no AI"
+        },
+        "quote": "Images should be in landscape format, with strong visual impact, and be at least 1800 x 900 pixels in size: PNG, TIFF or JPEG formats are preferred. Images should not include labels or text, and should be composed of no more than one or two panels.",
+        "source": "https://elife-rp.msubmit.net/html/elife-rp_author_instructions.html"
+      },
+      "image_integrity": {
+        "value": "Minimal whole-image processing applied equally to controls; no selective emphasis; mark combined images; raw uncropped gels/blots as source data",
+        "quote": "Minimal processing of images (for example, changing brightness and contrast) is appropriate only where it is applied equally across the whole image and is equally applied to controls. Contrast should not be adjusted to obscure data. Processing an image to emphasise one region at the expense of others, or to emphasise experimental data relative to the control, is not permitted. Combining images that should otherwise be presented separately may misrepresent the original data. If different images do need to be combined, then this should be clearly indicated in the image (for example, including dividing lines in gels) and described in the Figure legend.",
+        "source": "https://elife-rp.msubmit.net/html/elife-rp_author_instructions.html"
+      },
+      "chart_specific": {
+        "value": [
+          "Legends must give statistical tests, exact n, p values, inclusion/exclusion criteria, replicates (or put in source data)",
+          "Error bars: state n, define error bars, give method and significance levels",
+          "Follow Colour Universal Design palette principles",
+          "Source data files per figure (<100 MB each); raw + uncropped labelled gels/blots required"
+        ],
+        "quote": "When showing data with error bars the figure/figure legend should clearly indicate the sample size (n), define the error bars, and provide all statistical information including the statistical method used and levels of significance. When preparing figures, we recommend that authors follow the principles of Colour Universal Design",
+        "source": "https://elife-rp.msubmit.net/html/elife-rp_author_instructions.html"
+      }
+    },
+    "notes": "reviewer.elifesciences.org/author-guide/* redirects to the eLife (msubmit) author instructions page used here.",
+    "retrieval_method": "HTML via curl (reviewer.elifesciences.org redirects to elife-rp.msubmit.net)"
+  },
+  {
+    "journal": "Springer journals (generic 'Artwork and Illustrations Guidelines'; Reading and Writing page fetched as carrier)",
+    "publisher": "Springer Nature (Springer imprint)",
+    "source_urls": [
+      "https://link.springer.com/journal/11145/submission-guidelines",
+      "https://media.springer.com/full/springer-instructions-for-authors-assets/pdf/1491054_1007027_107_IfA_Download.pdf",
+      "https://www.springernature.com/gp/policies/editorial-policies"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": {
+          "large_journals_double_column_layout": "84 mm",
+          "large_journals_single_column_layout": "174 mm",
+          "small_journals": "119 mm"
+        },
+        "quote": "For large-sized journals the figures should be 84 mm (for double-column text areas), or 174 mm (for single-column text areas) wide and not higher than 234 mm. For small-sized journals, the figures should be 119 mm wide and not higher than 195 mm.",
+        "source": "https://link.springer.com/journal/11145/submission-guidelines",
+        "note": "CONFLICT: older Springer IfA PDF (2021, https://media.springer.com/full/springer-instructions-for-authors-assets/pdf/1491054_1007027_107_IfA_Download.pdf) says 'For most journals the figures should be 39 mm, 84 mm, 129 mm, or 174 mm wide and not higher than 234 mm. For books and book-sized journals, the figures should be 80 mm or 122 mm wide and not higher than 198 mm.'"
+      },
+      "max_height": {
+        "value": {
+          "large_journals": "234 mm",
+          "small_journals": "195 mm"
+        },
+        "quote": "... wide and not higher than 234 mm. For small-sized journals, the figures should be 119 mm wide and not higher than 195 mm.",
+        "source": "https://link.springer.com/journal/11145/submission-guidelines"
+      },
+      "resolution": {
+        "value": {
+          "line_art": ">= 1200 dpi",
+          "halftone": ">= 300 dpi",
+          "combination": ">= 600 dpi"
+        },
+        "quote": "Scanned line drawings and line drawings in bitmap format should have a minimum resolution of 1200 dpi. ... Halftones should have a minimum resolution of 300 dpi. ... Combination artwork should have a minimum resolution of 600 dpi.",
+        "source": "https://link.springer.com/journal/11145/submission-guidelines"
+      },
+      "file_formats": {
+        "value": {
+          "vector": "EPS preferred",
+          "halftones": "TIFF",
+          "also": "MSOffice files acceptable",
+          "vector_required": "no"
+        },
+        "quote": "For vector graphics, the preferred format is EPS; for halftones, please use TIFF format. MSOffice files are also acceptable.",
+        "source": "https://link.springer.com/journal/11145/submission-guidelines"
+      },
+      "fonts": {
+        "value": {
+          "family": "Helvetica or Arial",
+          "size": "about 2–3 mm (8–12 pt), consistent"
+        },
+        "quote": "To add lettering, it is best to use Helvetica or Arial (sans serif fonts). Keep lettering consistently sized throughout your final-sized artwork, usually about 2–3 mm (8–12 pt). Variance of type size within an illustration should be minimal, e.g., do not use 8-pt type on an axis and 20-pt type for the axis label.",
+        "source": "https://link.springer.com/journal/11145/submission-guidelines",
+        "note": "CONFLICT with Nature-branded journals (5–7 pt) within the same parent publisher."
+      },
+      "font_embedding_outlining": {
+        "value": "Embed fonts in vector graphics; avoid outline letters/shading effects",
+        "quote": "Vector graphics containing fonts must have the fonts embedded in the files. ... Avoid effects such as shading, outline letters, etc.",
+        "source": "https://link.springer.com/journal/11145/submission-guidelines"
+      },
+      "color_mode": {
+        "value": "RGB, 8 bits per channel",
+        "quote": "Color illustrations should be submitted as RGB (8 bits per channel).",
+        "source": "https://link.springer.com/journal/11145/submission-guidelines"
+      },
+      "line_weight": {
+        "value": ">= 0.1 mm (0.3 pt)",
+        "quote": "All lines should be at least 0.1 mm (0.3 pt) wide.",
+        "source": "https://link.springer.com/journal/11145/submission-guidelines"
+      },
+      "panel_labels": {
+        "value": "lowercase a, b, c",
+        "quote": "Figure parts should be denoted by lowercase letters (a, b, c, etc.).",
+        "source": "https://link.springer.com/journal/11145/submission-guidelines"
+      },
+      "special_figures": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://link.springer.com/journal/11145/submission-guidelines"
+        ]
+      },
+      "image_integrity": {
+        "value": "Springer Nature investigates inappropriately manipulated images; journal pages point to Springer's generative-AI image policy",
+        "quote": "Where a paper is suspected or discovered to be based on fraudulent results or to contain images that have been inappropriately manipulated, the editor will take prompt steps to investigate and to notify readers. The paper will be retracted if fraud is confirmed.",
+        "source": "https://www.springernature.com/gp/policies/editorial-policies"
+      },
+      "chart_specific": {
+        "value": [
+          "Patterns instead of or in addition to colors",
+          "Figure lettering contrast ratio >= 4.5:1",
+          "Scale bars inside figures for magnification",
+          "No titles or captions inside illustrations",
+          "If printed in B/W, do not refer to color in captions"
+        ],
+        "quote": "Patterns are used instead of or in addition to colors for conveying information (colorblind users would then be able to distinguish the visual elements) Any figure lettering has a contrast ratio of at least 4.5:1",
+        "source": "https://link.springer.com/journal/11145/submission-guidelines"
+      }
+    },
+    "notes": "Note the inverted-sounding wording: 84 mm is a column width in double-column journals; 174 mm is the full text width.",
+    "retrieval_method": "link.springer.com via firecrawl directQuote extraction (curl gets a client challenge); 2021 IfA PDF via curl; SN policy via firecrawl directQuote"
+  },
+  {
+    "journal": "Wiley journals (generic)",
+    "publisher": "Wiley",
+    "source_urls": [
+      "https://authors.wiley.com/author-resources/Journal-Authors/Prepare/manuscript-preparation-guidelines.html/figure-preparation.html",
+      "https://authors.wiley.com/asset/photos/electronic_artwork_guidelines.pdf"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": {
+          "range": "80–180 mm",
+          "small (quarter page)": ">= 80 mm canvas or >= 1800 px wide",
+          "large (half/full page)": ">= 80 mm canvas or >= 1800 px wide (current page)"
+        },
+        "quote": "Figures are created at a size between 80mm and 180mm in width and between 300dpi and 600dpi. ... At least 80mm canvas size or 1800 pixels wide",
+        "source": "https://authors.wiley.com/author-resources/Journal-Authors/Prepare/manuscript-preparation-guidelines.html/figure-preparation.html",
+        "note": "Older 2016 PDF (https://authors.wiley.com/asset/photos/electronic_artwork_guidelines.pdf) gives Small 80 mm and Large 180 mm canvas, 1800 px minimum width."
+      },
+      "max_height": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://authors.wiley.com/author-resources/Journal-Authors/Prepare/manuscript-preparation-guidelines.html/figure-preparation.html",
+          "https://authors.wiley.com/asset/photos/electronic_artwork_guidelines.pdf"
+        ]
+      },
+      "resolution": {
+        "value": {
+          "line_art": "600 dpi",
+          "images": "300 dpi",
+          "range": "300–600 dpi"
+        },
+        "quote": "Line art ... 600 dpi ... Images ... 300 dpi ... The final resolution of photographs should be a minimum of 300 dpi.",
+        "source": "https://authors.wiley.com/author-resources/Journal-Authors/Prepare/manuscript-preparation-guidelines.html/figure-preparation.html",
+        "note": "Older 2016 PDF: post-acceptance line art '600-1000 dpi'."
+      },
+      "file_formats": {
+        "value": {
+          "line_art": "PDF preferred (EPS also preferred in the 2016 PDF)",
+          "images": "PNG, TIFF",
+          "acceptable": "any standard file type",
+          "vector_required": "no"
+        },
+        "quote": "Line art: ... PDF Any standard file type. When in doubt, submit a PDF ... Images: ... PNG, TIFF Any standard file type.",
+        "source": "https://authors.wiley.com/author-resources/Journal-Authors/Prepare/manuscript-preparation-guidelines.html/figure-preparation.html"
+      },
+      "fonts": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://authors.wiley.com/author-resources/Journal-Authors/Prepare/manuscript-preparation-guidelines.html/figure-preparation.html"
+        ],
+        "note": "Only: 'All words or symbols in the figures are large enough for easy reading'."
+      },
+      "font_embedding_outlining": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://authors.wiley.com/author-resources/Journal-Authors/Prepare/manuscript-preparation-guidelines.html/figure-preparation.html"
+        ]
+      },
+      "color_mode": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://authors.wiley.com/author-resources/Journal-Authors/Prepare/manuscript-preparation-guidelines.html/figure-preparation.html",
+          "https://authors.wiley.com/asset/photos/electronic_artwork_guidelines.pdf"
+        ]
+      },
+      "line_weight": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://authors.wiley.com/author-resources/Journal-Authors/Prepare/manuscript-preparation-guidelines.html/figure-preparation.html"
+        ]
+      },
+      "panel_labels": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://authors.wiley.com/author-resources/Journal-Authors/Prepare/manuscript-preparation-guidelines.html/figure-preparation.html"
+        ]
+      },
+      "special_figures": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://authors.wiley.com/author-resources/Journal-Authors/Prepare/manuscript-preparation-guidelines.html/figure-preparation.html"
+        ]
+      },
+      "image_integrity": {
+        "value": "No feature enhanced/obscured/removed/moved/added; whole-image adjustments equal to controls; disclose nonlinear adjustments; full gels/blots in SI; keep originals 5 years",
+        "quote": "Specific features within an image should not be enhanced, obscured, removed, moved, or added. Adjustments to brightness or contrast are only acceptable if they apply equally across the entire image and are applied equally to controls, and as long as they do not obscure, eliminate, or misrepresent any information present in the information originally captured. ... Nonlinear adjustments or deleting portions of a recording must be disclosed in a figure legend. Authors are advised to store the original, unadjusted image data for 5 years following publication. ... Cropped images should be avoided for gels and blots. Wherever cropped images are shown in figures, a full scan of the entire original gel(s) must be submitted as part of the supplementary material.",
+        "source": "https://authors.wiley.com/author-resources/Journal-Authors/Prepare/manuscript-preparation-guidelines.html/figure-preparation.html"
+      },
+      "chart_specific": {
+        "value": [
+          "Each figure file < 10 MB; whole package < 500 MB",
+          "Legends in a separate section after references",
+          "Micrographs need scale bars and magnification",
+          "Source data for processed images"
+        ],
+        "quote": "Each individual figure file is less than 10 MB, with unnecessary white space removed to reduce file size.",
+        "source": "https://authors.wiley.com/author-resources/Journal-Authors/Prepare/manuscript-preparation-guidelines.html/figure-preparation.html"
+      }
+    },
+    "notes": "Wiley journals often add journal-specific rules; this is the Wiley Author Services generic page.",
+    "retrieval_method": "HTML and 2016 PDF via curl"
+  },
+  {
+    "journal": "Taylor & Francis journals (generic)",
+    "publisher": "Taylor & Francis",
+    "source_urls": [
+      "https://authorservices.taylorandfrancis.com/wp-content/uploads/2017/06/Submission-of-electronic-artwork.pdf",
+      "https://authorservices.taylorandfrancis.com/editorial-policies/images-and-figures/"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://authorservices.taylorandfrancis.com/wp-content/uploads/2017/06/Submission-of-electronic-artwork.pdf"
+        ],
+        "note": "Only: 'As a general guide, images should usually fit to the size of a column or a page.' Check journal IfA."
+      },
+      "max_height": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://authorservices.taylorandfrancis.com/wp-content/uploads/2017/06/Submission-of-electronic-artwork.pdf"
+        ]
+      },
+      "resolution": {
+        "value": {
+          "color_photo": "300 dpi",
+          "grayscale_photo": "600 dpi",
+          "line_art_monochrome": "1200 dpi",
+          "combination": "600 dpi"
+        },
+        "quote": "Color photographic images: 300dpi Grayscale photographic images: 600dpi Line art or monochrome images: 1200dpi Combination images (photographs and labelling): 600dpi",
+        "source": "https://authorservices.taylorandfrancis.com/wp-content/uploads/2017/06/Submission-of-electronic-artwork.pdf"
+      },
+      "file_formats": {
+        "value": {
+          "accepted": "EPS, PS, JPEG, TIFF, Word (DOC/DOCX)",
+          "text_containing_art": "EPS or PS",
+          "PDF": "not accepted"
+        },
+        "quote": "we recommend that electronic artwork files be submitted in one of our preferred formats: EPS, PS, JPEG, TIFF, or Microsoft Word (DOC or DOCX only). ... Please do not supply files in PDF format as these are ‘locked’ files and incompatible with our workflow software.",
+        "source": "https://authorservices.taylorandfrancis.com/wp-content/uploads/2017/06/Submission-of-electronic-artwork.pdf",
+        "note": "CONFLICT: most other publishers prefer or accept PDF."
+      },
+      "fonts": {
+        "value": {
+          "family": "Times, Helvetica, Arial, Symbol",
+          "size": "consistent; no pt values"
+        },
+        "quote": "Use standard fonts such as Times, Helvetica, Arial, and Symbol. All fonts should be embedded in the image files. ... Keep the font size consistent throughout your work. Do not use effects such as outlining and shadows on any lettering.",
+        "source": "https://authorservices.taylorandfrancis.com/wp-content/uploads/2017/06/Submission-of-electronic-artwork.pdf"
+      },
+      "font_embedding_outlining": {
+        "value": "Embed all fonts (non-embedded fonts are replaced by Courier)",
+        "quote": "All fonts should be embedded in the image files. Any fonts that are not embedded will be replaced by Courier which can result in character loss or realignment.",
+        "source": "https://authorservices.taylorandfrancis.com/wp-content/uploads/2017/06/Submission-of-electronic-artwork.pdf"
+      },
+      "color_mode": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://authorservices.taylorandfrancis.com/wp-content/uploads/2017/06/Submission-of-electronic-artwork.pdf"
+        ],
+        "note": "Color online, black and white in print unless agreed; RGB/CMYK only defined in the glossary."
+      },
+      "line_weight": {
+        "value": ">= 0.3 pt",
+        "quote": "Any lines should be a minimum of 0.3pt.",
+        "source": "https://authorservices.taylorandfrancis.com/wp-content/uploads/2017/06/Submission-of-electronic-artwork.pdf"
+      },
+      "panel_labels": {
+        "value": "Figure 1(a), Figure 1(b) (file-naming context)",
+        "quote": "In multi-part figures, each part should be labeled [e.g. Figure 1(a), Figure 1(b)].",
+        "source": "https://authorservices.taylorandfrancis.com/wp-content/uploads/2017/06/Submission-of-electronic-artwork.pdf"
+      },
+      "special_figures": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://authorservices.taylorandfrancis.com/wp-content/uploads/2017/06/Submission-of-electronic-artwork.pdf"
+        ]
+      },
+      "image_integrity": {
+        "value": "Only minor whole-image modifications, declared with software/version; splice lines; no cross-gel splicing; no overexposed blots; no generative AI on research images",
+        "quote": "Please note that any modifications are only acceptable if these are minor in nature and have been applied to the whole image. ... Any enhancements or changes in contrast settings must be applied to the whole image ... Regarding images of electrophoretic gels and immunoblots, where parts of the same gel or blot are spliced together, this should be indicated on the figures with a dividing line, making it clear where the image has been joined. Areas from different gels should not be spliced together. ... Use of Generative AI tools for creating or changing these types of images is strictly prohibited .",
+        "source": "https://authorservices.taylorandfrancis.com/editorial-policies/images-and-figures/"
+      },
+      "chart_specific": {
+        "value": [
+          "No layers or transparent objects",
+          "Supply at intended published size; remove excess white space",
+          "AI-assisted data visualisations allowed only with a caption declaration (tool name and version)"
+        ],
+        "quote": "Images do not contain any layers or transparent objects",
+        "source": "https://authorservices.taylorandfrancis.com/wp-content/uploads/2017/06/Submission-of-electronic-artwork.pdf"
+      }
+    },
+    "notes": "The T&F artwork guide is a 2019 PDF hosted on Author Services (no newer HTML figure-spec page was found; the old 'using-images-in-your-research' URL returns 404).",
+    "retrieval_method": "2019 artwork PDF and policy HTML via curl"
+  },
+  {
+    "journal": "Oxford University Press journals (generic)",
+    "publisher": "Oxford University Press",
+    "source_urls": [
+      "https://academic.oup.com/pages/for-authors/journals/preparing-and-submitting-your-manuscript",
+      "https://static.primary.prod.gcms.the-infra.com/static/site/journals/document/images-author-guidance.pdf?node=1bf05d0b2fbd9c529a23&version=490455:30c2211aa70bba63a5ee",
+      "https://static.primary.prod.gcms.the-infra.com/static/umbrella/document/Figures_accessibility_journals_edition_v2.2_2024.pdf?node=aef6670590405d43ef10",
+      "https://academic.oup.com/pages/for-authors/journals/preparing-and-submitting-your-manuscript/ethics"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://static.primary.prod.gcms.the-infra.com/static/site/journals/document/images-author-guidance.pdf?node=1bf05d0b2fbd9c529a23&version=490455:30c2211aa70bba63a5ee"
+        ],
+        "note": "Instruction is to measure the journal's own column widths: 'Check your chosen journal’s print size by using your PDF reader’s measuring tool, to assess the maximum width of single and double-column images'."
+      },
+      "max_height": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://static.primary.prod.gcms.the-infra.com/static/site/journals/document/images-author-guidance.pdf?node=1bf05d0b2fbd9c529a23&version=490455:30c2211aa70bba63a5ee"
+        ]
+      },
+      "resolution": {
+        "value": {
+          "colour_halftone": ">= 300 dpi",
+          "greyscale_halftone": ">= 600 dpi",
+          "combination_and_line_art": "600–900 dpi",
+          "monochrome_line_art": ">= 1200 dpi"
+        },
+        "quote": "Set intended print size in your software to ensure the resulting dpi is: o at least 300dpi for colour half-tones o at least 600dpi for greyscale half-tones o 600–900dpi for combination half-tones and line art o at least 1200dpi for monochrome line art o (pure vector images have no inherent resolution)",
+        "source": "https://static.primary.prod.gcms.the-infra.com/static/site/journals/document/images-author-guidance.pdf?node=1bf05d0b2fbd9c529a23&version=490455:30c2211aa70bba63a5ee"
+      },
+      "file_formats": {
+        "value": {
+          "raster": "uncompressed .tif (jpg/png acceptable)",
+          "vector": ".eps/.svg/.pdf with embedded fonts",
+          "avoid": ".bmp, .gif, native application formats"
+        },
+        "quote": "Save raster images (photographs, scans) as uncompressed .tif to avoid quality loss .jpg/.png are acceptable for raster images but may be lower resolution than .tif Save vector images (diagrams, shapes, text) as .eps/.svg/.pdf and embed fonts ... Avoid .bmp, .gif, and native application formats",
+        "source": "https://static.primary.prod.gcms.the-infra.com/static/site/journals/document/images-author-guidance.pdf?node=1bf05d0b2fbd9c529a23&version=490455:30c2211aa70bba63a5ee"
+      },
+      "fonts": {
+        "value": {
+          "family": "Arial, Times New Roman, Courier or Symbol",
+          "min_pt": 7
+        },
+        "quote": "Use Arial, Times New Roman, Courier or Symbol fonts for accurate reproduction Ensure text is no less than 7pt (to check, open at intended print size and add some 7pt text as a test)",
+        "source": "https://static.primary.prod.gcms.the-infra.com/static/site/journals/document/images-author-guidance.pdf?node=1bf05d0b2fbd9c529a23&version=490455:30c2211aa70bba63a5ee",
+        "note": "CONFLICT: OUP accessibility guide (2024) recommends 'Use a font size within figures set to 12-14pt or equivalent', 'Avoid using a serif-font', and fonts FS Me, Source Sans Pro or Open Sans."
+      },
+      "font_embedding_outlining": {
+        "value": "Embed fonts in vector files; for SVG convert text to paths",
+        "quote": "For .svg, convert text to shapes/paths to ensure consistent browser display",
+        "source": "https://static.primary.prod.gcms.the-infra.com/static/site/journals/document/images-author-guidance.pdf?node=1bf05d0b2fbd9c529a23&version=490455:30c2211aa70bba63a5ee"
+      },
+      "color_mode": {
+        "value": "RGB or CMYK; RGB recommended",
+        "quote": "Either RGB or CMYK colour-space is acceptable RGB is recommended as it makes the best use of screen capabilities",
+        "source": "https://static.primary.prod.gcms.the-infra.com/static/site/journals/document/images-author-guidance.pdf?node=1bf05d0b2fbd9c529a23&version=490455:30c2211aa70bba63a5ee"
+      },
+      "line_weight": {
+        "value": "0.25–1 pt",
+        "quote": "Set line thickness between 0.25pt and 1pt (test as described for text)",
+        "source": "https://static.primary.prod.gcms.the-infra.com/static/site/journals/document/images-author-guidance.pdf?node=1bf05d0b2fbd9c529a23&version=490455:30c2211aa70bba63a5ee"
+      },
+      "panel_labels": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://static.primary.prod.gcms.the-infra.com/static/site/journals/document/images-author-guidance.pdf?node=1bf05d0b2fbd9c529a23&version=490455:30c2211aa70bba63a5ee",
+          "https://academic.oup.com/pages/for-authors/journals/preparing-and-submitting-your-manuscript"
+        ]
+      },
+      "special_figures": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://static.primary.prod.gcms.the-infra.com/static/site/journals/document/images-author-guidance.pdf?node=1bf05d0b2fbd9c529a23&version=490455:30c2211aa70bba63a5ee",
+          "https://academic.oup.com/pages/for-authors/journals/preparing-and-submitting-your-manuscript"
+        ]
+      },
+      "image_integrity": {
+        "value": "Image manipulation and context-changing cropping count as falsification; some journals screen images",
+        "quote": "Examples of data falsification or fabrication include: image manipulation; cropping of gels/images to change context; omission of selected data; or making-up data sets. Some journals employ image manipulation software to detect evidence of falsification in submitted manuscripts.",
+        "source": "https://academic.oup.com/pages/for-authors/journals/preparing-and-submitting-your-manuscript/ethics"
+      },
+      "chart_specific": {
+        "value": [
+          "Avoid pale colours (e.g. yellow) and red–green combinations",
+          "Do not use colour alone to convey meaning",
+          "PDF proofs reduce raster images to 200 dpi; vectors preserved"
+        ],
+        "quote": "Avoid pale colours such as yellow and colour combinations that may be difficult for colour-blind readers to distinguish (eg red–green), and favour bold contrasts Avoid using colour in isolation to convey meaning—consider textures, labels or additional text",
+        "source": "https://static.primary.prod.gcms.the-infra.com/static/site/journals/document/images-author-guidance.pdf?node=1bf05d0b2fbd9c529a23&version=490455:30c2211aa70bba63a5ee"
+      }
+    },
+    "notes": "OUP says its artwork guide is 'tips rather than strict rules'; journal-specific pages override it.",
+    "retrieval_method": "OUP PDFs via curl + pdftotext; academic.oup.com pages via firecrawl (markdown / directQuote)"
+  },
+  {
+    "journal": "ACS journals (JACS author guidelines, Appendix 2, fetched as representative)",
+    "publisher": "American Chemical Society",
+    "source_urls": [
+      "https://researcher-resources.acs.org/publish/author_guidelines/pdf?coden=jacsat",
+      "https://pubsapp.acs.org/paragonplus/submission/toc_abstract_graphics_guidelines.pdf",
+      "https://researcher-resources.acs.org/publish/author_guidelines/pdf?coden=jaaucr"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": {
+          "single_column": "up to 240 pt (3.33 in)",
+          "double_column": "300–504 pt (4.167–7 in)"
+        },
+        "quote": "Graphics must fit a one- or two-column format. Single-column graphics can be sized up to 240 points wide (3.33 in.) and double-column graphics must be sized between 300 and 504 points (4.167 in. and 7 in.).",
+        "source": "https://researcher-resources.acs.org/publish/author_guidelines/pdf?coden=jacsat"
+      },
+      "max_height": {
+        "value": "660 pt (9.167 in) including caption (allow 12 pt per caption line)",
+        "quote": "The maximum depth for all graphics is 660 points (9.167 in.) including the caption (allow 12 pts. For each line of caption text).",
+        "source": "https://researcher-resources.acs.org/publish/author_guidelines/pdf?coden=jacsat"
+      },
+      "resolution": {
+        "value": {
+          "bw_line_art": "1200 dpi",
+          "grayscale": "600 dpi",
+          "color": "300 dpi"
+        },
+        "quote": "Digital graphics pasted into manuscripts should have the following minimum resolutions: Black and white line art, 1200 dpi Grayscale art, 600 dpi Color art, 300 dpi",
+        "source": "https://researcher-resources.acs.org/publish/author_guidelines/pdf?coden=jacsat"
+      },
+      "file_formats": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://researcher-resources.acs.org/publish/author_guidelines/pdf?coden=jacsat"
+        ],
+        "note": "Appendix 2 gives no general figure file formats (graphics are inserted into the manuscript); TOC: TIF or EPS; cover: TIF, JPG, PNG or EPS."
+      },
+      "fonts": {
+        "value": {
+          "family": "Helvetica or Arial work well",
+          "min_pt": 4.5,
+          "TOC_graphic": "sans serif, preferably 8 pt, >= 6 pt",
+          "NMR_spectra_in_SI": ">= 10 pt"
+        },
+        "quote": "Lettering should be no smaller than 4.5 points in the final published format. The text should be legible when the graphic is viewed full-size. Helvetica or Arial fonts work well for lettering.",
+        "source": "https://researcher-resources.acs.org/publish/author_guidelines/pdf?coden=jacsat",
+        "note": "JACS Au guidelines (https://researcher-resources.acs.org/publish/author_guidelines/pdf?coden=jaaucr) also say in their checklist: 'Text should be clear and legible, ideally with Arial or Helvetica fonts, with fonts no smaller than 8 pt.' (internal conflict with the 4.5 pt in Appendix 2)."
+      },
+      "font_embedding_outlining": {
+        "value": "TOC EPS: fonts converted to outlines or embedded",
+        "quote": "EPS in RGB document color mode with all fonts converted to outlines or embedded in the file.",
+        "source": "https://pubsapp.acs.org/paragonplus/submission/toc_abstract_graphics_guidelines.pdf"
+      },
+      "color_mode": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://researcher-resources.acs.org/publish/author_guidelines/pdf?coden=jacsat"
+        ],
+        "note": "TOC EPS must be RGB; 'Graphics intended to appear in black and white or grayscale should not be submitted in color.'"
+      },
+      "line_weight": {
+        "value": ">= 0.5 pt",
+        "quote": "Lines should be no thinner than 0.5 point.",
+        "source": "https://researcher-resources.acs.org/publish/author_guidelines/pdf?coden=jacsat"
+      },
+      "panel_labels": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://researcher-resources.acs.org/publish/author_guidelines/pdf?coden=jacsat"
+        ]
+      },
+      "special_figures": {
+        "value": {
+          "TOC_abstract_graphic": "<= 3.25 x 1.75 in (8.25 x 4.45 cm); TIF 300 dpi color / 1200 dpi B&W or RGB EPS",
+          "cover_JACS": "7.38 x 8.13 in (18.73 x 20.64 cm), >= 300 dpi, TIF/JPG/PNG/EPS",
+          "cover_JACS_Au": "8.19 x 10 in (20.80 x 25.4 cm) at 300 ppi; logo covers top 2.5 in"
+        },
+        "quote": "Submit the graphic at the actual size to be used for the TOC so that it will fit in an area no larger than 3.25 inches by 1.75 inches (approx. 8.25 cm by 4.45 cm). • Use a sans serif font type such as Helvetica, preferably at 8 pt. but no smaller than 6 pt. ... TIF at 300 dpi for color and at 1200 dpi for black and white. [JACS cover:] Image files should be submitted as TIF, JPG, PNG or EPS files with a resolution of at least 300 dpi for pixel-based images. Images should be 7.38 in × 8.13 in. (or 18.73 cm × 20.64 cm).",
+        "source": "https://pubsapp.acs.org/paragonplus/submission/toc_abstract_graphics_guidelines.pdf ; https://researcher-resources.acs.org/publish/author_guidelines/pdf?coden=jacsat",
+        "note": "Cover dimensions differ by ACS journal."
+      },
+      "image_integrity": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://researcher-resources.acs.org/publish/author_guidelines/pdf?coden=jacsat"
+        ],
+        "note": "Only: 'Figures are not modified or enhanced by journal production staff.' No manipulation policy in the guidelines fetched."
+      },
+      "chart_specific": {
+        "value": [
+          "Do not rely on color alone; use symbols, labels or patterns",
+          "WCAG contrast 4.5:1 for text and 3:1 for non-text elements"
+        ],
+        "quote": "The Web Content Accessibility Guidelines (WCAG) define minimum contrast requirements of 4.5:1 for text and 3:1 for nontext elements, with some exceptions for elements like large text.",
+        "source": "https://researcher-resources.acs.org/publish/author_guidelines/pdf?coden=jacsat"
+      }
+    },
+    "notes": "JACS guidelines PDF stamped 'Last updated: October 05, 2026'. ACS pubs.acs.org pages block plain fetchers; researcher-resources PDFs used.",
+    "retrieval_method": "ACS researcher-resources PDFs (JACS, JACS Au) and TOC-graphics PDF via curl + pdftotext"
+  },
+  {
+    "journal": "Royal Society journals (generic)",
+    "publisher": "The Royal Society",
+    "source_urls": [
+      "https://royalsociety.org/journals/authors/author-guidelines/"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://royalsociety.org/journals/authors/author-guidelines/"
+        ]
+      },
+      "max_height": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://royalsociety.org/journals/authors/author-guidelines/"
+        ]
+      },
+      "resolution": {
+        "value": {
+          "all": ">= 300 DPI"
+        },
+        "quote": "Figures should be uploaded as separate files and must be at least 300 DPI.",
+        "source": "https://royalsociety.org/journals/authors/author-guidelines/"
+      },
+      "file_formats": {
+        "value": {
+          "accepted": "PNG, EPS, TIFF, JPG, JPEG; LaTeX figures as PS/EPS; single flattened layer"
+        },
+        "quote": "Accepted figure formats: PNG EPS TIFF JPG JPEG TeX/LaTeX-coded figures should be converted to postscript format (PS or EPS) [LaTeX section:] Figures must be supplied as gif, tiff, jpg, png, ps or eps files, and should be a single flattened layer",
+        "source": "https://royalsociety.org/journals/authors/author-guidelines/"
+      },
+      "fonts": {
+        "value": {
+          "family": "Times New Roman (suggested)",
+          "preferred": "9 pt, 11 pt leading",
+          "min_pt": 7.5
+        },
+        "quote": "Suggested style for figure labels: Font: Times New Roman 9pt, 11pt leading is preferred. Text can be reduced, where necessary or restricted for space, but should be no smaller than 7.5pt",
+        "source": "https://royalsociety.org/journals/authors/author-guidelines/",
+        "note": "Serif font, unlike most other publishers."
+      },
+      "font_embedding_outlining": {
+        "value": "No Type 3 fonts (LaTeX); vector fonts preferred",
+        "quote": "Type 3 fonts are not accepted. Vector fonts (such as Type1, truetype, opentype etc.) are preferred",
+        "source": "https://royalsociety.org/journals/authors/author-guidelines/"
+      },
+      "color_mode": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://royalsociety.org/journals/authors/author-guidelines/"
+        ],
+        "note": "Colour online; black and white in print by default unless requested."
+      },
+      "line_weight": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://royalsociety.org/journals/authors/author-guidelines/"
+        ]
+      },
+      "panel_labels": {
+        "value": "italic letters in roman brackets, '(a)'; sub-parts '(ii)'; labels on coloured backgrounds in a white circle",
+        "quote": "Alphabetical labels should be italicized in roman brackets, eg '( a )' Sub-parts should be labelled using bracketed roman numberals, eg '(ii)' Figure labels that appear on a coloured background, should be placed inside a white circle",
+        "source": "https://royalsociety.org/journals/authors/author-guidelines/"
+      },
+      "special_figures": {
+        "value": {
+          "cover": "optional upload; no dimensions stated"
+        },
+        "quote": "You are welcome to submit a potential cover image for use on the journal website and on our press site for media promotion of your article.",
+        "source": "https://royalsociety.org/journals/authors/author-guidelines/"
+      },
+      "image_integrity": {
+        "value": "Minimal processing; retain unprocessed data; submissions screened for image integrity",
+        "quote": "Images should be minimally processed and accurately reflect the original data. Authors should retain their unprocessed data and metadata files, as editors may request them to aid in manuscript evaluation.",
+        "source": "https://royalsociety.org/journals/authors/author-guidelines/"
+      },
+      "chart_specific": {
+        "value": [
+          "Thin space between value and unit; thin spaces (not commas) as thousands separators",
+          "Figure parts labelled alphabetically left-to-right then top-to-bottom, same position in each part"
+        ],
+        "quote": "Numbers and units: please use a thin space between values and units (eg 300 nm, 400 μm) In numbers, thousands should be separated by thin spaces, not commas (eg 10 000 000)",
+        "source": "https://royalsociety.org/journals/authors/author-guidelines/"
+      }
+    },
+    "notes": "'(a)' in the quote is rendered with the italic a split by the HTML; source shows '( a )'.",
+    "retrieval_method": "HTML via curl"
+  },
+  {
+    "journal": "Frontiers journals (generic)",
+    "publisher": "Frontiers",
+    "source_urls": [
+      "https://www.frontiersin.org/guidelines/author-guidelines",
+      "https://www.frontiersin.org/guidelines/policies-and-publication-ethics"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": {
+          "single_column": "85 mm",
+          "double_column": "180 mm"
+        },
+        "quote": "Individual figures should not be longer than one page and with a width that corresponds to one column (85 mm) or two columns (180 mm).",
+        "source": "https://www.frontiersin.org/guidelines/author-guidelines"
+      },
+      "max_height": {
+        "value": "one page",
+        "quote": "Individual figures should not be longer than one page",
+        "source": "https://www.frontiersin.org/guidelines/author-guidelines"
+      },
+      "resolution": {
+        "value": {
+          "all": "300 dpi at final size"
+        },
+        "quote": "All images must have a resolution of 300 dpi at final size.",
+        "source": "https://www.frontiersin.org/guidelines/author-guidelines"
+      },
+      "file_formats": {
+        "value": {
+          "accepted": "TIF/TIFF, JPEG, EPS (upon acceptance)",
+          "vector_required": "no"
+        },
+        "quote": "The following formats are accepted: TIF/TIFF (.tif/.tiff), JPEG (.jpg), and EPS (.eps) (upon acceptance).",
+        "source": "https://www.frontiersin.org/guidelines/author-guidelines"
+      },
+      "fonts": {
+        "value": {
+          "min_pt": 8,
+          "family": "not stated (chemical structures: Arial 8 pt)"
+        },
+        "quote": "The smallest visible text should be no less than eight points in height when viewed at actual size.",
+        "source": "https://www.frontiersin.org/guidelines/author-guidelines"
+      },
+      "font_embedding_outlining": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://www.frontiersin.org/guidelines/author-guidelines"
+        ]
+      },
+      "color_mode": {
+        "value": "RGB",
+        "quote": "Images must be submitted in the color mode RGB.",
+        "source": "https://www.frontiersin.org/guidelines/author-guidelines"
+      },
+      "line_weight": {
+        "value": ">= 2 pt (as stated)",
+        "quote": "Solid lines should not be broken up. Any lines in the graphic should be no smaller than two points wide.",
+        "source": "https://www.frontiersin.org/guidelines/author-guidelines",
+        "note": "Unusually thick minimum compared with all other publishers (0.25–1 pt typical)."
+      },
+      "panel_labels": {
+        "value": "(A), (B), (C) — not embedded over the image; replaced in typesetting",
+        "quote": "For figures with more than one panel, panels should be clearly indicated using labels (A), (B), (C), (D), etc. However, do not embed the part labels over any part of the image. These labels will be replaced during typesetting according to Frontiers' journal style.",
+        "source": "https://www.frontiersin.org/guidelines/author-guidelines"
+      },
+      "special_figures": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://www.frontiersin.org/guidelines/author-guidelines"
+        ]
+      },
+      "image_integrity": {
+        "value": "No modification of individual features; whole-image (every pixel) adjustments; full gel scans in SI for cropped gels; declare splicing; AI screening (AIRA)",
+        "quote": "We do not accept that individual features within an image are modified (including enhanced, obscured, moved, recycled, removed, or added). Image processing methods (such as changes to the brightness, contrast, or color balance) must be applied to every pixel in the image, and the changes should not alter the information illustrated in the figure. Cropped images should be avoided where possible for gels and blots. Where cropped images are shown in figures, a full scan of the entire original gel(s) must be submitted as part of the supplementary material.",
+        "source": "https://www.frontiersin.org/guidelines/policies-and-publication-ethics"
+      },
+      "chart_specific": {
+        "value": [
+          "Self-explanatory axis labels with units",
+          "Text contrast >= 4.5:1 (AA) / 7:1 (AAA)",
+          "Avoid red or green indicators; do not use colour alone"
+        ],
+        "quote": "For graphs, there must be a self-explanatory label (including units) along each axis. ... Avoid using red or green indicators",
+        "source": "https://www.frontiersin.org/guidelines/author-guidelines"
+      }
+    },
+    "notes": "",
+    "retrieval_method": "HTML via curl"
+  },
+  {
+    "journal": "MDPI journals (Sensors instructions fetched as representative)",
+    "publisher": "MDPI",
+    "source_urls": [
+      "https://www.mdpi.com/journal/sensors/instructions"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://www.mdpi.com/journal/sensors/instructions"
+        ]
+      },
+      "max_height": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://www.mdpi.com/journal/sensors/instructions"
+        ]
+      },
+      "resolution": {
+        "value": {
+          "figures": "preferably >= 600 dpi",
+          "original_images_in_SI": ">= 1000 px width/height or >= 300 dpi"
+        },
+        "quote": "All figures should be of a high quality (preferably no less than 600 dpi) in PNG, JPEG or TIFF formats. ... Original images must be provided as Supplementary Material files at a sufficiently high resolution (a minimum of 1000 pixels in width/height, or a resolution of 300 dpi or higher)",
+        "source": "https://www.mdpi.com/journal/sensors/instructions"
+      },
+      "file_formats": {
+        "value": {
+          "figures": "PNG, JPEG or TIFF (flattened; no editable parts)",
+          "microscopy": "TIFF, PNG, GIF, EPS",
+          "vector": "not mentioned"
+        },
+        "quote": "All figures should be of a high quality (preferably no less than 600 dpi) in PNG, JPEG or TIFF formats. ... Images should be combined to avoid any issues during formatting changes. There should be no editable parts in the images.",
+        "source": "https://www.mdpi.com/journal/sensors/instructions",
+        "note": "CONFLICT in spirit with Nature/Science, which require editable vector text."
+      },
+      "fonts": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://www.mdpi.com/journal/sensors/instructions"
+        ],
+        "note": "GA text fonts suggested: Times, Arial, Courier, Helvetica, Ubuntu, Calibri; tables >= 8 pt."
+      },
+      "font_embedding_outlining": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://www.mdpi.com/journal/sensors/instructions"
+        ]
+      },
+      "color_mode": {
+        "value": "RGB, 8-bit per channel",
+        "quote": "Authors are encouraged to prepare figures and schemes in color (RGB at 8-bit per channel).",
+        "source": "https://www.mdpi.com/journal/sensors/instructions"
+      },
+      "line_weight": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://www.mdpi.com/journal/sensors/instructions"
+        ]
+      },
+      "panel_labels": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://www.mdpi.com/journal/sensors/instructions"
+        ]
+      },
+      "special_figures": {
+        "value": {
+          "graphical_abstract": ">= 560 x 1100 px (height x width), PNG/JPEG/TIFF; online only"
+        },
+        "quote": "A graphical abstract should be a high-quality illustration or diagram in any of the following file formats: PNG, JPEG, or TIFF. The minimum required size for the graphical abstract is 560 × 1100 pixels (height × width).",
+        "source": "https://www.mdpi.com/journal/sensors/instructions"
+      },
+      "image_integrity": {
+        "value": "Minimal processing; slight whole-image adjustments; no area-specific manipulation; declare splicing/grouping; full scans for cropped images; uncropped EM images",
+        "quote": "Digital images within the manuscript submitted should be minimally processed. ... The use of software filters to improve image quality is not recommended. Slight adjustments to contrast settings, brightness, intensity, color, etc., are generally acceptable but must be applied equally to the entire image. Excessive image manipulations that are specific to one area of an image and are not performed on other areas are considered part of a non-ethical practice of image processing",
+        "source": "https://www.mdpi.com/journal/sensors/instructions"
+      },
+      "chart_specific": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://www.mdpi.com/journal/sensors/instructions"
+        ]
+      }
+    },
+    "notes": "MDPI instructions are per journal but share this text; mdpi.com blocks plain fetchers, page read via firecrawl.",
+    "retrieval_method": "mdpi.com via firecrawl directQuote extraction (site blocks curl)"
+  },
+  {
+    "journal": "BMC journals (BMC Medicine page fetched as representative)",
+    "publisher": "BMC (Springer Nature)",
+    "source_urls": [
+      "https://link.springer.com/journal/12916/submission-guidelines",
+      "https://link.springer.com/brands/bmc/editorial-policies"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": {
+          "half_page": "85 mm",
+          "full_page": "170 mm",
+          "web": "600 px standard / 1200 px high resolution"
+        },
+        "quote": "Figures in the final PDF version: width of 85 mm for half page width figure width of 170 mm for full page width figure maximum height of 225 mm for figure and legend image resolution of approximately 300 dpi (dots per inch) at the final size",
+        "source": "https://link.springer.com/journal/12916/submission-guidelines"
+      },
+      "max_height": {
+        "value": "225 mm for figure and legend",
+        "quote": "maximum height of 225 mm for figure and legend",
+        "source": "https://link.springer.com/journal/12916/submission-guidelines"
+      },
+      "resolution": {
+        "value": {
+          "all": "approx. 300 dpi at final size"
+        },
+        "quote": "image resolution of approximately 300 dpi (dots per inch) at the final size",
+        "source": "https://link.springer.com/journal/12916/submission-guidelines"
+      },
+      "file_formats": {
+        "value": {
+          "accepted": "EPS, PDF, Word, PowerPoint, TIFF, JPEG, PNG, BMP, CDX",
+          "vector": "PDF preferred over EPS for vector"
+        },
+        "quote": "We accept the following file formats for figures: EPS (suitable for diagrams and/or images) PDF (suitable for diagrams and/or images) Microsoft Word ... PowerPoint ... TIFF (suitable for images) JPEG (suitable for photographic images, less suitable for graphical images) PNG (suitable for images) BMP (suitable for images) CDX (ChemDraw - suitable for molecular structures) ... Vector figures should if possible be submitted as PDF files, which are usually more compact than EPS files.",
+        "source": "https://link.springer.com/journal/12916/submission-guidelines"
+      },
+      "fonts": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://link.springer.com/journal/12916/submission-guidelines"
+        ],
+        "note": "Only legibility at standard widths is required."
+      },
+      "font_embedding_outlining": {
+        "value": "Embed all fonts",
+        "quote": "All fonts must be embedded.",
+        "source": "https://link.springer.com/journal/12916/submission-guidelines"
+      },
+      "color_mode": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://link.springer.com/journal/12916/submission-guidelines"
+        ]
+      },
+      "line_weight": {
+        "value": "> 0.25 pt at standard widths",
+        "quote": "All lines should be wider than 0.25 pt when constrained to standard figure widths.",
+        "source": "https://link.springer.com/journal/12916/submission-guidelines"
+      },
+      "panel_labels": {
+        "value": "lowercase parts a, b, c, d (implied)",
+        "quote": "Multi-panel figures (those with parts a, b, c, d etc.) should be submitted as a single composite file that contains all parts of the figure.",
+        "source": "https://link.springer.com/journal/12916/submission-guidelines"
+      },
+      "special_figures": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://link.springer.com/journal/12916/submission-guidelines"
+        ]
+      },
+      "image_integrity": {
+        "value": "Uniform adjustments incl. controls; no cloning/healing; uncropped blots with membrane edges in SI; disclose pseudo-colouring/gamma; define colour scales",
+        "quote": "Avoid using tools that deliberately alter images (e.g., cloning, healing). Apply adjustments (brightness, contrast, etc.) uniformly across the entire figure panel , including controls. Do not alter data visibility or selectively emphasize regions. ... All papers containing blots should provide uncropped images with the membrane edges clearly visible as a supplementary information file ready for peer-review.",
+        "source": "https://link.springer.com/brands/bmc/editorial-policies"
+      },
+      "chart_specific": {
+        "value": [
+          "Figure keys go inside the graphic, not in the legend",
+          "Titles <= 15 words, legends <= 300 words",
+          "All colour scales must be defined with intensity levels"
+        ],
+        "quote": "Figure keys should be incorporated into the graphic, not into the legend of the figure.",
+        "source": "https://link.springer.com/journal/12916/submission-guidelines"
+      }
+    },
+    "notes": "biomedcentral.com now redirects to link.springer.com/brands/bmc; BMC widths (85/170 mm) differ from Springer generic (84/174 mm).",
+    "retrieval_method": "link.springer.com BMC pages via firecrawl directQuote extraction"
+  },
+  {
+    "journal": "IEEE journals (Author Center graphics guidelines)",
+    "publisher": "IEEE",
+    "source_urls": [
+      "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/",
+      "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/file-formatting/",
+      "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/resolution-and-size/",
+      "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/prepare-supplementary-materials/",
+      "https://graphicsqc.ieee.org/"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": {
+          "one_column": "3.5 in / 88.9 mm / 21 picas",
+          "two_column": "7.16 in / 182 mm / 43 picas"
+        },
+        "quote": "Most charts, graphs, and tables are sized to be one column width or two columns width: One column width: 3.5 inches, 88.9 millimeters, or 21 picas Two columns width: 7.16 inches, 182 millimeters, or 43 picas",
+        "source": "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/resolution-and-size/",
+        "note": "IEEE advises not sizing graphics below one column width."
+      },
+      "max_height": {
+        "value": "no larger than 7.16 x 8.8 in (182 x 220 mm, 43 x 52 picas)",
+        "quote": "Make sure that all image layers are flattened, and your graphic is of the correct resolution (dpi) and dimensions (no larger than 7.16 x 8.8 inches, 182 x 220 millimeters, or 43 x 52 picas).",
+        "source": "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/file-formatting/"
+      },
+      "resolution": {
+        "value": {
+          "color_grayscale": "> 300 dpi",
+          "bw_line_art": "> 600 dpi",
+          "vector": "preferred (PS, EPS, PDF)"
+        },
+        "quote": "IEEE standards for non-vector graphics for color and grayscale images are >300dpi. IEEE standards for black and white line art are >600dpi.",
+        "source": "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/resolution-and-size/"
+      },
+      "file_formats": {
+        "value": {
+          "accepted": "PS, EPS, PDF, PNG, TIFF",
+          "office": "DOC/PPT/XLS only if originally drawn there",
+          "not_processable": "VSD, GIF, BMP",
+          "vector": "preferred"
+        },
+        "quote": "IEEE accepts PS, EPS, PDF, PNG, or TIFF formats for graphics submission. It is acceptable to submit Microsoft Office documents (DOC, PPT, XLS) only when the graphic was originally drawn in the program. ... Other file formats such as VSD, GIF, or BMP cannot be processed by IEEE.",
+        "source": "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/file-formatting/"
+      },
+      "fonts": {
+        "value": {
+          "family": "Helvetica, Times New Roman, Arial, Cambria, Symbol",
+          "size": "approx. 9–10 pt at full size"
+        },
+        "quote": "As you prepare your graphics, select fonts from the recommended list: Helvetica Times New Roman Arial Cambria Symbol ... Typefaces and type sizes should be consistent in all your graphics and tables. Type should appear approximately 9-10 point when viewed at full size.",
+        "source": "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/file-formatting/"
+      },
+      "font_embedding_outlining": {
+        "value": "Embed fonts or convert all text to outlines (EPS/PS/PDF)",
+        "quote": "If you are supplying EPS, PS, or PDF files, either convert all text to outlines or embed the fonts.",
+        "source": "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/file-formatting/"
+      },
+      "color_mode": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/",
+          "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/file-formatting/",
+          "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/resolution-and-size/"
+        ]
+      },
+      "line_weight": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/",
+          "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/file-formatting/",
+          "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/resolution-and-size/"
+        ]
+      },
+      "panel_labels": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/",
+          "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/file-formatting/",
+          "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/resolution-and-size/"
+        ]
+      },
+      "special_figures": {
+        "value": {
+          "graphical_abstract": "660 x 295 px, >= 300 dpi, < 45 KB recommended, font >= 16 px (~12 pt), contrast >= 4.5:1"
+        },
+        "quote": "Image specifications Dimensions: 660 x 295 pixels File types: JPG, TIF, PNG, GIF, DOC, DOCX, PDF, PS, EPS, or BMP Recommended file size: <45 KB Minimum resolution: 300 dpi (dots per inch)",
+        "source": "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/prepare-supplementary-materials/"
+      },
+      "image_integrity": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/",
+          "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/file-formatting/",
+          "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/resolution-and-size/"
+        ],
+        "note": "Only policy found on graphics pages: IEEE no longer accepts papers containing the 'Lena' image."
+      },
+      "chart_specific": {
+        "value": [
+          "Readable in greyscale; use colour AND shape (solid/dashed lines, fill patterns)",
+          "Thick lines with unique data-point symbols; label lines directly instead of colour keys",
+          "IEEE Graphics Analyzer tool has been decommissioned (graphics checked automatically at submission)"
+        ],
+        "quote": "Evaluate your graphs by checking whether they can be interpreted correctly from a greyscale printout. ... Use both color and shape to convey the same meaning ... Make each line of your line graph a thick line with a unique data point symbol. ... Connect the data label to the data line rather than relying on a color key.",
+        "source": "https://journals.ieeeauthorcenter.ieee.org/create-your-ieee-journal-article/create-graphics-for-your-article/",
+        "note": "graphicsqc.ieee.org redirects to a shut page: 'When you submit your article, your graphics will be automatically checked by IEEE now that the IEEE Graphics Analyzer has been decommissioned.'"
+      }
+    },
+    "notes": "IEEE Graphics Analyzer requirements could not be retrieved because the tool is decommissioned (https://graphicsqc.ieee.org/).",
+    "retrieval_method": "HTML via curl; graphicsqc.ieee.org redirects to a decommission notice"
+  },
+  {
+    "journal": "ACM (acmart class v2.21, 2026/11/01; TAPS)",
+    "publisher": "Association for Computing Machinery",
+    "source_urls": [
+      "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+      "https://www.acm.org/publications/authors/submissions"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "widths": {
+        "value": {
+          "sigconf": "\\textwidth 506.295 pt = 7.006 in; \\columnwidth 241.1475 pt = 3.337 in; columnsep 24 pt; 2 columns",
+          "acmsmall (journals)": "\\textwidth 395.8225 pt = 5.477 in; 1 column",
+          "acmlarge": "\\textwidth 452.295 pt = 6.258 in; 1 column",
+          "acmtog": "\\textwidth 510.295 pt = 7.061 in; \\columnwidth 243.1475 pt = 3.364 in; 2 columns",
+          "sigplan": "\\textwidth 505.89 pt = 7.0 in; \\columnwidth 240.945 pt = 3.334 in; 2 columns"
+        },
+        "quote": "\\or % sigconf \\geometry{twoside=true, head=13pt, paperwidth=8.5in, paperheight=11in, includeheadfoot, columnsep=2pc, top=57pt, bottom=73pt, inner=54pt, outer=54pt, marginparwidth=2pc,heightrounded } ... \\or % acmsmall \\geometry{twoside=true, includeheadfoot, head=13pt, foot=2pc, paperwidth=6.75in, paperheight=10in, top=58pt, bottom=44pt, inner=46pt, outer=46pt, ...",
+        "source": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip (acmart.dtx)",
+        "note": "Widths are derived: textwidth = paperwidth − inner − outer (1 in = 72.27 pt); columnwidth = (textwidth − columnsep)/2. acmart docs: 'For figure in two-column mode, use \\columnwidth.' and use \\textwidth for figure* / teaserfigure."
+      },
+      "max_height": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip"
+        ]
+      },
+      "resolution": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+          "https://www.acm.org/publications/authors/submissions"
+        ]
+      },
+      "file_formats": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+          "https://www.acm.org/publications/authors/submissions"
+        ]
+      },
+      "fonts": {
+        "value": {
+          "family": "Linux Libertine (libertine package; newtxmath); Libertinus Math under XeTeX/LuaTeX",
+          "body_size": "9pt: manuscript, acmtog, sigconf, siggraph, sigchi, acmcp; 10pt: acmsmall, acmlarge, sigplan, sigchi-a, acmengage"
+        },
+        "quote": "\\or % sigconf \\def\\ACM@fontsize{9pt}% ... \\or % acmsmall \\def\\ACM@fontsize{10pt}% ... % We use Libertine throughout.",
+        "source": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip (acmart.dtx)"
+      },
+      "font_embedding_outlining": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip"
+        ]
+      },
+      "color_mode": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+          "https://www.acm.org/publications/authors/submissions"
+        ]
+      },
+      "line_weight": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip"
+        ]
+      },
+      "panel_labels": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip"
+        ]
+      },
+      "special_figures": {
+        "value": {
+          "figure_descriptions": "\\Description{...} or \\includegraphics[alt={...}] in every figure (missing description gives a compile warning)"
+        },
+        "quote": "The command \\cs{Description}\\oarg{short description}\\marg{long description} should be placed inside every \\texttt{figure}, \\texttt{teaserfigure} or \\texttt{marginfigure} environment to provide a description of the image(s) used in the figure. ... At present the lack of descriptions generates a warning at compilation.",
+        "source": "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip (acmart.dtx)"
+      },
+      "image_integrity": {
+        "value": "not stated",
+        "quote": null,
+        "source": [
+          "https://mirrors.ctan.org/macros/latex/contrib/acmart.zip",
+          "https://www.acm.org/publications/authors/submissions"
+        ]
+      },
+      "chart_specific": {
+        "value": [
+          "Article should remain readable printed in greyscale; never encode information by colour alone",
+          "Use ColorBrewer or ACE to choose palettes"
+        ],
+        "quote": "The most accessible approach would be to ensure that your article is still readable when printed in greyscale. ... NOTE: It is NOT safe to encode information using only variations in color (i.e., only differences in hue and/or saturation), as there is bound to be someone affected!",
+        "source": "https://www.acm.org/publications/authors/submissions"
+      }
+    },
+    "notes": "acmart.cls is generated from acmart.dtx; values read from the .dtx source in the CTAN zip (not executed).",
+    "retrieval_method": "acmart.zip from CTAN (acmart.dtx read with grep/sed, not executed); acm.org page via firecrawl directQuote extraction"
+  },
+  {
+    "journal": "NeurIPS 2026 (neurips_2026.sty, 2026-01-29)",
+    "publisher": "NeurIPS Foundation",
+    "source_urls": [
+      "https://media.neurips.cc/Conferences/NeurIPS2026/Formatting_Instructions_For_NeurIPS_2026.zip",
+      "https://neurips.cc/Conferences/2026/CallForPapers"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "textwidth": {
+        "value": "5.5 in = 397.485 pt (139.7 mm); textheight 9 in = 650.43 pt",
+        "quote": "\\newgeometry{ textheight=9in, textwidth=5.5in, top=1in, headheight=12pt, headsep=25pt, footskip=30pt }",
+        "source": "https://media.neurips.cc/Conferences/NeurIPS2026/Formatting_Instructions_For_NeurIPS_2026.zip (neurips_2026.sty)"
+      },
+      "columnwidth": {
+        "value": "= \\textwidth: 5.5 in = 397.485 pt (single column)",
+        "quote": "The text must be confined within a rectangle 5.5~inches (33~picas) wide and 9~inches (54~picas) long. The left margin is 1.5~inch (9~picas).",
+        "source": "https://media.neurips.cc/Conferences/NeurIPS2026/Formatting_Instructions_For_NeurIPS_2026.zip (neurips_2026.tex)"
+      },
+      "column_count": {
+        "value": 1,
+        "quote": "\\documentclass{article}",
+        "source": "https://media.neurips.cc/Conferences/NeurIPS2026/Formatting_Instructions_For_NeurIPS_2026.zip (neurips_2026.tex)",
+        "note": "No twocolumn option; single-column layout."
+      },
+      "body_font": {
+        "value": "Times (ptm) 10 pt on 11 pt leading; sans-serif default = Helvetica (phv)",
+        "quote": "\\renewcommand{\\rmdefault}{ptm} \\renewcommand{\\sfdefault}{phv} ... \\renewcommand{\\normalsize}{% \\@setfontsize\\normalsize\\@xpt\\@xipt [tex:] Use 10~point type with a vertical spacing (leading) of 11~points. Times New Roman is the preferred typeface throughout, and will be selected for you by default.",
+        "source": "https://media.neurips.cc/Conferences/NeurIPS2026/Formatting_Instructions_For_NeurIPS_2026.zip"
+      }
+    },
+    "notes": "PDF must contain only Type 1 or embedded TrueType fonts. Points are TeX points (1 in = 72.27 pt); 5.5 in = 396 bp.",
+    "retrieval_method": "official zip via curl; .sty/.tex read with grep/sed"
+  },
+  {
+    "journal": "ICML 2026 (icml2026.sty v2.0, 2025/10/29)",
+    "publisher": "International Machine Learning Society",
+    "source_urls": [
+      "https://media.icml.cc/Conferences/ICML2026/Styles/icml2026.zip"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "textwidth": {
+        "value": "6.75 in = 487.8225 pt (171.45 mm); textheight 9.0 in = 650.43 pt",
+        "quote": "\\setlength\\textheight{9.0in} \\setlength\\textwidth{6.75in} \\setlength\\columnsep{0.25in}",
+        "source": "https://media.icml.cc/Conferences/ICML2026/Styles/icml2026.zip (icml2026.sty)"
+      },
+      "columnwidth": {
+        "value": "3.25 in = 234.8775 pt (82.55 mm) [(6.75 − 0.25)/2]; columnsep 0.25 in = 18.0675 pt",
+        "quote": "The text of the paper should be formatted in two columns, with an overall width of 6.75~inches, height of 9.0~inches, and 0.25~inches between the columns.",
+        "source": "https://media.icml.cc/Conferences/ICML2026/Styles/icml2026.zip (example_paper.tex)",
+        "note": "Columnwidth derived from textwidth and columnsep."
+      },
+      "column_count": {
+        "value": 2,
+        "quote": "\\flushbottom \\twocolumn",
+        "source": "https://media.icml.cc/Conferences/ICML2026/Styles/icml2026.zip (icml2026.sty)",
+        "note": "Wide figures may span both columns with figure*."
+      },
+      "body_font": {
+        "value": "Times 10 pt on 11 pt leading; captions 9 pt",
+        "quote": "% 2025.11.6 revert to times for better compatibility \\RequirePackage{times} ... \\def\\@normalsize{\\@setsize\\normalsize{11pt}\\xpt\\@xpt} [example_paper.tex:] The paper body should be set in 10~point type with a vertical spacing of 11~points. Please use Times typeface throughout the text. ... The figure caption should be set in 9~point type",
+        "source": "https://media.icml.cc/Conferences/ICML2026/Styles/icml2026.zip"
+      }
+    },
+    "notes": "The sty aborts if margins/textwidth are altered (checks textwidth=487.8225pt). Only Type-1 fonts allowed.",
+    "retrieval_method": "official zip via curl; .sty/.tex read with grep/sed"
+  },
+  {
+    "journal": "ICLR 2027 (iclr2027_conference.sty; identical geometry to ICLR 2026)",
+    "publisher": "ICLR",
+    "source_urls": [
+      "https://raw.githubusercontent.com/ICLR/Master-Template/master/iclr2027/iclr2027_conference.sty",
+      "https://raw.githubusercontent.com/ICLR/Master-Template/master/iclr2027/iclr2027_conference.tex",
+      "https://raw.githubusercontent.com/ICLR/Master-Template/master/iclr2026/iclr2026_conference.sty",
+      "https://iclr.cc/Conferences/2026/AuthorGuide"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "textwidth": {
+        "value": "5.5 in = 397.485 pt (139.7 mm); textheight 9.0 in = 650.43 pt",
+        "quote": "\\textheight 9.0 true in       % Height of text (including footnotes & figures) \\textwidth 5.5 true in        % Width of text line.",
+        "source": "https://raw.githubusercontent.com/ICLR/Master-Template/master/iclr2027/iclr2027_conference.sty"
+      },
+      "columnwidth": {
+        "value": "= \\textwidth: 5.5 in = 397.485 pt (single column)",
+        "quote": "The text must be confined within a rectangle 5.5~inches (33~picas) wide and 9~inches (54~picas) long. The left margin is 1.5~inch (9~picas).",
+        "source": "https://raw.githubusercontent.com/ICLR/Master-Template/master/iclr2027/iclr2027_conference.tex"
+      },
+      "column_count": {
+        "value": 1,
+        "quote": "\\usepackage{iclr2027_conference,times}",
+        "source": "https://raw.githubusercontent.com/ICLR/Master-Template/master/iclr2027/iclr2027_conference.tex",
+        "note": "No twocolumn; single column."
+      },
+      "body_font": {
+        "value": "Times (loaded by the template .tex) 10 pt on 11 pt leading",
+        "quote": "\\def\\normalsize{\\@setsize\\normalsize{11pt}\\xpt\\@xpt} [tex:] Use 10~point type with a vertical spacing of 11~points. Times New Roman is the preferred typeface throughout.",
+        "source": "https://raw.githubusercontent.com/ICLR/Master-Template/master/iclr2027/iclr2027_conference.sty ; https://raw.githubusercontent.com/ICLR/Master-Template/master/iclr2027/iclr2027_conference.tex"
+      }
+    },
+    "notes": "Fetched from the official ICLR/Master-Template GitHub repo (iclr2027 folder). diff vs iclr2026_conference.sty: only the header strings ('ICLR 2026' -> 'ICLR 2027') differ. The ICLR 2027 AuthorGuide page returned 404 on retrieval; the ICLR 2026 author guide links github.com/ICLR/Master-Template/raw/master/iclr2026.zip.",
+    "retrieval_method": "raw files from github.com/ICLR/Master-Template via curl"
+  },
+  {
+    "journal": "CVPR 2027 (cvpr.sty from official author kit v1; same geometry as ICCV 2025 iccv.sty)",
+    "publisher": "CVF / IEEE",
+    "source_urls": [
+      "https://media.eventhosts.cc/Conferences/CVPR2027/author-kit-CVPR2027-v1-latex.zip",
+      "https://cvpr.thecvf.com/Conferences/2027/AuthorGuidelines",
+      "https://raw.githubusercontent.com/cvpr-org/author-kit/main/cvpr.sty",
+      "https://raw.githubusercontent.com/cvpr-org/author-kit/main/sec/2_formatting.tex",
+      "https://media.eventhosts.cc/Conferences/ICCV2025/ICCV2025-Author-Kit-Feb.zip"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "textwidth": {
+        "value": "6.875 in = 496.8562 pt (174.6 mm); textheight 8.875 in = 641.3963 pt",
+        "quote": "\\setlength{\\textheight}{8.875in} \\setlength{\\textwidth}{6.875in} \\setlength{\\columnsep}{0.3125in}",
+        "source": "https://media.eventhosts.cc/Conferences/CVPR2027/author-kit-CVPR2027-v1-latex.zip (cvpr.sty)"
+      },
+      "columnwidth": {
+        "value": "derived 3.28125 in = 237.1359 pt (83.34 mm); template text says 3 1/4 in (8.25 cm)",
+        "quote": "The columns should be $3\\frac14$ inches (8.25 cm) wide, with a $\\frac{5}{16}$ inch (0.8 cm) space between them.",
+        "source": "https://raw.githubusercontent.com/cvpr-org/author-kit/main/sec/2_formatting.tex",
+        "note": "MINOR CONFLICT: (6.875 − 0.3125)/2 = 3.28125 in from the .sty vs the stated 3.25 in; use \\columnwidth (3.28125 in) in LaTeX."
+      },
+      "column_count": {
+        "value": 2,
+        "quote": "\\documentclass[10pt,twocolumn,letterpaper]{article}",
+        "source": "https://media.eventhosts.cc/Conferences/CVPR2027/author-kit-CVPR2027-v1-latex.zip (main.tex)",
+        "note": "cvpr.sty warns: 'Single column document - CVPR requires papers to have two-column layout.'"
+      },
+      "body_font": {
+        "value": "Times 10 pt; captions 9 pt Roman; figure callouts 9 pt Helvetica",
+        "quote": "\\RequirePackage{times}    % Integrate Times for here [2_formatting.tex:] Type main text in 10-point Times, single-spaced. ... The captions of the figures and tables should be in 9-point Roman type ... Callouts should be 9-point Helvetica, non-boldface type.",
+        "source": "https://media.eventhosts.cc/Conferences/CVPR2027/author-kit-CVPR2027-v1-latex.zip ; https://raw.githubusercontent.com/cvpr-org/author-kit/main/sec/2_formatting.tex"
+      }
+    },
+    "notes": "Kit downloaded from the link on the CVPR 2027 AuthorGuidelines page; its cvpr.sty is identical (except whitespace) to cvpr-org/author-kit main. ICCV 2025 kit iccv.sty has the same textwidth/textheight/columnsep. Kit also says: 'Resize fonts in figures to match the font in the body text' and avoid relying only on red vs green.",
+    "retrieval_method": "official CVPR 2027 kit zip (linked from cvpr.thecvf.com) and ICCV 2025 kit zip via curl; cvpr-org/author-kit raw files via curl"
+  },
+  {
+    "journal": "ACL / *ACL / ACL Rolling Review (acl.sty, acl-org/acl-style-files master)",
+    "publisher": "Association for Computational Linguistics",
+    "source_urls": [
+      "https://raw.githubusercontent.com/acl-org/acl-style-files/master/acl.sty",
+      "https://raw.githubusercontent.com/acl-org/acl-style-files/master/acl_latex.tex",
+      "https://raw.githubusercontent.com/acl-org/acl-style-files/master/formatting.md"
+    ],
+    "retrieved": "2026-11-14",
+    "fields": {
+      "textwidth": {
+        "value": "16 cm = 6.2992 in = 455.2441 pt (A4, 2.5 cm margins); textheight 24.7 cm = 9.7244 in = 702.7831 pt",
+        "quote": "\\PassOptionsToPackage{a4paper,margin=2.5cm,heightrounded=true}{geometry} \\RequirePackage{geometry} \\setlength\\columnsep{0.6cm}",
+        "source": "https://raw.githubusercontent.com/acl-org/acl-style-files/master/acl.sty",
+        "note": "Textwidth derived: 21 cm − 2 × 2.5 cm."
+      },
+      "columnwidth": {
+        "value": "7.7 cm = 3.0315 in = 219.0862 pt; gap 0.6 cm = 17.0717 pt",
+        "quote": "Column width: 7.7 cm * Column height: 24.7 cm * Gap between columns: 0.6 cm",
+        "source": "https://raw.githubusercontent.com/acl-org/acl-style-files/master/formatting.md"
+      },
+      "column_count": {
+        "value": 2,
+        "quote": "\\flushbottom \\twocolumn \\sloppy",
+        "source": "https://raw.githubusercontent.com/acl-org/acl-style-files/master/acl.sty",
+        "note": "formatting.md: 'Manuscripts must be set in two columns.'"
+      },
+      "body_font": {
+        "value": "Times Roman 11 pt document text; captions 10 pt; footnotes 9 pt",
+        "quote": "All text (except non-Latin scripts and mathematical formulas) should be set in **Times Roman**. ... | document text         | 11 pt     |       | | captions              | 10 pt     |       | ... | footnotes             | 9 pt      |       |",
+        "source": "https://raw.githubusercontent.com/acl-org/acl-style-files/master/formatting.md",
+        "note": "Template uses \\documentclass[11pt]{article} and \\usepackage{times}. acl.sty also contains a legacy '\\def\\@normalsize{\\@setsize\\normalsize{11pt}\\xpt\\@xpt}' line (10 pt on 11 pt); the formatting rules state 11 pt."
+      }
+    },
+    "notes": "A4 paper is mandatory ('All papers must use **A4 paper format** (21 cm x 29.7 cm).'). No year-stamped release; master branch is the official source referenced by ACL/ARR.",
+    "retrieval_method": "raw files from github.com/acl-org/acl-style-files via curl"
+  }
+]

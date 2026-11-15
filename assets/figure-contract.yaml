@@ -1,0 +1,80 @@
+# Figure contract: complete before drawing (merged from Scientific-Figure-Design and
+# polish-sci-figures, with clinical fields). Quick tasks need only the first block.
+
+claim: ""                      # one defensible sentence
+five_second_takeaway: ""       # what a reader states after five seconds
+comparison: ""                 # the comparison the reader must make
+visual_anchor: ""              # null line (HR = 1), baseline, threshold, bound, diagonal
+target:
+  preset: "generic"            # pubfig preset key or journal name
+  column: "single"             # or width in mm
+  height_mm: null
+  mode: "manuscript"           # manuscript | presentation | poster | showcase
+  instructions_url: ""         # recheck for a real submission
+  retrieved: ""
+
+data:
+  source_files: []             # authoritative data and analysis outputs
+  experimental_unit: ""        # patient, limb, lesion, animal, culture
+  design: ""                   # independent, paired, repeated, clustered, censored
+  n_per_group: {}
+  outcome_and_unit: ""
+  estimand: ""                 # e.g. HR (95% CI) from Cox model adjusted for ...
+  model_results_supplied: true # never recompute model estimates from display data
+  prespecified_comparisons: []
+  multiplicity: ""
+  synthetic: false             # label synthetic or illustrative data
+
+reporting:
+  guideline: ""                # CONSORT 2025, STROBE, PRISMA 2020, TRIPOD, STARD, ARRIVE
+  stats_style: ""              # ama | nejm | annals | lancet | ehj | ejves | jevt | vascmed | aha | generic_lz
+  error_bars: ""               # SD | SEM | 95% CI | IQR (defined in legend)
+  km_rules: ""                 # numbers at risk; truncation rule per journal
+
+design:
+  archetype: ""                # estimation, survival, forest, flow, agreement, ROC, heatmap, overview, ablation ...
+  panels:
+    - id: "A"
+      purpose: ""
+  reading_order: ""
+  encodings:
+    color: {}                  # entity -> color (from the frozen paper palette)
+    shape: {}
+    line_style: {}
+  palette_file: "paper-palette.yaml"
+  grayscale_strategy: ""
+  cvd_strategy: ""
+
+images:                         # only for image panels
+  manifest: ""
+  calibration_source: ""
+  display_policy: ""            # batch-locked window, gamma, LUT
+  phi_removed: false
+  duplicate_screen_done: false
+
+diagram:                        # only for schematics
+  semantic_inventory:
+    entities: []
+    transformations: []
+    states: []
+    boundaries: []
+    relations: []
+  icon_family: "lucide"
+  drawio: false
+  agent_evolution: false        # see references/ai-agent-evolution-figures.md
+
+deliverables:
+  vector_master: "final_figures/FigN.pdf"
+  editable: "final_figures/FigN.svg"
+  raster: "final_figures/FigN.tif"
+  source: "figure_sources/figN.py"
+  legend: ""
+  alt_text: ""
+
+validation:
+  figure_qa_findings_accepted: []   # WARN items kept, each with a reason
+  final_png_inspected: false
+  cvd_preview_inspected: false
+  five_second_test: ""
+  caption_test: ""
+  numbers_checked_against_source: false

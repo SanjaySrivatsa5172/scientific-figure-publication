@@ -1,0 +1,33 @@
+{
+  "name": "scientific-figure-publication",
+  "description": "Publication-ready scientific figures at final journal size: verified presets for 42 journals and venues, clinical builders (Kaplan-Meier, forest, CONSORT, PRISMA, Bland-Altman, ROC), color-vision-safe palettes, editable diagrams, image-panel integrity checks, and an automated QA gate.",
+  "owner": {
+    "name": "SanjaySrivatsa5172",
+    "url": "https://github.com/SanjaySrivatsa5172"
+  },
+  "plugins": [
+    {
+      "name": "scientific-figure-publication",
+      "source": "./",
+      "version": "1.0.0",
+      "description": "Publication-ready scientific figures at final journal size: verified presets for 42 journals and venues, clinical builders (Kaplan-Meier, forest, CONSORT, PRISMA, Bland-Altman, ROC), color-vision-safe palettes, editable diagrams, image-panel integrity checks, and an automated QA gate.",
+      "author": {
+        "name": "SanjaySrivatsa5172",
+        "url": "https://github.com/SanjaySrivatsa5172"
+      },
+      "homepage": "https://github.com/SanjaySrivatsa5172/scientific-figure-publication",
+      "repository": "https://github.com/SanjaySrivatsa5172/scientific-figure-publication",
+      "license": "MIT",
+      "keywords": [
+        "scientific-figures",
+        "data-visualization",
+        "matplotlib",
+        "journal-submission",
+        "kaplan-meier",
+        "forest-plot",
+        "consort",
+        "color-blind-safe"
+      ]
+    }
+  ]
+}
