@@ -148,6 +148,80 @@ class Survival(unittest.TestCase):
         self.assertAlmostEqual(st["auc"], 0.6856597326901819, places=12)  # scikit-learn
         self.assertAlmostEqual(st["se"], 0.03752631566402746, places=12)
 
+    def test_auc_delong_ci_default_is_wald(self):
+        # hand calculation: pos = [0.9, 0.8, 0.6, 0.4], neg = [0.7, 0.5, 0.3, 0.2]
+        # AUC = 13/16; V10 = [1, 1, .75, .5], V01 = [.5, .75, 1, 1]; each has sample
+        # variance 0.171875/3, so var(AUC) = (0.171875/3)/4 + (0.171875/3)/4
+        y = [1, 1, 1, 1, 0, 0, 0, 0]
+        s = [0.9, 0.8, 0.6, 0.4, 0.7, 0.5, 0.3, 0.2]
+        st = pc.auc_delong(y, s)
+        se = (2 * (0.171875 / 3) / 4) ** 0.5
+        self.assertEqual(st["ci_method"], "wald")
+        self.assertAlmostEqual(st["auc"], 13 / 16, places=12)
+        self.assertAlmostEqual(st["se"], se, places=12)
+        z = 1.959963984540054
+        self.assertAlmostEqual(st["ci_low"], 13 / 16 - z * se, places=9)
+        self.assertAlmostEqual(st["ci_high"], 1.0, places=12)  # 0.8125 + 0.3317 clipped at 1
+        lg = pc.auc_delong(y, s, ci="logit")
+        self.assertEqual(lg["ci_method"], "logit")
+        self.assertAlmostEqual(lg["se"], st["se"], places=12)
+        self.assertLess(lg["ci_high"], 1.0)
+        self.assertNotAlmostEqual(lg["ci_low"], st["ci_low"], places=3)
+        with self.assertRaises(ValueError):
+            pc.auc_delong(y, s, ci="bootstrap")
+        with self.assertRaises(ValueError):
+            pc.auc_delong([1, 0, 1, 0], [0.2, float("nan"), 0.4, 0.1])
+
+    def test_missing_survival_input_is_an_error(self):
+        nan = float("nan")
+        with self.assertRaisesRegex(ValueError, "1 of 3 observations"):
+            pc.kaplan_meier([1, 2, nan], [1, 0, 1])
+        with self.assertRaises(ValueError):
+            pc.kaplan_meier([1, 2, 3], [1, nan, 1])
+        with self.assertRaises(ValueError):
+            pc.kaplan_meier([1, 2, float("inf")], [1, 0, 1])
+        with self.assertRaises(ValueError):
+            pc.cumulative_incidence([1, nan, 3], [1, 2, 0])
+        with self.assertRaises(ValueError):
+            pc.logrank_test([1, 2, 3, nan], [1, 1, 1, 1], [0, 0, 1, 1])
+        with self.assertRaises(ValueError):
+            pc.logrank_test([1, 2, 3, 4], [1, 1, 1, 1], [0, 0, 1, None])
+
+    def test_greenwood_se_undefined_when_survival_reaches_zero(self):
+        km = pc.kaplan_meier([1, 2, 3], [1, 1, 1])
+        np.testing.assert_allclose(km.se[:3], [0, (2 / 9 / 3) ** 0.5, (1 / 3) * (1 / 6 + 1 / 2) ** 0.5], atol=1e-12)
+        self.assertTrue(np.isnan(km.se[3]))
+        self.assertEqual((km.surv[3], km.lower[3], km.upper[3]), (0.0, 0.0, 0.0))
+        # the SE rule now stops the curve before the undefined point
+        t = np.r_[np.arange(1, 201), 300.0]
+        e = np.r_[np.zeros(200, int), 1]
+        big = pc.kaplan_meier(t, e)   # S = 1 with SE 0 until the last subject has the event
+        self.assertEqual(pc.km_truncation_time(big, max_se=0.10), 200.0)
+
+    def test_logrank_undefined_cases_raise_value_error(self):
+        with self.assertRaisesRegex(ValueError, "no events"):
+            pc.logrank_test([1, 2, 3, 4], [0, 0, 0, 0], [0, 0, 1, 1])
+        with self.assertRaisesRegex(ValueError, "singular"):
+            # group 1 is censored before the only event, so it is never at risk at an event time
+            pc.logrank_test([5, 6, 1, 2], [1, 0, 0, 0], [0, 0, 1, 1])
+
+    def test_normal_quantile_fallback_is_exact_without_scipy(self):
+        import builtins
+        real = builtins.__import__
+
+        def no_scipy(name, *a, **k):
+            if name == "scipy" or name.startswith("scipy."):
+                raise ImportError(name)
+            return real(name, *a, **k)
+
+        builtins.__import__ = no_scipy
+        try:
+            self.assertAlmostEqual(pc._norm_ppf(0.90), 1.2815515655446004, places=9)   # 80% level
+            self.assertAlmostEqual(pc._norm_ppf(0.975), 1.959963984540054, places=9)
+            self.assertAlmostEqual(pp.t_quantile(0.80, 10), 1.2815515655446004, places=9)
+        finally:
+            builtins.__import__ = real
+
 
 class CanvasAndExport(unittest.TestCase):
     def test_exact_canvas_and_files(self):

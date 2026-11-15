@@ -49,7 +49,8 @@ def t_quantile(level: float, df: int) -> float:
         return float(stats.t.ppf(0.5 + level / 2, df))
     except ImportError:  # normal approximation, flagged
         warnings.warn("scipy missing: using normal quantile for CI (too narrow for small n)")
-        return {0.9: 1.645, 0.95: 1.96, 0.99: 2.576}.get(level, 1.96)
+        from statistics import NormalDist
+        return NormalDist().inv_cdf(0.5 + level / 2)
 
 
 def mean_ci(x: np.ndarray, level: float = 0.95) -> tuple[float, float, float]:
