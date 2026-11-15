@@ -1,3 +1,5 @@
 numpy>=1.24
-matplotlib>=3.8
+matplotlib>=3.7
 pillow>=10
+scipy>=1.10
+# optional: pypdf (PDF font audit), cairosvg (SVG rasterizing), requests (arXiv corpus mining)

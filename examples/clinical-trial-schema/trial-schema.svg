@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="178.00mm" height="79.11mm" viewBox="0 0 1080.0 480.0" font-family="Arial, Helvetica, sans-serif" text-rendering="geometricPrecision" role="img" aria-labelledby="figure-title figure-desc">
+<title id="figure-title">Trial schema</title>
+<desc id="figure-desc">Patients with PAD randomized to drug-coated balloon or plain balloon angioplasty, followed for 12 months for primary patency.</desc>
+<defs>
+<style>.edge{fill:none;stroke-linecap:round;stroke-linejoin:round}.node-label,.node-subtitle,.edge-label{paint-order:stroke;stroke:none}</style>
+<marker id="arrow-64748b" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#64748B"/></marker>
+</defs>
+<rect width="1080.0" height="480.0" fill="#FFFFFF"/>
+<path class="edge" id="edge-0" d="M 211.2 244.0 H 232.2 V 244.0 H 253.2" stroke="#64748B" stroke-width="1.7" marker-end="url(#arrow-64748b)"/>
+<path class="edge" id="edge-1" d="M 416.4 244.0 H 437.4 V 244.0 H 458.4" stroke="#64748B" stroke-width="1.7" marker-end="url(#arrow-64748b)"/>
+<path class="edge" id="edge-2" d="M 621.6 244.0 H 642.6 V 244.0 H 663.6" stroke="#64748B" stroke-width="1.7" marker-end="url(#arrow-64748b)"/>
+<path class="edge" id="edge-3" d="M 826.8 244.0 H 847.8 V 244.0 H 868.8" stroke="#64748B" stroke-width="1.7" marker-end="url(#arrow-64748b)"/>
+<rect x="763.6" y="130.5" width="168.3" height="25" rx="5" fill="#FFFFFF" opacity="0.96"/><text class="edge-label" x="847.8" y="148.5" text-anchor="middle" fill="#5B6472" font-size="16.5">duplex ultrasound</text>
+<g class="node" id="node-pts"><rect x="48.0" y="179.0" width="163.2" height="130.0" rx="12.0" fill="#F7F8F9" stroke="#64748B" stroke-width="1.6" vector-effect="non-scaling-stroke"/><svg class="node-icon" x="62.0" y="224.0" width="40.0" height="40.0" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" aria-hidden="true" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M18 21a8 8 0 0 0-16 0" />
+  <circle cx="10" cy="8" r="5" />
+  <path d="M22 20c0-3.37-2-6.5-4-8a5 5 0 0 0-.45-8.3" />
+</svg><text class="node-label" x="115.0" y="225.2" text-anchor="start" fill="#172033" font-size="19.0" font-weight="600" data-max-width="82.2"><tspan x="115.0" dy="0.0">Patients</tspan><tspan x="115.0" dy="22.0">with PAD</tspan></text><text class="node-subtitle" x="115.0" y="270.2" text-anchor="start" fill="#5B6472" font-size="16.5" data-max-width="82.2"><tspan x="115.0" dy="0.0">n = 400</tspan></text></g>
+<g class="node" id="node-rand"><rect x="253.2" y="179.0" width="163.2" height="130.0" rx="12.0" fill="#F7F8F9" stroke="#64748B" stroke-width="1.6" vector-effect="non-scaling-stroke"/><svg class="node-icon" x="267.2" y="224.0" width="40.0" height="40.0" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" aria-hidden="true" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <rect width="8" height="4" x="8" y="2" rx="1" ry="1" />
+  <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2" />
+  <path d="m9 14 2 2 4-4" />
+</svg><text class="node-label" x="320.2" y="237.2" text-anchor="start" fill="#172033" font-size="19.0" font-weight="600" data-max-width="82.2"><tspan x="320.2" dy="0.0">Randomized</tspan><tspan x="320.2" dy="22.0">1:1</tspan></text></g>
+<g class="node" id="node-dcb"><rect x="458.4" y="179.0" width="163.2" height="130.0" rx="12.0" fill="#EBF4F9" stroke="#0072B2" stroke-width="1.6" vector-effect="non-scaling-stroke"/><svg class="node-icon" x="472.4" y="224.0" width="40.0" height="40.0" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" aria-hidden="true" fill="none" stroke="#0072B2" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="m18 2 4 4" />
+  <path d="m17 7 3-3" />
+  <path d="M19 9 8.7 19.3c-1 1-2.5 1-3.4 0l-.6-.6c-1-1-1-2.5 0-3.4L15 5" />
+  <path d="m9 11 4 4" />
+  <path d="m5 19-3 3" />
+  <path d="m14 4 6 6" />
+</svg><text class="node-label" x="525.4" y="237.2" text-anchor="start" fill="#172033" font-size="19.0" font-weight="600" data-max-width="82.2"><tspan x="525.4" dy="0.0">Drug-coated</tspan><tspan x="525.4" dy="22.0">balloon</tspan></text></g>
+<g class="node" id="node-fu"><rect x="663.6" y="179.0" width="163.2" height="130.0" rx="12.0" fill="#F7F8F9" stroke="#64748B" stroke-width="1.6" vector-effect="non-scaling-stroke"/><svg class="node-icon" x="677.6" y="224.0" width="40.0" height="40.0" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" aria-hidden="true" fill="none" stroke="#64748B" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M8 2v3" />
+  <path d="M16 2v3" />
+  <rect x="3" y="3" width="18" height="18" rx="2" />
+  <path d="M3 9h18" />
+  <path d="M8 13h.01" />
+  <path d="M12 13h.01" />
+  <path d="M16 13h.01" />
+  <path d="M8 17h.01" />
+  <path d="M12 17h.01" />
+  <path d="M16 17h.01" />
+</svg><text class="node-label" x="730.6" y="237.2" text-anchor="start" fill="#172033" font-size="19.0" font-weight="600" data-max-width="82.2"><tspan x="730.6" dy="0.0">12-month</tspan><tspan x="730.6" dy="22.0">follow-up</tspan></text></g>
+<g class="node" id="node-out"><rect x="868.8" y="179.0" width="163.2" height="130.0" rx="12.0" fill="#ECF5EF" stroke="#15803D" stroke-width="1.6" vector-effect="non-scaling-stroke"/><svg class="node-icon" x="882.8" y="224.0" width="40.0" height="40.0" viewBox="0 0 24 24" preserveAspectRatio="xMidYMid meet" aria-hidden="true" fill="none" stroke="#15803D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+  <path d="M2 9.5a5.5 5.5 0 0 1 9.591-3.676.56.56 0 0 0 .818 0A5.49 5.49 0 0 1 22 9.5c0 2.29-1.5 4-3 5.5l-5.492 5.313a2 2 0 0 1-3 .019L5 15c-1.5-1.5-3-3.2-3-5.5" />
+  <path d="M3.22 13H9.5l.5-1 2 4.5 2-7 1.5 3.5h5.27" />
+</svg><text class="node-label" x="935.8" y="237.2" text-anchor="start" fill="#172033" font-size="19.0" font-weight="600" data-max-width="82.2"><tspan x="935.8" dy="0.0">Primary</tspan><tspan x="935.8" dy="22.0">patency</tspan></text></g>
+</svg>
