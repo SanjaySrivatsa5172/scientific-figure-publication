@@ -56,7 +56,7 @@ Local tools it may call when installed: poppler, Ghostscript, LibreOffice, cairo
 
 ## Verification
 
-- 54 automated tests: the 17 upstream Scientific-Figure-Design tests and 37 toolkit tests, including Kaplan-Meier, Greenwood standard errors, and log-rank values checked against hand calculation and lifelines, AUC and DeLong values checked against scikit-learn, color-vision simulation checked against colorspacious, and CIEDE2000 checked against the Sharma test pairs. Run `python -m unittest discover -s tests`.
+- 59 automated tests: the 17 upstream Scientific-Figure-Design tests and 42 toolkit tests, including Kaplan-Meier, Greenwood standard errors, and log-rank values checked against hand calculation and lifelines, AUC and DeLong values checked against scikit-learn, color-vision simulation checked against colorspacious, and CIEDE2000 checked against the Sharma test pairs. Run `python -m unittest discover -s tests`.
 - `python scripts/demo_gallery.py --target <preset>` renders the ten gallery figures and audits them; the gallery passes the automated gate under most presets, and the failures that remain (for example at Vascular Medicine's 16 to 18 pt type) are real redesign needs, not tool errors.
 - Eval cases for `claude plugin eval` are in `evals/`.
 

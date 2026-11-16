@@ -33,7 +33,33 @@ def _norm_ppf(q: float) -> float:
         from scipy.stats import norm
         return float(norm.ppf(q))
     except ImportError:
-        return {0.975: 1.959964, 0.95: 1.644854, 0.995: 2.575829}.get(q, 1.959964)
+        from statistics import NormalDist  # exact for any level; no silent 1.96
+        return NormalDist().inv_cdf(q)
+
+
+def _clean_survival_input(time, code, what: str = "event", group=None):
+    """Validate survival input; missing or non-finite values are an error, not a guess.
+
+    A NaN time is never >= any time, so it would sit in the starting n but
+    never in a risk set, and the risk table would be wrong without warning.
+    """
+    t = np.asarray(time, float)
+    c_raw = np.asarray(code, float)
+    if t.shape != c_raw.shape:
+        raise ValueError(f"time and {what} must have equal length")
+    bad = ~np.isfinite(t) | ~np.isfinite(c_raw)
+    if group is not None:
+        g = np.asarray(group)
+        if g.shape != t.shape:
+            raise ValueError("time and group must have equal length")
+        bad |= np.array([v is None or (isinstance(v, float) and v != v) for v in g.tolist()])
+    if bad.any():
+        raise ValueError(f"{int(bad.sum())} of {t.size} observations have a missing or non-finite time, "
+                         f"{what}, or group; resolve them in the source data (exclude with a stated reason "
+                         "or correct) before plotting")
+    if (c_raw != np.round(c_raw)).any():
+        raise ValueError(f"{what} must be integer coded")
+    return t, c_raw.astype(int)
 
 
 def _chi2_sf(x: float, df: int) -> float:
@@ -67,11 +93,14 @@ class KMTable:
 
 
 def kaplan_meier(time, event, level: float = 0.95) -> KMTable:
-    """Product-limit estimate with pointwise log(-log) (exponential Greenwood) CI."""
-    t = np.asarray(time, float)
-    e = np.asarray(event).astype(int)
-    if t.shape != e.shape:
-        raise ValueError("time and event must have equal length")
+    """Product-limit estimate with pointwise log(-log) (exponential Greenwood) CI.
+
+    Missing or non-finite times or events raise ValueError. When the last
+    subjects at risk all have the event, S(t) = 0 and its Greenwood SE is
+    undefined: ``se`` is NaN from that time on (as in R ``survfit``), and the
+    CI collapses to the point estimate.
+    """
+    t, e = _clean_survival_input(time, event)
     if (t < 0).any() or not set(np.unique(e)) <= {0, 1}:
         raise ValueError("time must be >= 0 and event coded 0 (censored) / 1 (event)")
     z = _norm_ppf(0.5 + level / 2)
@@ -86,13 +115,15 @@ def kaplan_meier(time, event, level: float = 0.95) -> KMTable:
             s *= 1 - d / at_risk
             if at_risk > d:
                 gw += d / (at_risk * (at_risk - d))
-        if s > 0 and s < 1:
+            else:
+                gw = math.nan  # everyone left had the event: Greenwood term d/(n(n-d)) is undefined
+        if s > 0 and s < 1 and not math.isnan(gw):
             se = math.sqrt(gw) / abs(math.log(s))
             l_, h_ = s ** math.exp(z * se), s ** math.exp(-z * se)
         else:
             l_, h_ = (s, s)
         times.append(float(u)); surv.append(s); lo.append(l_); hi.append(h_)
-        nr.append(at_risk); ne.append(d); nc.append(c); ses.append(s * math.sqrt(gw))
+        nr.append(at_risk); ne.append(d); nc.append(c); ses.append(math.nan if math.isnan(gw) else s * math.sqrt(gw))
     return KMTable(np.array(times), np.array(surv), np.array(lo), np.array(hi), np.array(nr),
                    np.array(ne), np.array(nc), np.unique(t[e == 0]), np.array(ses))
 
@@ -104,11 +135,12 @@ def km_truncation_time(km: KMTable, *, min_at_risk: int | None = None, max_se: f
     max_se: stop before the Greenwood SE of S(t) exceeds this (JVS, JEVT: 0.10).
     The SE rule is absolute: at low survival it can stay under 10% with very
     few patients left, so pair it with an at-risk floor when follow-up is long.
+    An undefined SE (S(t) = 0, see ``kaplan_meier``) counts as exceeding max_se.
     """
     end = float(km.time[-1])
     for i in range(1, len(km.time)):
         bad = (min_at_risk is not None and km.n_risk[i] < min_at_risk) or \
-              (max_se is not None and km.se is not None and km.se[i] > max_se)
+              (max_se is not None and km.se is not None and (km.se[i] > max_se or math.isnan(km.se[i])))
         if bad:
             cut = float(km.time[i - 1])
             if cut <= 0:
@@ -133,14 +165,19 @@ def cumulative_counts(time, event, at_times) -> tuple[list[int], list[int]]:
 
 
 def logrank_test(time, event, group) -> dict:
-    """k-sample log-rank (Mantel-Haenszel) test; returns chi2, df, p."""
-    t = np.asarray(time, float)
-    e = np.asarray(event).astype(int)
+    """k-sample log-rank (Mantel-Haenszel) test; returns chi2, df, p.
+
+    Raises ValueError for missing input, for data with no events, and when the
+    statistic is undefined (singular variance matrix).
+    """
+    t, e = _clean_survival_input(time, event, group=group)
     g = np.asarray(group)
     labels = list(dict.fromkeys(g.tolist()))
     k = len(labels)
     if k < 2:
         raise ValueError("need at least two groups")
+    if not (e == 1).any():
+        raise ValueError("log-rank test is undefined: no events in the data")
     O = np.zeros(k); E = np.zeros(k); V = np.zeros((k, k))
     for u in np.unique(t[e == 1]):
         at = t >= u
@@ -154,6 +191,9 @@ def logrank_test(time, event, group) -> dict:
             V += d * (n - d) / (n - 1) * (np.diag(nj / n) - np.outer(nj, nj) / n ** 2)
     diff = (O - E)[:-1]
     Vr = V[:-1, :-1]
+    if np.linalg.matrix_rank(Vr) < k - 1:
+        raise ValueError("log-rank test is undefined: the variance matrix is singular (at every event time "
+                         "at most one group is still at risk, or a group is never at risk)")
     chi2 = float(diff @ np.linalg.solve(Vr, diff))
     return {"chi2": chi2, "df": k - 1, "p": _chi2_sf(chi2, k - 1), "observed": dict(zip(labels, O.tolist())),
             "expected": dict(zip(labels, E.tolist()))}
@@ -166,8 +206,7 @@ def cumulative_incidence(time, status, cause: int = 1) -> tuple[np.ndarray, np.n
     instead of 1 - KM when a competing event (e.g. non-cardiovascular death)
     precludes the event of interest: 1 - KM overstates incidence there.
     """
-    t = np.asarray(time, float)
-    s = np.asarray(status).astype(int)
+    t, s = _clean_survival_input(time, status, what="status")
     times, cif = [0.0], [0.0]
     surv, F = 1.0, 0.0
     for u in np.unique(t):
@@ -785,10 +824,29 @@ def roc_curve(y, score) -> tuple[np.ndarray, np.ndarray, np.ndarray]:
     return fpr, tpr, thr
 
 
-def auc_delong(y, score, level: float = 0.95) -> dict:
-    """AUC with DeLong variance (fast midrank algorithm, Sun & Xu 2014)."""
-    y = np.asarray(y).astype(int)
+def auc_delong(y, score, level: float = 0.95, ci: str = "wald") -> dict:
+    """AUC with DeLong variance (fast midrank algorithm, Sun & Xu 2014).
+
+    ci="wald" (default): AUC +/- z * SE, clipped to [0, 1]. This is the interval
+    DeLong et al (1988) describe and the one R pROC reports for
+    ``ci.auc(method="delong")``, so it reproduces an analyst's pROC output.
+    ci="logit": the same SE carried to the logit scale by the delta method and
+    back-transformed; it stays inside (0, 1) and is asymmetric, and differs
+    visibly from Wald when the AUC is high or the sample is small. Name the
+    method in the legend (``ci_method`` in the result). With perfect separation
+    the DeLong SE is 0 and both intervals collapse to the point estimate.
+    """
+    if ci not in ("wald", "logit"):
+        raise ValueError("ci must be 'wald' or 'logit'")
+    y = np.asarray(y, float)
     s = np.asarray(score, float)
+    if y.shape != s.shape:
+        raise ValueError("y and score must have equal length")
+    if not (np.isfinite(y).all() and np.isfinite(s).all()):
+        raise ValueError("y and score must not contain missing or non-finite values")
+    if not set(np.unique(y)) <= {0.0, 1.0}:
+        raise ValueError("y must be coded 0/1")
+    y = y.astype(int)
     pos, neg = s[y == 1], s[y == 0]
     m, n = pos.size, neg.size
     if m == 0 or n == 0:
@@ -815,19 +873,25 @@ def auc_delong(y, score, level: float = 0.95) -> dict:
     var = np.var(v01, ddof=1) / m + np.var(v10, ddof=1) / n
     se = math.sqrt(var)
     z = _norm_ppf(0.5 + level / 2)
-    # logit-transformed interval stays inside (0, 1)
-    if 0 < auc < 1:
+    auc = float(auc)
+    if ci == "wald":
+        lo, hi = max(0.0, auc - z * se), min(1.0, auc + z * se)
+    elif 0 < auc < 1:
         lg = math.log(auc / (1 - auc))
         se_lg = se / (auc * (1 - auc))
         lo, hi = 1 / (1 + math.exp(-(lg - z * se_lg))), 1 / (1 + math.exp(-(lg + z * se_lg)))
     else:
         lo = hi = auc
-    return {"auc": float(auc), "se": se, "ci_low": lo, "ci_high": hi, "n_pos": int(m), "n_neg": int(n)}
+    return {"auc": auc, "se": se, "ci_low": float(lo), "ci_high": float(hi), "ci_method": ci, "level": level,
+            "n_pos": int(m), "n_neg": int(n)}
 
 
 def roc_plot(ax, y, scores: Mapping[str, Sequence[float]], *, colors=None, level: float = 0.95, digits: int = 2,
-             legend_loc: str = "auto") -> dict:
+             legend_loc: str = "auto", ci: str = "wald") -> dict:
     """Empirical ROC curves with AUC (DeLong CI) in the legend; chance diagonal.
+
+    ci is passed to ``auc_delong``: "wald" (default, matches R pROC) or "logit".
+    State the method in the figure legend.
 
     legend_loc="auto" keeps the legend in the lower right when it clears the
     curves and the diagonal, and moves it below the axis label when it does not
@@ -838,7 +902,7 @@ def roc_plot(ax, y, scores: Mapping[str, Sequence[float]], *, colors=None, level
     out = {}
     for i, (name, sc) in enumerate(scores.items()):
         fpr, tpr, _ = roc_curve(y, sc)
-        st = auc_delong(y, sc, level)
+        st = auc_delong(y, sc, level, ci)
         ax.step(fpr, tpr, where="post", color=colors[i % len(colors)], zorder=2,
                 label=f"{name}: AUC {st['auc']:.{digits}f} ({st['ci_low']:.{digits}f}{pf.MINUS if False else '-'}{st['ci_high']:.{digits}f})")
         out[name] = st
