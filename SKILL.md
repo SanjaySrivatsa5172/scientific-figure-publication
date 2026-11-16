@@ -1,6 +1,6 @@
 ---
 name: scientific-figure-publication
-description: Publication-ready scientific figures at final journal size: charts, Kaplan-Meier and forest plots, CONSORT, diagrams, image panels, 42 journal presets, QA. Use for any figure, graph, or legend.
+description: "Publication-ready scientific figures at final journal size: charts, Kaplan-Meier and forest plots, CONSORT, diagrams, image panels, 42 journal presets, QA. Use for any figure, graph, or legend."
 license: MIT (bundled third-party icons keep their own licenses; see THIRD_PARTY_NOTICES.md)
 ---
 

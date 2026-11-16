@@ -4,7 +4,7 @@
 Examples:
   python3 search_icons.py "vector database retrieval" --limit 8
   python3 search_icons.py "模型训练" --family lucide --recolorable
-  python3 search_icons.py "baseline model" --category brand --json
+  python3 search_icons.py "baseline model" --family lucide --json
 """
 
 from __future__ import annotations

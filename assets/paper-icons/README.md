@@ -24,5 +24,4 @@ library. PDF/PNG rendering and contact sheets require `rsvg-convert` from librsv
 Pillow and NumPy are needed only for the rare case of recoloring a PNG that has no
 SVG source.
 
-Brand logos are trademarks of their owners. Use them only for academic
-identification/comparison and preserve official colors.
+Vendor and product logos are not bundled; label products in text.

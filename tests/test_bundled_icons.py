@@ -24,8 +24,8 @@ class BundledIconTests(unittest.TestCase):
         )
         cls.icons = cls.catalog["icons"]
 
-    def test_catalog_has_619_unique_resolvable_svg_icons(self) -> None:
-        self.assertEqual(len(self.icons), 619)
+    def test_catalog_has_580_unique_resolvable_svg_icons(self) -> None:
+        self.assertEqual(len(self.icons), 580)
         ids = [icon["id"] for icon in self.icons]
         self.assertEqual(len(ids), len(set(ids)))
         missing = [
@@ -41,7 +41,7 @@ class BundledIconTests(unittest.TestCase):
             sources,
             {
                 "original": 37,
-                "ml-paper-icons (MIT)": 512,
+                "ml-paper-icons (MIT)": 473,
                 "Lucide (ISC), fetched on demand": 70,
             },
         )
@@ -67,15 +67,14 @@ class BundledIconTests(unittest.TestCase):
             group_total += group["count"]
         self.assertEqual(group_total, len(self.icons))
 
-    def test_color_brand_marks_are_not_recolorable(self) -> None:
-        protected = [
-            icon
-            for icon in self.icons
-            if icon["category"] == "brand"
-            and icon["color_type"] == "color"
-        ]
-        self.assertEqual(len(protected), 32)
-        self.assertTrue(all(icon["recolorable"] is False for icon in protected))
+    def test_no_trademarked_brand_marks_are_bundled(self) -> None:
+        self.assertEqual(
+            [icon["id"] for icon in self.icons if icon["category"] == "brand"], []
+        )
+        self.assertFalse((LIBRARY / "brand").exists())
+        self.assertFalse(
+            any(group.get("trademarked") for group in self.license_manifest["groups"])
+        )
 
     def test_svg_sources_do_not_embed_raster_or_html(self) -> None:
         unsafe = []

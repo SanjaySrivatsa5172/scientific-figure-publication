@@ -11,7 +11,7 @@
 - Lucide (https://github.com/lucide-icons/lucide), ISC License; some Feather-derived icons under MIT. Includes 70 icons in `library/fetched/`, 38 of them added on 2026-11-14 (clinical set).
 - Tabler Icons (https://github.com/tabler/tabler-icons), MIT License.
 - Phosphor Icons (https://github.com/phosphor-icons/core), MIT License.
-- Lobe Icons brand marks (https://github.com/lobehub/lobe-icons), MIT License for SVG code; logos and names remain trademarks of their owners. Use only for accurate identification; no implied endorsement.
+- Vendor and product logos (Lobe Icons brand marks, present upstream and in v1.0.0) are not distributed from v1.0.1 onward.
 - Curation derived from Mizar77/ml-paper-icons (MIT).
 Full texts: `assets/paper-icons/LICENSE`, `assets/paper-icons/THIRD_PARTY_LICENSES.md`, `assets/paper-icons/library/license-manifest.json`.
 

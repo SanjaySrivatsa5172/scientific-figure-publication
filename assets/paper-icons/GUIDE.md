@@ -55,19 +55,19 @@ Use `search_icons.py`; do not manually scan hundreds of filenames first.
 ```bash
 python3 "$SKILL/scripts/search_icons.py" "vector database retrieval" --limit 8
 python3 "$SKILL/scripts/search_icons.py" "模型训练" --family lucide --recolorable
-python3 "$SKILL/scripts/search_icons.py" "closed model baseline" --category brand --json
+python3 "$SKILL/scripts/search_icons.py" "clinical trial enrollment" --family fetched --json
 ```
 
 Then visually confirm candidates in `library/overview/`. Search ranking is a shortlist, not a design decision.
 
-Icon IDs are catalog keys such as `database`, `lucide-brain`, `tabler-database`, `phosphor-f-brain`, and `claude-color`. The catalog is `library/catalog.json`.
+Icon IDs are catalog keys such as `database`, `lucide-brain`, `tabler-database`, and `phosphor-f-brain`. The catalog is `library/catalog.json`.
 
 Selection rules:
 
 - Match the concept, not the noun literally. A database icon means storage; it does not automatically mean “dataset.”
 - Keep stroke/fill language consistent. Do not mix outline Lucide nodes with heavy silhouettes without a reason.
 - Use one icon per node at most. Omit icons from secondary nodes when labels are clearer.
-- Preserve official colors for `color_type: color` brand marks and use them only for academic identification.
+- Vendor and product logos are not bundled; name the product in the node label instead.
 - Prefer text over an unfamiliar pictogram. Icons must remain understandable without a legend.
 
 ## Recolor and export individual icons

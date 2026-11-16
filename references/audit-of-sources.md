@@ -18,7 +18,8 @@ Changed:
 - Fixed widths of 85 and 178 mm replaced by verified per-journal presets (42 journals, publishers, and venues). SFD's ranges were reasonable generic values but miss Nature (89/183 mm), Elsevier (90/190 mm), Cell (85/174 mm), PNAS (87/178 mm), and the clinical journals entirely.
 - Its matplotlib recipe used `savefig.bbox: tight`, which changes the physical canvas; replaced by fixed canvases with constrained layout.
 - Composer PDF and PNG export needed `rsvg-convert`; added a `cairosvg` fallback, with PNGs rasterized from the vector PDF by poppler because cairo's direct PNG text rendering garbled bold labels in testing.
-- Added 38 clinical Lucide icons with clinical search hints; the library is now 619 icons.
+- Added 38 clinical Lucide icons with clinical search hints; the library was 619 icons at v1.0.0.
+- v1.0.1: removed the 39 Lobe Icons vendor logos (trademark exposure not covered by the MIT license on the SVG code); the library is now 580 icons.
 - The nested `paper-icons/SKILL.md` became `GUIDE.md`: claude.ai rejects skills containing more than one SKILL.md.
 - Dropped `style-tokens.json` (a manual copy of `academic-style.yaml` that no script read).
 

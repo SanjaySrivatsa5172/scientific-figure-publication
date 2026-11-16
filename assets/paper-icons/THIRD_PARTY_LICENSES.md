@@ -12,23 +12,14 @@ compliance.
 | `icons/tabler/`   | Tabler Icons (`@tabler/icons`)  | MIT | https://github.com/tabler/tabler-icons |
 | `icons/phosphor/` | Phosphor Icons (`@phosphor-icons/core`) | MIT | https://github.com/phosphor-icons/core |
 | `icons/duotone/`  | Phosphor Icons (duotone weight) | MIT | https://github.com/phosphor-icons/core |
-| `icons/brand/`    | Lobe Icons (`@lobehub/icons`)   | MIT | https://github.com/lobehub/lobe-icons |
 
 ---
 
-## ⚠️ Important note on brand logos (`icons/brand/`)
+## Brand logos
 
-The brand / vendor logos (OpenAI, Anthropic/Claude, Google/Gemini, Meta,
-Hugging Face, NVIDIA, PyTorch, etc.) are distributed by the Lobe Icons project
-under the MIT license **as SVG assets**, but the logos themselves remain the
-**trademarks of their respective owners**. The MIT license covers the SVG
-code, not trademark rights.
-
-Using a company's logo in an academic paper to indicate "we used this
-model/framework" is generally accepted nominative use, but:
-- Do **not** imply endorsement by the trademark owner.
-- Follow each owner's brand guidelines where they exist.
-- When in doubt, prefer a neutral text label or a generic mono icon instead.
+The upstream collection ships vendor logos from Lobe Icons under `icons/brand/`.
+They are not included in this bundle (removed in scientific-figure-publication
+v1.0.1): the MIT license covers the SVG code, not the trademarks.
 
 ---
 
